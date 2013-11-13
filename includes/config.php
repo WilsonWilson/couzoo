@@ -13,7 +13,7 @@ $couzoo->SetWebsiteName('CouZoo');
 $couzoo->SetFromAddress('no-reply@couzoo.com');
 
 // Site variables
-define(SITE_LOC, "/"); // Sub-directory? Otherwise, enter "/" for root of domain
+define(SITE_LOC, "/"); // Sub-directory? Otherwise, enter "/" for root of domain -- **Sub-domains, with a root directory, don't need to be changed - leave "/" **
 define(ADMIN_LOC, "admin-panel/"); // Admin location, don't forget trailing slash
 define(ADMIN_PASS, "admin123"); // Admin Password
 
