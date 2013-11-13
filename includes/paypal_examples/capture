@@ -1,0 +1,5 @@
+curl -v -H 'Content-Type: application/json' \
+	   -H 'Accept: application/json' \
+	   -H 'Authorization: Bearer CteOK4nha0A9KzX6MY2eKVOhHU.35eS60CwFacxeheM' \
+	   -d '{ "amount":{ "currency":"USD", "total":"7.47" }}' \
+	https://api.sandbox.paypal.com/v1/payments/authorization/7YW77563RR2815837/capture

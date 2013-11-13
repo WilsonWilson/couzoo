@@ -1,0 +1,430 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+
+<link rel="stylesheet" href="css/style.css" type="text/css" /><!--gerneral-->
+<link type='text/css' href='css/login.css' rel='stylesheet' media='screen' /><!--Login-->
+<link rel="stylesheet" href="css/log-in-changer.css">
+<link href="css/mini-cart-styles.css" rel="stylesheet" type="text/css" />
+
+        <!--[if IE 9]>
+		<style type="text/css">
+		#le-tabs.oldlook #le-tabs_tab_container a.X-tab{background-image:url(images/X-tab.png); background-repeat:no-repeat; color:#603912; margin:0px 1px 0px 1px;}
+        </style>
+		<![endif]-->
+        
+        <!--[if lte IE 8]>
+		<link rel="stylesheet" href="css/ie9-or-less.css" type="text/css" />
+		<![endif]-->
+        
+
+    <!-- FOR DROPDOWN -->
+    <script type='text/javascript' src='js/login-jquery.js'></script>
+    <script type='text/javascript' src='js/login-jquery.simplemodal.js'></script>
+    <script type='text/javascript' src='js/login.js'></script>
+
+    <!--FOR FORM-->
+	<script src="js/jquery.formHighlighter.js" type="text/javascript"></script>
+    <script src="js/query.formHighlighterSettings.js" type="text/javascript"></script>
+    
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+	<script src="js/jquery.formHighlighter.js" type="text/javascript"></script>
+    <script src="js/query.formHighlighterSettings.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/LXP.js"></script>
+    <script type="text/javascript" src="js/sticky-search.js"></script>  
+    
+    
+    <!-- CSS changes for if Mac OS (mainly in tabbed slider navigation)-->    
+    <script src="js/if-mac.js" type="text/javascript"></script>    
+    
+	<!--Mini-Cart Slide out-->
+    
+	<script src="js/jquery.tabSlideOut.v1.3.js"></script>
+	<script type="text/javascript" src="js/miini-cart-settings.js"></script>  
+    
+
+	<!-- Add fancyBox main JS and CSS files -->
+	<!--#include virtual="fancybox.html" -->
+	<script type="text/javascript" src="fancybox/source/jquery.fancybox.js?v=2.0.6"></script>
+	<link rel="stylesheet" type="text/css" href="fancybox/source/jquery.fancybox.css?v=2.0.6" media="screen" />
+
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+
+			$('.fancybox').fancybox();
+
+			$("#fancybox-manual-a").click(function() {
+				$.fancybox.open('1_b.jpg');
+			});
+			
+		});
+	</script>
+
+    <script type="text/javascript">
+		$(document).ready(function(){
+		$("#expanderHead").click(function(){
+		$("#expanderContent").slideToggle();
+		if ($("#expanderSign").text() == "Filter Results"){
+			$("#expanderSign").html("Close Filters")
+		}
+		else {
+			$("#expanderSign").text("Filter Results")
+			}
+		});
+	});
+	</script>
+    
+    <!--Range Slider-->
+    <link type="text/css" href="css/range-slider/ui-lightness/jquery-ui-1.8.21.custom.css" rel="stylesheet" />
+	<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>-->
+	<script src="js/range-slider/jquery.ui.core.js"></script>
+	<script src="js/range-slider/jquery.ui.widget.js"></script>
+	<script src="js/range-slider/jquery.ui.mouse.js"></script>
+	<script src="js/range-slider/jquery.ui.slider.js"></script>
+	<link rel="stylesheet" href="css/range-slider/demos.css">
+	<style>
+	#demo-frame > div.demo { padding: 10px !important; };
+	</style>
+	<script>
+	$(function() {
+		$( "#coupon-price" ).slider({
+			range: true,
+			min: 1,
+			max: 5,
+			values: [ 1, 5 ],
+			slide: function( event, ui ) {
+				$( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+			}
+		});
+		$( "#amount" ).val( "$" + $( "#coupon-price" ).slider( "values", 0 ) +
+			" - $" + $( "#coupon-price" ).slider( "values", 1 ) );
+			
+		$( "#savings-amount" ).slider({
+			range: true,
+			min: 1,
+			max: 100,
+			values: [ 1, 100 ],
+			slide: function( event, ui ) {
+				$( "#amount2" ).val(  ui.values[ 0 ]+"% - "   + ui.values[ 1 ]+ "%" );
+			}
+		});
+		$( "#amount2" ).val(  $( "#savings-amount" ).slider( "values", 0 )+ "% - " +
+			 $( "#savings-amount" ).slider( "values", 1 )+"%"  );
+	});
+	</script>
+<!--End Range Slider-->
+
+	<style type="text/css">
+		.fancybox-custom .fancybox-skin {
+			box-shadow: 0 0 50px #222;
+		}
+	</style>
+    
+<!--For log-in (customer/merchant login/sign up) changer-->
+    <script src="js/log-in-changer.js"></script>   
+
+
+
+
+</head>
+
+<body>
+<div id="overlay" style="display:none"></div>
+<!--START HEADER & Log-in, Log-out, Register, My Account-->
+<!--#include virtual="header.html" -->
+<!--END HEADER & Log-in, Log-out, Register, My Account-->
+
+<!--START OPEN and CLOSE ALL SIDE BUTTON-->
+<!--#include virtual="open-close-all-tab.html" -->
+<!--END OPEN and CLOSE ALL SIDE BUTTON-->
+
+<br clear="all"/>
+
+<!--START OPEN and CLOSE ALL SIDE BUTTON-->
+<!--#include virtual="mini-cart.html" -->
+<!--END OPEN and CLOSE ALL SIDE BUTTON-->
+
+<div id="container">
+
+<div id="page-top-push"></div>
+
+<div id="main-column">
+
+<!--Start search box-->
+<div id="search-box-title">
+<div id="search-results-title">Search Results</div>   
+<!--START STICKY-->
+<div id="stickyheader">
+  <div id="advancedCall">
+    <form action="" name="pageSearch">
+        <input class="myclass" type="text" name="pageSearch" value="search for coupons here" />
+        <div class="search-btn"></div>
+        
+        <div style="float:left; margin:-44px 0px 0px 475px; position:relative; z-index:999;">
+        	
+            	<div id="refine-box">
+                	<h4 id="expanderHead" style="cursor:pointer;">
+						<span id="expanderSign">Filter Results</span>
+					</h4>
+				</div>
+            
+                <div class="results-order"  style="float:right; position:relative; z-index:999;">
+                    <select>
+                      <option style="font-weight:bold;">Order by:</option><br />  
+                      <option>Best Match</option><br />  
+                      <option>Time Left</option><br />
+                      <option>Distance</option><br />
+                      <option>Savings</option><br />
+                      <option>Coupon Price</option><br />
+                    </select>
+                </div>
+                
+                
+                
+        </div>
+        
+        
+    </form>
+    
+  </div>
+  <br clear="all"/>
+  <div id="expanderContent" style="display:none; position:relative; z-index:999;">
+
+
+<table width="600" border="0" cellspacing="0" style="text-align:left; margin:15px;">
+  <tr>
+    <th scope="col" width="235" style="text-align:left;" valign="top">
+    			<div id="catagory-title"><h1>Location</h1></div><br />
+                    <div id="advancedCallBrowse">
+                            <form action="" name="homeSearch">
+                                <input class="myclass" type="text" name="brownseSearch" value="enter location here" /><br />
+                            </form>
+                    </div>
+                <span id="footnote">(zip code / neighborhood / town / city)</span>
+    </th>
+                        
+                        
+    <th scope="col" style="padding-left:30px;" width="220" valign="top">
+    <div id="catagory-title"><h1>Distance</h1></div>
+                    	<br />
+                         <div class="browse-dropdown-order">
+                         <select>
+                          <option>1/2 mile or less</option><br />
+                          <option>1 mile or less</option><br />
+                          <option>3 miles or less</option><br />
+                          <option>5 miles or less</option><br />
+                          <option>10 miles or less</option><br />
+                          <option>20 miles or less</option><br />                                                                        
+                          <option>50 miles or less</option><br />                        
+                          <option>Any Distance</option><br />                        
+                        </select>
+                        </div>
+					<br /><br /><br />
+			                    
+                    <div id="catagory-title"><h1>Time Left</h1></div>
+                   		 <br />
+                         <div class="browse-dropdown-order">
+                         <select>
+                          <option>1 Day or less</option><br />
+                          <option>3 Days or less</option><br />
+                          <option>5 Days or less</option><br />
+                          <option>15 Days or less</option><br />
+                          <option>30 Days or less</option><br />                                                                        
+                          <option>More than 30 days</option><br />
+                        </select>
+                        </div>
+
+                    <br /><br /><br />
+
+                    <div id="catagory-title"><h1>Sales Left</h1></div>
+                     <br />
+                         <div class="browse-dropdown-order">
+                         <select>
+                          <option>10 or less</option><br />
+                          <option>25 or less</option><br />
+                          <option>50 or less</option><br />
+                          <option>100 or less</option><br />
+                          <option>250 Days or less</option><br />                                                                        
+                          <option>More than 250</option><br />
+                        </select>
+                        </div>
+    </th>
+    
+     <th scope="col" style="padding-left:30px;" width="220" valign="top">
+   					<div id="catagory-title"><h1>Coupon Price</h1>
+                        <p style="line-height:18px; margin-bottom:4px;"><label for="amount"></label>
+                        <input type="text" id="amount" style="border:0; color:#f26625; font-weight:bold;" />
+                        </p>
+                        <div id="coupon-price"></div>
+                    </div>
+                    
+                    <br clear="all"/><br /><br />
+
+                    <div id="catagory-title"><h1>Savings</h1>
+                        <p style="line-height:18px; margin-bottom:4px;"><label for="amount2"></label>
+                        <input type="text" id="amount2" style="border:0; color:#f26625; font-weight:bold;" />
+                        </p>
+                        <div id="savings-amount"></div>
+                    </div>
+    </th>
+
+  </tr>
+</table>
+
+
+                   
+         
+           
+</div>  
+</div>
+<!--END STICKY-->
+
+</div>
+<!--END search box-->
+       
+
+  
+        
+<!--START large-ad-container-->
+<div class="large-ad-container large-ad-3-dollar-bg"><!--class here determines background and border color-->
+<div class="price-box price-box-3-dollar">$3</div>
+<div class="large-ad-image"><img src="http://factory.mamajennies.com/wp-content/uploads/2009/11/delicious-italian-food.jpg" /></div>
+
+<div id="large-ad-right-content">
+
+<div class="large-ad-item-title">$20 for a $50 dinner at Cillante Little Italy</div>
+
+<div class="large-ad-learn-more"><a href="">View details</a></div>
+
+<div class="large-ad-distance">Distance: <span class="distance-number">0.40 miles</span> </div>
+
+<div class="ends-in">Removed in:&nbsp;&nbsp;
+<span class="ends-in-numbers">03d : 10h : 18m : 04s</span>&nbsp;&nbsp;-or-&nbsp;&nbsp;<span class="ends-in-numbers">127 Sales</span></span></div>
+
+<div class="large-ad-social-share-sml">
+	<a href="http://www.twitter.com" target="_blank"><img src="images/twitter-sml.png" border="0"/></a>
+	<a href="http://www.facebook.com" target="_blank"><img src="images/facebook-sml.png" border="0"/></a>
+	<a href="http://plus.google.com" target="_blank"><img src="images/google-plus-sml.png" border="0"/></a>
+	<a href="http://plus.google.com" target="_blank"><img src="images/pinterest-sml.png" border="0"/></a>
+	<a href="mailto:"><img src="images/email-sml.png" border="0"/></a>
+</div>
+
+<div class="large-ad-buttons-box">
+	<div class="large-ad-buy-now-btn"></div>
+    <div class="large-ad-add-to-cart-btn"></div>
+	<div class="large-ad-maybe-btn"></div>
+</div><!--END buttons-box-->
+
+</div><!--END large-ad-right-content-->
+</div><!--END large-ad-container-->
+
+
+
+
+
+<!--Start pods-->
+<ul class="acc" id="acc">
+
+<!--#include virtual="pod-example-1-dollar.html" -->
+<!--#include virtual="pod-example-2-dollar.html" -->
+<!--#include virtual="pod-example-3-dollar.html" -->
+<!--#include virtual="pod-example-4-dollar.html" -->
+<!--#include virtual="pod-example-5-dollar.html" --> 
+<!--#include virtual="pod-example-1-dollar.html" -->
+<!--#include virtual="pod-example-2-dollar.html" -->
+<!--#include virtual="pod-example-3-dollar.html" -->
+<!--#include virtual="pod-example-4-dollar.html" -->
+<!--#include virtual="pod-example-5-dollar.html" --> 
+	
+</ul>
+<!--END pods-->
+
+
+<!--below script is for accordion coupons-->
+<script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript">
+var parentAccordion=new TINY.accordion.slider("parentAccordion");
+parentAccordion.init("acc","h3",0,-1, 'selected');
+</script>
+<!--End Coupons-->
+
+
+
+</div><!--END MAIN-COLUMN-->
+
+
+
+
+<div id="side-column"><!--start right side column-->
+
+<div id="side-ad-container" class="side-ad-5-dollar-bg">
+<a class="sideAdLink" href="#">
+<div class="side-ad-image"><img src="http://images.ebizautos.com/sites/6383/images/photolistpageid73932index995.jpg"/></div>
+<div class="side-ad-5-dollar-bg">
+<div class="side-ad-price-box price-box-5-dollar">$5</div>
+<div class="side-ad-item-title">$120 for a 30 minute test drive in exotic cars</div>
+<br clear="all"/>
+<div id="side-ad-bottom-bg">
+<div id="side-ad-distance">Distance: <span class="side-ad-distance-number">0.3</span>mi.</div>
+<div class="side-ad-view-box">view</div>
+</div>
+</div><!--END side-ad-X-dollar-bg-->
+</a>
+</div><!--END side-ad-container-->
+
+
+<div id="side-ad-container" class="side-ad-2-dollar-bg">
+<a class="sideAdLink" href="#">
+<div class="side-ad-image"><img src="http://t2.gstatic.com/images?q=tbn:ANd9GcRvOMgnqgQEoZRXdOHU9EW1FdPVnxyM3FDimLe3Cxq_FgBDuyu2"/></div>
+<div class="side-ad-2-dollar-bg">
+<div class="side-ad-price-box price-box-2-dollar">$2</div>
+<div class="side-ad-item-title">$20 for a $50 complete vehicle tune up at JiffJaff</div>
+<br clear="all"/>
+<div id="side-ad-bottom-bg">
+<div id="side-ad-distance">Distance: <span class="side-ad-distance-number">0.3</span>mi.</div>
+<div class="side-ad-view-box">view</div>
+</div>
+</div><!--END side-ad-X-dollar-bg-->
+</a>
+</div><!--END side-ad-container-->
+
+
+<div id="side-ad-container" class="side-ad-1-dollar-bg">
+<a class="sideAdLink" href="#">
+<div class="side-ad-image"><img src="http://t3.gstatic.com/images?q=tbn:ANd9GcTY42noR5YT0bdUCLxoTseakaEKJ_xVuIjBBipFr-andTY13bGrew"/></div>
+<div class="side-ad-1-dollar-bg">
+<div class="side-ad-price-box price-box-1-dollar">$1</div>
+<div class="side-ad-item-title">$4 for $10 Pizza at Fat Tony's</div>
+<br clear="all"/>
+<div id="side-ad-bottom-bg">
+<div id="side-ad-distance">Distance: <span class="side-ad-distance-number">0.3</span>mi.</div>
+<div class="side-ad-view-box">view</div>
+</div>
+</div><!--END side-ad-X-dollar-bg-->
+</a>
+</div><!--END side-ad-container-->
+
+
+<!--START LXP -->
+<!--#include virtual="lxp.html" -->
+<!--END LXP -->
+
+
+</div><!--END right side column-->
+
+
+</div><!--end container-->
+<br clear="all"/>
+
+
+<!--START FOOTER-->
+<!--#include virtual="footer.html" -->
+<!--END FOOTER-->
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> SimpleModal OSX Style Dialog </title>
+
+<!-- OSX Style CSS files -->
+<link type='text/css' href='css/login.css' rel='stylesheet' media='screen' />
+<link rel="stylesheet" href="css/style.css" type="text/css" /><!--gerneral-->
+
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+
+    <!-- FOR DROPDOWN -->
+    <script type='text/javascript' src='js/login-jquery.js'></script>
+    <script type='text/javascript' src='js/login-jquery.simplemodal.js'></script>
+    <script type='text/javascript' src='js/login.js'></script>
+
+    <!--FOR FORM FIELD-->
+	<script src="js/jquery.formHighlighter.js" type="text/javascript"></script>
+    <script src="js/query.formHighlighterSettings.js" type="text/javascript"></script>
+
+
+</head>
+<body>
+
+    
+		<div id="login-box">
+<a href='#' id="login-link" class='osx'>Log-in &nbsp;|&nbsp; Register</a>
+		</div>
+	
+		<!-- START Login dropdown content -->
+<div id="osx-modal-content">
+			<div id="osx-modal-title">Welcome to COUZOO</div>
+			<div class="close"><a href="#" class="simplemodal-close">x</a></div>
+			<div id="osx-modal-data">
+				<h2>Customer</h2>
+				        <div id="advancedCall">
+                            <form action="" name="customerLogin">
+                                <input class="myclass" type="text" name="customerEmail" value="email" /><br />
+                                <input class="myclass" type="text" name="customerPassword" value="password" /> <br>
+								<div class="login-btn"></div>
+                                <div id="login-more-links"><a href="">create an account</a></div>
+                                <div id="login-more-links"><a href="">learn more</a></div>
+                           </form>
+                        
+                <br clear="all"/> <div style="height:10px;"></div>
+                <h2>Merchant</h2>
+                		
+                            <form action="" name="merchantLogin">
+                                <input class="myclass" type="text" name="merchantEmail" value="email" /><br />
+                                <input class="myclass" type="text" name="merchantPassword" value="password" /><br>
+								<div class="login-btn"></div>
+                                <div id="login-more-links"><a href="">create an account</a></div>
+                                <div id="login-more-links"><a href="">learn more</a></div>
+                            </form>
+                            <br clear="all"/>
+                            <div style="height:8px;"></div>
+                        </div>
+			</div>
+		</div>
+  		<!-- END Login dropdown content -->
+
+</body>
+</html>

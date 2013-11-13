@@ -1,0 +1,20 @@
+﻿/*For tooltip target element that has class="tooltip" */
+span.tooltip { outline: none;  text-decoration: none;}
+
+/*For tooltip box*/
+#mcTooltip {padding:16px; color:#967e48; line-height:16px; font-size:13px; font-family: Verdana, Arial;}
+
+/*Special effects*/
+#mcTooltip 
+{
+    /*Following specified a rounded-corner. Note: Old IE browsers do not support it.*/
+    -moz-border-radius:6px; -webkit-border-radius:6px; border-radius:6px; 
+}
+
+        
+
+/*Following settings should remain unchanged*/
+#mcTooltipWrapper {position:fixed;visibility:hidden;overflow:visible;z-index:8888;}
+#mcTooltip {float:left;position:relative; border-style:solid;}
+#mcttCo {position:absolute;text-align:left;}
+#mcttCo em, #mcttCo b {display:block; width:0; height:0;overflow:hidden;}

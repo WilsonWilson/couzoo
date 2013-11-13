@@ -1,0 +1,351 @@
+
+#osx-modal-content, #osx-modal-data, #osx-modal-register {display:none; clear:both;}
+
+/* Overlay */
+#osx-overlay {background-color:#000;}
+
+/* Container */
+#osx-container {background-color:#ebece6; color:#000; font:16px/24px Arial,sans-serif; padding-bottom:0px; width:336px; border:#f26625 solid 3px; border-top:none; -moz-border-radius-bottomleft:15px; -webkit-border-bottom-left-radius:15px; -moz-border-radius-bottomright:15px; -webkit-border-bottom-right-radius:15px; border-radius:0 0 15px 15px; -moz-box-shadow:0 0 64px #000; -webkit-box-shadow:0 0 64px #000; box-shadow:0 0 64px #000; margin-left:120px; height: 208px; overflow:hidden;}
+
+#osx-container #osx-modal-title, #osx-container-register #osx-modal-title {color:#fff; background-color:#603912; border-bottom:1px solid #ccc; font-weight:bold; padding:6px 8px;}
+#osx-container .close,#osx-container-register .close {display:none; position:absolute; right:0; top:0;}
+#osx-container .close a, #osx-container-register .close a {display:block; color:#fff; font-weight:bold; padding:5px 12px 0; text-decoration:none; text-shadow:0 1px 0 #f4f4f4;}
+#osx-container .close a:hover, #osx-container-register .close a:hover {color:#f26625;}
+#osx-container #osx-modal-data, #osx-container-register #osx-modal-data {font-size:12px; padding:6px 12px;}
+#osx-container h2, #osx-container-register h2 {margin:12px 0px 2px 0px; font-family:Arial, Helvetica, sans-serif; font-size:18px; color:#603912; font-weight:bold;}
+#osx-container p, #osx-container-register p {margin-bottom:20px;}
+#osx-container span, #osx-container-register span {color:#777;}
+
+
+
+#osx-container-register {background-color:#ebece6; color:#000; font:16px/24px Arial,sans-serif; padding-bottom:4px; width:500px; border:#f26625 solid 3px; border-top:none; -moz-border-radius-bottomleft:15px; -webkit-border-bottom-left-radius:15px; -moz-border-radius-bottomright:15px; -webkit-border-bottom-right-radius:15px; border-radius:0 0 15px 15px; -moz-box-shadow:0 0 64px #000; -webkit-box-shadow:0 0 64px #000; box-shadow:0 0 64px #000; margin-left:128px;}
+
+
+
+.styled-select select {
+    width: 310px;
+	height:42px;/*only for homepage search*/
+	margin-bottom:0px;
+    font-size:14px;
+    font-weight:bold;
+    padding:10px 6px;
+    border:1px solid #603912;
+	color:#9a8a7a;
+	-moz-border-radius: 6px;
+	border-radius: 6px;	
+	background:#eaeaea;
+}
+
+.styled-select option, {
+ 	margin:10px;
+	color:#f26625;
+}
+
+.styled-select
+{
+    width: 300px;
+	height:42px;/*only for homepage search*/
+	float:left;
+	background:#eaeaea;
+	margin:2px 0px;
+}
+
+
+
+/*Log-in and Register Only*/
+
+#advancedCall input, #advancedCall2 input
+{
+    width:410px;/*changed for cart log-in*/
+    height:50px;/*only for homepage search*/
+	margin-bottom:10px;
+    font-size:16px;
+    font-weight:bold;
+    padding-left:15px;
+	background:#F4F4F4;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+}
+
+
+/*for cart account log-in, sign up, guest page*/
+#advancedCall .sign-in-column-left input, #advancedCall .sign-in-column-right input
+{
+    width:310px;/*changed for cart log-in*/
+    height:50px;/*only for homepage search*/
+	margin-bottom:10px;
+    font-size:16px;
+    font-weight:bold;
+    padding-left:15px;
+	background:#F4F4F4;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+}
+
+#advancedCall-minicart input
+{
+    width:118px;/*changed for cart log-in*/
+    height:20px;/*only for homepage search*/
+	margin-left:23px;
+	text-align:center;
+    font-size:12px;
+    padding-left:5px;
+	background:#F4F4F4;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+}
+
+#advancedCall2 textarea
+{
+    width:698px;/*changed for cart log-in*/
+    height:200px;/*only for homepage search*/
+    font-size:16px;
+    font-weight:bold;
+    margin:3px;
+    padding:8px 4px 8px 8px;
+	background:#F4F4F4;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+}
+
+
+#advancedCall textarea
+{
+    font-size:14px;
+	margin:3px;
+    padding:8px;
+	background:#F4F4F4;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+}
+
+#advancedCallLogin input 
+{
+    width:300px;/*changed for cart log-in*/
+    height:40px;/*only for homepage search*/
+	margin:2px 0px;
+    font-size:14px;
+    font-weight:bold;
+    padding-left:8px;
+	background:#eaeaea;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	position:relative;
+	z-index:999;
+}
+
+
+
+#advancedCallBrowse input
+{
+    width:235px;/*changed for cart log-in*/
+    height:50px;/*only for homepage search*/
+	margin:6px 0px;
+    font-size:16px;
+    font-weight:bold;
+    padding-left:15px;
+	background:#F4F4F4;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+}
+
+#stickyheader #advancedCall input
+{
+    width:315px;/*changed for cart log-in*/
+    height:40px;/*only for homepage search*/
+	margin:10px 0px 0px 14px;
+    font-size:14px;
+    font-weight:bold;
+    padding-left:8px;
+	background:#eaeaea;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	position:relative;
+	z-index:999;
+}
+
+
+
+
+
+
+#advancedCall3 input 
+{
+    width:335px;
+    height:50px;
+	margin-bottom:10px;
+    font-size:16px;
+    font-weight:bold;
+    padding-left:15px;
+	background:#F4F4F4;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+}
+
+#osx-modal-data #advancedCall3 input 
+{
+    width:225px;/*changed for cart log-in*/
+    height:40px;/*only for homepage search*/
+	margin:2px 0px;
+    font-size:14px;
+    font-weight:bold;
+    padding-left:8px;
+	background:#eaeaea;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	position:relative;
+	z-index:999;
+}
+
+#advancedCall3 #line{
+	width:473px;
+	height:1px;
+	margin:10px 0px;
+	background-color:#603912;
+	clear:both;
+}
+
+#register-preferences {
+	width:453px;
+	margin:6px 0px;
+	min-height:200px;
+	}	
+
+
+.demoFocus
+{
+    color:#FFB366;
+	
+    border:1px solid #f26625;	
+	
+	-moz-box-shadow: 0px 0px 8px #f26625;
+	-webkit-box-shadow: 0px 0px 12px #f26625;
+	box-shadow: 0px 0px 8px #f26625;
+	
+	-moz-transition: -moz-box-shadow 1s, color 1s; /* Firefox 4 */
+	-webkit-transition: -webkit-box-shadow 1s, color 1s; /* Safari and Chrome */
+	-o-transition: box-shadow 1s, color 1s; /* Opera */
+}
+
+.demoFocus-none
+{
+    color:#603912;
+	border:none;
+	background:none;	
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	-moz-transition: none; /* Firefox 4 */
+	-webkit-transition: none; /* Safari and Chrome */
+	-o-transition: none; /* Opera */
+	height:22px;
+}
+
+.demoBlur
+{
+    color:#9a8a7a;
+    border:1px solid #603912;
+}
+
+.demoNotEqualToDefault
+{
+    color:#f26625;
+    border:1px solid #f26625;
+}
+
+.demoKeydown
+{
+    color:#f26625;
+    border:1px solid #f26625;
+	background:#ddd;
+}
+
+
+#advancedCall input[type=radio], #advancedCall input[type=checkbox], #advancedCall3 input[type=checkbox]
+{
+    width:20px;
+    padding-left:15px;
+	float:left;
+	display:block;
+	margin:-16px 4px 0px 0px;
+	background:none;
+}
+#advancedCall input[type=checkbox], #advancedCall3 input[type=checkbox], #advancedCall3 input[type=radio]
+{
+    width:20px;
+	height:20px;
+    margin-top:-2px;
+}
+
+#advancedCallLogin input[type=checkbox]
+{
+    width:20px;
+	float:left;
+	display:block;
+	margin:-12px 4px 0px 0px;
+	background:none;
+}
+
+span:not(#foo) > input:hover + label, span:not(#foo) > input:focus + label, span:not(#foo) > input + label:hover, span:not(#foo) > input:focus + label
+	{color: #f26625;-moz-transition: color 1s; /* Firefox 4 */
+	-webkit-transition: color 1s; /* Safari and Chrome */
+	-o-transition: color 1s; /* Opera */}
+
+span:not(#foo) > input + label
+{
+	background: url(gr_custom-inputs.png) 0 -1px no-repeat;
+	height: 16px;
+}
+span:not(#foo) > input[type=radio] + label	{ background-position: 0 -161px; }
+
+/* Checked styles */
+span:not(#foo) > input[type=radio]:checked + label 							{ background-position: 0 -241px; }
+span:not(#foo) > input[type=checkbox]:checked + label 							{ background-position: 0 -81px; }
+span:not(#foo) > input[type=checkbox]:hover:checked + label,
+span:not(#foo) > input[type=checkbox]:focus:checked + label,
+span:not(#foo) > input[type=checkbox]:checked + label:hover,
+span:not(#foo) > input[type=checkbox]:focus:checked + label 					{ background-position: 0 -101px; }
+span:not(#foo) > input[type=radio]:hover:checked + label,
+span:not(#foo) > input[type=radio]:focus:checked + label,
+span:not(#foo) > input[type=radio]:checked + label:hover,
+span:not(#foo) > input[type=radio]:focus:checked + label 						{ background-position: 0 -261px; }
+
+/* Hover & Focus styles */
+span:not(#foo) > input[type=checkbox]:hover + label,
+span:not(#foo) > input[type=checkbox]:focus + label,
+span:not(#foo) > input[type=checkbox] + label:hover 							{ background-position: 0 -21px; }
+span:not(#foo) > input[type=radio]:hover + label,
+span:not(#foo) > input[type=radio]:focus + label,
+span:not(#foo) > input[type=radio] + label:hover								{ background-position: 0 -181px; }
+
+/* Active styles */
+span:not(#foo) > input[type=checkbox]:active + label,
+span:not(#foo) > input[type=checkbox] + label:hover:active						{ background-position: 0 -41px; }
+span:not(#foo) > input[type=radio]:active + label,
+span:not(#foo) > input[type=radio] + label:hover:active						{ background-position: 0 -201px; }
+span:not(#foo) > input[type=checkbox]:active:checked + label,
+span:not(#foo) > input[type=checkbox]:checked + label:hover:active				{ background-position: 0 -121px; }
+span:not(#foo) > input[type=radio]:active:checked + label,
+span:not(#foo) > input[type=radio]:checked + label:hover:active				{ background-position: 0 -281px; }
+
+/* Disabled styles */
+span:not(#foo) > input[type=checkbox]:disabled + label,
+span:not(#foo) > input[type=checkbox]:hover:disabled + label,
+span:not(#foo) > input[type=checkbox]:focus:disabled + label,
+span:not(#foo) > input[type=checkbox]:disabled + label:hover,
+span:not(#foo) > input[type=checkbox]:disabled + label:hover:active			{ background-position: 0 -61px; }
+span:not(#foo) > input[type=radio]:disabled + label,
+span:not(#foo) > input[type=radio]:hover:disabled + label,
+span:not(#foo) > input[type=radio]:focus:disabled + label,
+span:not(#foo) > input[type=radio]:disabled + label:hover,
+span:not(#foo) > input[type=radio]:disabled + label:hover:active				{ background-position: 0 -221px; }
+span:not(#foo) > input[type=checkbox]:disabled:checked + label,
+span:not(#foo) > input[type=checkbox]:hover:disabled:checked + label,
+span:not(#foo) > input[type=checkbox]:focus:disabled:checked + label,
+span:not(#foo) > input[type=checkbox]:disabled:checked + label:hover,
+span:not(#foo) > input[type=checkbox]:disabled:checked + label:hover:active	{ background-position: 0 -141px; }
+span:not(#foo) > input[type=radio]:disabled:checked + label,
+span:not(#foo) > input[type=radio]:hover:disabled:checked + label,
+span:not(#foo) > input[type=radio]:focus:disabled:checked + label,
+span:not(#foo) > input[type=radio]:disabled:checked + label:hover,
+span:not(#foo) > input[type=radio]:disabled:checked + label:hover:active		{ background-position: 0 -301px; }

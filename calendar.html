@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<title>jQuery UI Example Page</title>
+		<link type="text/css" href="calendar/css/custom-theme/jquery-ui-1.7.3.custom.css" rel="stylesheet" />	
+		<script type="text/javascript" src="calendar/js/jquery-1.3.2.min.js"></script>
+        <script type="text/javascript" src="calendar/js/jquery-ui-1.7.3.custom.min.js"></script>
+        <script type="text/javascript" src="calendar/js/hover.js"></script>
+        
+
+	
+	</head>
+	<body>
+	
+<script type="text/javascript">
+	$(function() {
+		var dates = $( "#from, #to" ).datepicker({
+			defaultDate: "+1w",
+			changeMonth: true,
+			numberOfMonths: 2,
+			onSelect: function( selectedDate ) {
+				var option = this.id == "from" ? "minDate" : "maxDate",
+					instance = $( this ).data( "datepicker" ),
+					date = $.datepicker.parseDate(
+						instance.settings.dateFormat ||
+						$.datepicker._defaults.dateFormat,
+						selectedDate, instance.settings );
+				dates.not( this ).datepicker( "option", option, date );
+			}
+		});
+	});
+</script>
+
+<script type="text/javascript">
+	$(function() {
+		var dates = $( "#from2, #to2" ).datepicker({
+			defaultDate: "+1w",
+			changeMonth: true,
+			numberOfMonths: 2,
+			onSelect: function( selectedDate ) {
+				var option = this.id == "from" ? "minDate" : "maxDate",
+					instance = $( this ).data( "datepicker" ),
+					date = $.datepicker.parseDate(
+						instance.settings.dateFormat ||
+						$.datepicker._defaults.dateFormat,
+						selectedDate, instance.settings );
+				dates.not( this ).datepicker( "option", option, date );
+			}
+		});
+	});
+</script>
+
+
+<div class="demo">
+
+<label for="from">From</label>
+<input type="text" id="from" name="from"/>
+<label for="to">to</label>
+<input type="text" id="to" name="to"/>
+
+</div><!-- End demo -->
+
+<div class="demo">
+
+<label for="from">From</label>
+<input type="text" id="from2" name="from"/>
+<label for="to">to</label>
+<input type="text" id="to2" name="to"/>
+
+</div><!-- End demo -->
+
+
+
+<div class="demo-description">
+<p>Select the date range to search for.</p>
+</div><!-- End demo-description -->
+
+	</body>
+</html>
+
+

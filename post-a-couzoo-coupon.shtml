@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+
+<link rel="stylesheet" href="css/style.css" type="text/css" /><!--gerneral-->
+<link type='text/css' href='css/login.css' rel='stylesheet' media='screen' /><!--Login-->
+<link rel="stylesheet" href="css/log-in-changer.css">
+        <!--[if IE 9]>
+		<style type="text/css">
+		#le-tabs.oldlook #le-tabs_tab_container a.X-tab{background-image:url(images/X-tab.png); background-repeat:no-repeat; color:#603912; margin:0px 1px 0px 1px;}
+        </style>
+		<![endif]-->
+        
+        <!--[if lte IE 8]>
+		<link rel="stylesheet" href="css/ie9-or-less.css" type="text/css" />
+		<![endif]-->
+        
+
+    <!-- FOR DROPDOWN -->
+    <script type='text/javascript' src='js/login-jquery.js'></script>
+    <script type='text/javascript' src='js/login-jquery.simplemodal.js'></script>
+    <script type='text/javascript' src='js/login.js'></script>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+    
+    
+    <!-- CSS changes for if Mac OS (mainly in tabbed slider navigation)-->    
+    <script src="js/if-mac.js" type="text/javascript"></script>    
+    
+ 
+      <!--FOR FORM-->
+	<script src="js/jquery.formHighlighter.js" type="text/javascript"></script>
+    <script src="js/query.formHighlighterSettings.js" type="text/javascript"></script>
+  
+
+
+	<!-- Add fancyBox main JS and CSS files -->
+	<!--#include virtual="fancybox.html" -->
+	<script type="text/javascript" src="fancybox/source/jquery.fancybox.js?v=2.0.6"></script>
+	<link rel="stylesheet" type="text/css" href="fancybox/source/jquery.fancybox.css?v=2.0.6" media="screen" />
+
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+
+			$('.fancybox').fancybox();
+
+			$("#fancybox-manual-a").click(function() {
+				$.fancybox.open('1_b.jpg');
+			});
+			
+		});
+	</script>
+
+
+
+	<style type="text/css">
+		.fancybox-custom .fancybox-skin {
+			box-shadow: 0 0 50px #222;
+		}
+
+	</style>
+    
+<!--For log-in (customer/merchant login/sign up) changer-->
+    <script src="js/log-in-changer.js"></script>   
+
+</head>
+
+<body>
+
+<!--START OPEN and CLOSE ALL SIDE BUTTON-->
+<!--#include virtual="open-close-all-tab.html" -->
+<!--END OPEN and CLOSE ALL SIDE BUTTON-->
+
+<!--START HEADER & Log-in, Log-out, Register, My Account-->
+<!--#include virtual="header.php" -->
+<!--END HEADER & Log-in, Log-out, Register, My Account-->
+
+
+<div id="container">
+
+<div id="page-top-push"></div>
+
+<div id="main-column">
+
+
+
+<!--Start Merchant Header-->
+<div id="general-page-container">
+<div id="general-page-header">
+
+<h1>How to Post Your Coupon on CouZoo</h1>
+
+<p>
+To post your coupon on CouZou you must be a registerd mechant. If you have not yet registered you can <a href='#' id="login-link" class='osx' style="font-size:16px; color:#00988d; text-decoration:underline;">Register here</a>. It's quick, easy and free to register.
+</p>
+<p>
+Once you are registereed and  signed in click the "Create a Coupon" tab and simply follow the short, step-by-step form and that's it. You're coupon will begin to appear on CouZoo shortly after that.
+</p>
+<p>
+At CouZoo you create your coupon, not us. You can use your images, write your own copy, and set the sales limits, dates, and restircitons that fit you and your business best. We don't tell you what to do. It's your business, it should be your coupon. </p>
+<p>If for any reason you would like our advice or input just give us a call at 555.555.5555 or <a href="contact-couzoo.shtml">contact us here</a>. We try to answer for everyone but we're a small business so If you don't get in touch with us right away, we'll get back to you soon, we promise.  
+</p>
+
+</div><!--END general-page-header-->
+
+</div><!--END general-page-container-->
+       
+
+
+
+
+
+</div><!--END MAIN-COLUMN-->
+
+
+<div id="side-column"><!--start right side column-->
+</div><!--END right side column-->
+
+
+</div><!--end container-->
+<br clear="all"/>
+
+<!--START FOOTER-->
+<!--#include virtual="footer.html" -->
+<!--END FOOTER-->
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+
+/*Payment and finalize pourchase section*/
+#fstep_9 #payment-left-column{width:290px; min-height:200px; margin:0px 10px 20px 0px; padding: 0px 10px 10px 0px; border-right:thin #603912 solid; float:left;}
+#fstep_9 #payment-right-column{width:380px; min-height:200px; margin:0px 0px 20px 24px; padding: 0px; float:left; }
+
+#payment-right-column h2{font-family:Arial, Helvetica, sans-serif; font-size:22px; color:#603912; text-align:left; line-height:24px; font-weight:bold; letter-spacing:-1px; margin:0px 0px 10px 0px; clear:both;}
+#payment-right-column .showBillingAddress {color:#603912; font-size:14px;}
+#payment-right-column a.change:link, #payment-right-column a.change:active, #payment-right-column a.change:visited{color:#00988d; text-decoration:none; font-size:14px; font-family:Arial, Helvetica, sans-serif;}
+#payment-right-column a.change:hover{color:#f26625;}
+#payment-right-column .dIB {width:250px; height:34px; color:#603912; font-size:14px; font-weight:bold; clear:all; margin:2px 10px;}
+
+
+ul.priceList {list-style:none; color:#603912;}
+ul.priceList li strong, ul.priceList li em {font-size:14px; display:inline-block;}
+ul.priceList li strong {width:125px;text-align:left; margin-right:5px;}
+ul.priceList li em {width:50px;text-align:right; margin-right:5px;}
+
+
+

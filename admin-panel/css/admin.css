@@ -1,0 +1,207 @@
+#admin-main {
+	width:760px;
+	float:left;
+	margin-top: -137px;
+}
+
+#admin-dash-header-container {
+	width:757px; 
+	height:auto; 
+	position:relative; 
+	z-index:0; 
+	clear:both;
+	padding-bottom: 50px;
+}
+
+#admin-dash-header {
+	width:754px; 
+	height:auto; 
+	padding-top:0px; 
+	margin:0px; 
+	background-color:#fff;
+	border:#f26625 3px solid; 
+	-moz-border-radius: 12px; 
+	border-radius: 12px; 
+}
+
+#search-header {
+ 	padding-bottom: 25px;
+}
+
+#admin-main h2 { 
+	color: #f26625; 
+	font-size: 22px;
+	text-align: center;
+	padding-bottom: 5px;
+}
+
+#admin-main h3 { 
+	color: #f26625; 
+	font-size: 18px;
+	text-align: center;
+	padding-bottom: 5px;
+}
+
+#masterStatus {
+	display: none;
+	text-align: center;
+	padding: 5px;
+}
+
+.hide {
+	display: none;
+}
+
+.click-me:hover {
+	cursor: pointer;
+}
+
+.admin-search-btn {width:102px; height:42px; background-image:url(../../images/search-btn.jpg); background-repeat:no-repeat; background-position: 1px 1px; margin: -33px 0px 0px 400px;position:relative; z-index:999;}
+.admin-search-btn:hover {cursor:pointer; width:102px; height:42px; background-image:url(../../images/search-btn.jpg); background-repeat:no-repeat; background-position: 1px -41px;}
+
+#center-search {
+	text-align: center;
+	float: left;
+	margin-bottom: 25px;
+}
+
+#center-search input {
+	margin: 0px -33px 0px 0px;
+}
+
+.admin-nav {
+	text-align: center;
+	margin: 10px;
+}
+
+.nav-item {
+	display: inline;
+	color: #f26625;
+	text-decoration: underline;
+	padding: 5px;
+}
+
+.nav-item:hover {
+	cursor: pointer;
+	font-weight: bold;
+}
+
+#admin-main table {
+	border-collapse: collapse;
+	padding: 5px 2px;
+}
+
+#admin-main tr:nth-child(even) {
+    	background-color: #f26625;
+	color: #FFF !important;
+}
+
+#admin-main tr:nth-child(odd) {
+    	color: #000 !important;
+}
+
+#admin-main .header td {
+	text-align: center;
+	font-weight: bold;
+}
+
+#admin-main .data td {
+	text-align: center;
+	padding: 2px;
+}
+
+tr:nth-child(even) .edit_style  {
+	color: #FFF !important;
+}
+
+tr:nth-child(odd) .edit_style {
+    	color: #000 !important;
+}
+
+.edit_style:hover {
+	cursor: pointer;
+	font-weight: bold !important;
+}
+
+.delete_coupon:hover {
+	cursor: pointer;
+	font-weight: bold;
+}
+
+.admin-submit-btn {
+	padding: 25px;
+}
+
+.edit_coupon h2, .edit_promo h2 {
+	font-family: Arial, Helvetica, sans-serif; 
+	color: #f26625; 
+	font-size: 22px;
+	text-align: center;
+	padding-bottom: 5px;
+}
+
+
+.edit_coupon ul, .edit_promo ul {
+    display: block;
+    list-style: none;
+    padding: 0;
+    width: 700px;
+}
+
+.edit_coupon li, .edit_promo li {
+    display: block;
+    list-style: none;
+    padding: 10px 0 0 0;
+    margin: 0 0 0 0;
+}
+
+.edit_coupon li label, .edit_promo li label {
+    font-size: 11px;
+    font-weight: bold;
+    width: 100px;
+    float: left;
+}
+
+.edit_coupon li input, .edit_promo li input {
+    width: 550px;
+    float: left;
+}
+
+#add_promo h2 {
+	font-family: Arial, Helvetica, sans-serif; 
+	color: #f26625; 
+	font-size: 22px;
+	text-align: center;
+	padding-bottom: 5px;
+}
+
+#add_promo ul {
+    display: block;
+    list-style: none;
+    padding: 0;
+    width: 450px;
+}
+
+#add_promo li {
+    display: block;
+    list-style: none;
+    padding: 10px 0 0 0;
+    margin: 0 0 0 0;
+}
+
+#add_promo li label {
+    font-size: 11px;
+    font-weight: bold;
+    width: 150px;
+    float: left;
+}
+
+#add_promo li input {
+    width: 200px;
+    float: left;
+}
+
+.delete_promo:hover {
+	cursor: pointer;
+	font-weight: bold;
+}

@@ -1,0 +1,1101 @@
+<?php
+require_once("includes/config.php");
+
+if(!$couzoo->CheckLogin())
+{
+    $couzoo->RedirectToURL("login-merchant.php");
+    exit;
+}
+
+if(isset($_POST['submit_coupon']))
+{
+   if($couzoo->AddCoupon())
+   {
+        $couzoo->RedirectToURL("merchant-dash.php");
+   }
+}
+?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+
+<link rel="stylesheet" href="css/style.css" type="text/css" /><!--gerneral-->
+<link type='text/css' href='css/login.css' rel='stylesheet' media='screen' /><!--Login-->
+<link rel="stylesheet" href="css/create-coupon.css" type="text/css"/>
+<link rel="stylesheet" href="css/cart-styles.css" type="text/css"/>
+
+<!--for calendar-->
+   		<link type="text/css" href="calendar/css/custom-theme/jquery-ui-1.7.3.custom.css" rel="stylesheet" />	
+
+        <!--[if IE 9]>
+		<style type="text/css">
+		#le-tabs.oldlook #le-tabs_tab_container a.X-tab{background-image:url(images/X-tab.png); background-repeat:no-repeat; color:#603912; margin:0px 1px 0px 1px;}
+        #merch-dash-header-container #le-tabs.oldlook #le-tabs_tab_container a.tab-2{width:180px; height:52px; padding-top:8px; margin:0px; background-color:#fff;border:#603912 3px solid; -moz-border-radius: 12px; border-radius: 12px; margin:0px 1px 0px 0px; text-align:center; color:#603912;}
+        </style>
+		<![endif]-->
+        
+        <!--[if lte IE 8]>
+		<link rel="stylesheet" href="css/ie9-or-less.css" type="text/css" />
+		<![endif]-->
+        
+    <!-- CSS changes for if Mac OS (mainly in tabbed slider navigation)-->    
+    <script type="text/javascript" src="js/if-mac.js"></script>
+        
+ <!--For Create a Calendar-->
+    <script type="text/javascript" src="calendar/js/jquery-ui-1.7.3.custom.min.js"></script>
+    <script type="text/javascript" src="calendar/js/hover.js"></script>          
+        
+    <!-- FOR DROPDOWN -->
+    <script type='text/javascript' src='js/login-jquery.js'></script>
+    <script type='text/javascript' src='js/login-jquery.simplemodal.js'></script>
+    <script type='text/javascript' src='js/login.js'></script>
+        
+<!--Form Slider-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.4.3.min.js" type="text/javascript"></script>
+	<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+
+<!--For div content changer box -->
+	<script type="text/javascript" src="js/box/jquery-1.7.min.js"></script>
+    
+
+<!--Expand and collapse div-->  
+    <script type="text/javascript" src="js/expander.js"></script> 
+
+<!--for tooptips -->
+<link type="text/css" rel="stylesheet" href="css/Tooltip.css" />
+<script type="text/javascript" src="js/Tooltip.js"></script> 
+
+   
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+	<script src="js/jquery.formHighlighter.js" type="text/javascript"></script>
+    <script src="js/query.formHighlighterSettings.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/LXP.js"></script>
+    <script type="text/javascript" src="js/browser-select.js"></script>    
+
+<!--[if IE]>
+<style type='text/css'>
+* html .myButton { display:inline; }  /* hack per IE 6 */
+* + html .myButton { display:inline; }  /* hack per IE 7 */
+</style>
+<![endif]-->	
+
+<!--for auto populate-->   
+<script type="text/javascript">
+    $(function() {                                       // <== Doc Ready
+    $("#featured-item").change(function() {                  // When changed
+        $('#featured-item-2').val(this.value);                  // copy it over 
+		$('#featured-item-3').val(this.value);                  // copy it over
+    });
+	 $("#retail-price").change(function() {                  // When changed
+        $('#retail-price-2').val(this.value);                  // copy it over
+		$('#retail-price-3').val(this.value);                  // copy it over 
+    });
+	 $("#sale-price").change(function() {                  // When hanged
+        $('#sale-price-2').val(this.value);                  // copy it over
+		$('#sale-price-3').val(this.value);                  // copy it over
+    });
+});
+</script>
+
+    
+    <!--Form Highlighter plugin-->
+    <script src="js/jquery.formHighlighter.js" type="text/javascript"></script>
+    
+    <!--Demo examples-->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            /*Calling your own functions through Form Highlighter*/
+            $("#advancedCall").formHighlighter({
+                classFocus: 'demoFocus',
+                classBlur: 'demoBlur',
+                classKeyDown: 'demoKeydown',
+                classNotEqualToDefault: 'demoNotEqualToDefault',
+                clearField:false,
+                onBlur: function () { demoBlur(); },
+                onFocus: function () { demoFocus($(this)); }
+            });
+            /*Your own function that will be called from Form Highlighter*/
+            function demoBlur() {
+                $("#advancedCall input.demoBlur:not(input:hidden)").stop(0, 1).fadeTo(500, 1.0);
+            }
+            function demoFocus(element) {
+                $("#advancedCall input.demoBlur:not(input:hidden)").stop(0, 1).fadeTo(500, 0.5);
+            }
+        }); 
+    </script>
+    
+      <script type="text/javascript" src="js/jquery.validate.js"></script>
+ 
+    <!--End create a coupon-->
+       
+       	<!--Start radio button show hide divs-->
+	<script type="text/javascript">//&lt;![CDATA[
+        $(window).load(function(){
+        $(function() {
+            $("[name=toggler]").click(function() {
+                $('.toHide').hide();
+                $("#blk-" + $(this).val()).show('slow');
+				$("#blk-b-" + $(this).val()).show('slow');
+            });
+        });
+        });//]]&gt; 
+    </script> 
+    
+    <script type="text/javascript">//&lt;![CDATA[
+        $(window).load(function(){
+        $(function() {
+            $("[name=maxPurch]").click(function() {
+                $('.toHide').hide();
+                $("#paymaxp-" + $(this).val()).show('slow');
+				$("#paymaxp-b-" + $(this).val()).show('slow');
+            });
+        });
+        });//]]&gt; 
+    </script>
+    
+    <script type="text/javascript">//&lt;![CDATA[
+        $(window).load(function(){
+        $(function() {
+            $("[name=ad]").click(function() {
+                $('.toHide').hide();
+                $("#adblk-" + $(this).val()).show('slow');
+				$("#adblk-b-" + $(this).val()).show('slow');
+            });
+        });
+        });//]]&gt; 
+    </script> 
+        
+    <script type="text/javascript">//&lt;![CDATA[
+        $(window).load(function(){
+        $(function() {
+            $("[name=paymentForm]").click(function() {
+                $('.toHide').hide();
+                $("#payblk-" + $(this).val()).show('slow');
+				$("#payblk-b-" + $(this).val()).show('slow');
+            });
+        });
+        });//]]&gt; 
+    </script> 
+    
+ 	<!--Browse view check box, check all function-->
+	<script language='JavaScript'>
+      //For Food and Drink checkboxes
+	  checked = false;
+      function checkedAll () {
+        if (checked == false){checked = true}else{checked = false}
+	for (var i = 0; i < document.getElementById('myform').elements.length; i++) {
+	  document.getElementById('myform').elements[i].checked = checked;
+	}
+    }
+
+      //For Beauty checkboxes
+	  checked = false;
+      function checkedAll2 () {
+        if (checked == false){checked = true}else{checked = false}
+	for (var i = 0; i < document.getElementById('myform2').elements.length; i++) {
+	  document.getElementById('myform2').elements[i].checked = checked;
+	}
+    }
+	
+	 //For Fitness checkboxes
+	  checked = false;
+      function checkedAll3 () {
+        if (checked == false){checked = true}else{checked = false}
+	for (var i = 0; i < document.getElementById('myform3').elements.length; i++) {
+	  document.getElementById('myform3').elements[i].checked = checked;
+	}
+    }
+	
+	//For Medical checkboxes
+	  checked = false;
+      function checkedAll4 () {
+        if (checked == false){checked = true}else{checked = false}
+	for (var i = 0; i < document.getElementById('myform4').elements.length; i++) {
+	  document.getElementById('myform4').elements[i].checked = checked;
+	}
+    }
+	
+	 //For Activities Checkboxes
+	  checked = false;
+      function checkedAll5 () {
+        if (checked == false){checked = true}else{checked = false}
+	for (var i = 0; i < document.getElementById('myform5').elements.length; i++) {
+	  document.getElementById('myform5').elements[i].checked = checked;
+	}
+    }
+	
+	//For Retail and Services Checkboxes
+	  checked = false;
+      function checkedAll6 () {
+        if (checked == false){checked = true}else{checked = false}
+	for (var i = 0; i < document.getElementById('myform6').elements.length; i++) {
+	  document.getElementById('myform6').elements[i].checked = checked;
+	}
+    }
+	
+	//For Other Checkboxes
+	  checked = false;
+      function checkedAll7 () {
+        if (checked == false){checked = true}else{checked = false}
+	for (var i = 0; i < document.getElementById('myform7').elements.length; i++) {
+	  document.getElementById('myform7').elements[i].checked = checked;
+	}
+    }
+    </script>
+    
+    
+	<!-- Add fancyBox main JS and CSS files -->
+	<?php include 'fancybox.html'; ?>
+
+<style type="text/css">
+.check-box-md {clear:both; margin:0px 0px 4px 0px;}
+</style>
+
+</head>
+
+<body>
+
+<?php include "header.php"; ?>
+
+<div id="container">
+
+<div id="page-top-push"></div>
+
+<div id="main-column">
+
+<!--Start Merchant Header-->
+<div id="merch-dash-header-container">
+
+<!--START LXP -->
+<div id="le-tabs" class="example3 oldlook animSpeed-200 direction-horizontal  autoOrder-false autoplayInterval-0">
+			
+			<div id="le-tabs_tab_container">
+				<a href="#content-2" id="first_tab" class="tab-2x3 box-trigger" data-activates="defualt">create a coupon</a>
+            </div>
+			
+			<div id="le-tabs_content_container">
+				<div id="le-tabs_content_inner">
+
+                    <div id="content-2" class="le-tabs_content merchant-2b-height">
+                        <div id="tab-2-top-x3"></div>
+                    
+                    	 <div id="box-instructions">
+                                
+                                <a href="javascript:void(0);" class="create-1-coupon-btn box-trigger" data-activates="default"></a>
+                               
+                               <!-- Double and Triple Coupons (add later)
+                               <a href="javascript:void(0);" class="create-2-coupon-btn box-trigger" data-activates="fifth"></a>
+                                <a href="javascript:void(0);" class="create-3-coupon-btn box-trigger" data-activates="sixth"></a> -->
+                                <br clear="all"/>
+                                
+                              	<div id="box3">
+                                    <div class="changeable defualt"></div>
+                                    <div class="changeable fifth"></div>
+                                    <div class="changeable sixth"></div>
+                              	</div>
+                              
+        				</div>
+                   </div><!--End Box 2-->    
+                   
+                    <br clear="all"/><br clear="all"/>
+                                    
+                   </div>
+          </div>
+          </div>
+          
+</div><!--END merch-dash-container-->         
+<br clear="all"/>
+
+<div id="box-rm" >
+    <div class="changeable empty">
+            <div></div>
+    </div>
+    
+    <!--Start create a single coupon-->
+	<div class="changeable forth">
+        <div id="header-bg" class="header-single-coupon"><h2>Below you can create a single coupon.</h2></div>
+<div><span class='error'><?php echo $couzoo->GetErrorMessage(); ?></span></div>
+            <div id="create-a-coupon">
+              <div id="advancedCall">
+   				<form style="" id="form1" action="<?php echo $couzoo->GetSelfScript(); ?>" method="post" name="advancedCall">
+			       <input type='hidden' name='submit_coupon' id='submitted' value='1'/>
+                <ul class="acc" id="acccreate">
+                
+                
+ 					<li>
+                        <h3><span class="cc-step-title"><strong>1:</strong>Select Coupon Catagory</span></h3>
+                        <div class="acc-section">
+                            <div class="acc-content">
+                               <p><span class="step-copy">What is the catagory or industry your coupon represents?</span></p>
+                               
+                                <!--Start Checkbox options-->
+                               
+                        <br clear="all"/>
+                        <br clear="all"/>
+
+                        <div id="customer-pref-container">
+                           
+                            <div id="customer-pref-column-two">
+                                <form id="myform">
+                                    <div id="catagory-top">
+                                        <div id="catagory-title">
+                                        <span class="check-all-title" name='checkall' onclick='checkedAll();'><h1>Food & Drink</h1></span>
+                                        </div>               
+                                        <div id="check-all"><span class="check-all-btn" name='checkall' onclick='checkedAll();'>all</span></div>
+                                    </div><!--END catagory top-->
+                                	<br clear="all"/>
+                                    <div class="catagory-box">
+                                      <div class="check-box-md"><input type="checkbox" name="category" value="Restauants">&nbsp;<label>Restauants</label></div>
+                                      <div class="check-box-md"><input type="checkbox" name="category" value="Bar">&nbsp;<label>Bars & Nightlife</label></div>
+                                    </div>
+                            
+                                    <div id="catagory-top">
+                                        <div id="catagory-title">
+                                        <span class="check-all-title" name='checkall' onclick='checkedAll2();'><h1>Beauty</h1></span>
+                                        </div>               
+                                        <div id="check-all"><span class="check-all-btn" name='checkall' onclick='checkedAll2();'>all</span></div>
+                                    </div><!--END catagory top-->
+                                    <br clear="all"/>
+                                    <div class="catagory-box">
+                                      <div class="check-box-md"><input type="checkbox" name="category" value="Massage">&nbsp;<label>Massage</label></div>
+                                      <div class="check-box-md"><input type="checkbox" name="category" value="Facial">&nbsp;<label>Facial</label></div>
+                                      <div class="check-box-md"><input type="checkbox" name="category" value="NailCare">&nbsp;<label>Nail Care</label></div>
+                                      <div class="check-box-md"><input type="checkbox" name="category" value="Tanning">&nbsp;<label>Tanning</label></div>
+                                      <div class="check-box-md"><input type="checkbox" name="category" value="Hair">&nbsp;<label>Hair</label></div>
+                                      <div class="check-box-md"><input type="checkbox" name="category" value="Waxing">&nbsp;<label>Waxing</label></div>
+                                      <div class="check-box-md"><input type="checkbox" name="category" value="Spa">&nbsp;<label>Spa</label></div>
+                                      <div class="check-box-md"><input type="checkbox" name="category" value="TeethWhitening">&nbsp;<label>Teeth Whitening</label></div>
+                                    </div>
+                                
+                                    <div id="catagory-top">
+                                        <div id="catagory-title">
+                                        <span class="check-all-title" name='checkall' onclick='checkedAll3();'><h1>Fitness</h1></span>
+                                        </div>               
+                                        <div id="check-all"><span class="check-all-btn" name='checkall' onclick='checkedAll3();'>all</span></div>
+                                    </div><!--END catagory top-->
+                                    <br clear="all"/>
+                                    <div class="catagory-box">
+                                      <div class="check-box-md"><input type="checkbox" name="category" value="Yoga">&nbsp;<label>Yoga & Pilates</label></div>
+                                      <div class="check-box-md"><input type="checkbox" name="category" value="Gym">&nbsp;<label>Gym</label></div>
+                                      <div class="check-box-md"><input type="checkbox" name="category" value="BootCamp">&nbsp;<label>Boot Camp</label></div>
+                                      <div class="check-box-md"><input type="checkbox" name="category" value="MartialArts">&nbsp;<label>Martial Arts</label></div>
+                                      <div class="check-box-md"><input type="checkbox" name="category" value="Classes">&nbsp;<label>Classes</label></div>
+                                      <div class="check-box-md"><input type="checkbox" name="category" value="PersonalTraining">&nbsp;<label>Personal Training</label></div>
+                                    </div>
+                                
+                            </div><!--END Column One-->
+                    
+                    
+                            <div id="customer-pref-column-two">
+                               
+                                <div id="catagory-top">
+                                    <div id="catagory-title">
+                                    <span class="check-all-title" name='checkall' onclick='checkedAll4();'><h1>Medical</h1></span>
+                                    </div>               
+                                    <div id="check-all"><span class="check-all-btn" name='checkall' onclick='checkedAll4();'>all</span></div>
+                                </div><!--END catagory top-->
+                                <br clear="all"/>
+                                <div class="catagory-box">
+                                      <div class="check-box-md"><input type="checkbox" name="category" value="Vision">&nbsp;<label>Vision & Eye Care</label></div>
+                                      <div class="check-box-md"><input type="checkbox" name="category" value="Dental">&nbsp;<label>Dental</label></div>
+                                      <div class="check-box-md"><input type="checkbox" name="category" value="Chiropractor">&nbsp;<label>Chiropractor</label></div>
+                                      <div class="check-box-md"><input type="checkbox" name="category" value="SkinCare">&nbsp;<label>Skin Care</label></div>
+                                </div>
+                            
+                                    <div id="catagory-top">
+                                        <div id="catagory-title">
+                                        <span class="check-all-title" name='checkall' onclick='checkedAll5();'><h1>Activities</h1></span>
+                                        </div>               
+                                        <div id="check-all"><span class="check-all-btn" name='checkall' onclick='checkedAll5();'>all</span></div>
+                                    </div><!--END catagory top-->
+                                        <br clear="all"/>
+                                    <div class="catagory-box">
+                                      <div class="check-box-md"><input type="checkbox" name="category" value="Museums">&nbsp;<label>Museums</label></div>
+                                      <div class="check-box-md"><input type="checkbox" name="category" value="WineTasting">&nbsp;<label>Wine Tasting</label></div>
+                                      <div class="check-box-md"><input type="checkbox" name="category" value="Tours">&nbsp;<label>Tours</label></div>
+                                      <div class="check-box-md"><input type="checkbox" name="category" value="ComedyClubs">&nbsp;<label>Comedy Clubs</label></div>
+                                      <div class="check-box-md"><input type="checkbox" name="category" value="Shows">&nbsp;<label>Shows</label></div>
+                                      <div class="check-box-md"><input type="checkbox" name="category" value="LifeSkill">&nbsp;<label>Life Skill Classes</label></div>
+                                      <div class="check-box-md"><input type="checkbox" name="category" value="Golf">&nbsp;<label>Golf</label></div>
+                                      <div class="check-box-md"><input type="checkbox" name="category" value="Bowling">&nbsp;<label>Bowling</label></div>
+                                      <div class="check-box-md"><input type="checkbox" name="category" value="SkyDiving">&nbsp;<label>Sky Diving</label></div>
+                                      <div class="check-box-md"><input type="checkbox" name="category" value="OutdoorAdventure">&nbsp;<label>Outdoor Adventure</label></div>
+                                    </div>                            
+                                       
+                            </div><!--END Column Two-->
+                        
+                            <div id="customer-pref-column-two">
+                                                         
+                                 <div id="catagory-top">
+                                      <div id="catagory-title">
+                                      <span class="check-all-title" name='checkall' onclick='checkedAll6();'><h1>Retail & Services</h1></span>
+                                      </div>               
+                                    <div id="check-all"><span class="check-all-btn" name='checkall' onclick='checkedAll6();'>all</span></div>
+                                 </div><!--END catagory top-->
+                                   <br clear="all"/>
+                                <div class="catagory-box">
+                                      <div class="check-box-md"><input type="checkbox" name="category" value="Home Services">&nbsp;<label>Home Services</label></div>
+                                      <div class="check-box-md"><input type="checkbox" name="category" value="Clothing">&nbsp;<label>Clothing</label></div>
+                                      <div class="check-box-md"><input type="checkbox" name="category" value="Automotive">&nbsp;<label>Automotive</label></div>
+                                      <div class="check-box-md"><input type="checkbox" name="category" value="Photography">&nbsp;<label>Photography</label></div>
+                                </div>
+                            
+                                <div id="catagory-title">
+                                     <span class="check-all-title" name='checkall' onclick='checkedAll7();'><h1>Other</h1></span>
+                                </div>               
+                                <div id="check-all"><span class="check-all-btn" name='checkall' onclick='checkedAll7();'>all</span></div>
+                                     <br clear="all"/>
+                                <div class="catagory-box">
+                                      <div class="check-box-md"><input type="checkbox" name="category" value="Wedding">&nbsp;<label>Wedding</label></div>
+                                      <div class="check-box-md"><input type="checkbox" name="category" value="Pregnancy">&nbsp;<label>Pregnancy</label></div>
+                                      <div class="check-box-md"><input type="checkbox" name="category" value="Baby">&nbsp;<label>Baby</label></div>
+                                      <div class="check-box-md"><input type="checkbox" name="category" value="Children">&nbsp;<label>Children</label></div>
+                                      <div class="check-box-md"><input type="checkbox" name="category" value="Gay">&nbsp;<label>Gay</label></div>
+                                      <div class="check-box-md"><input type="checkbox" name="category" value="Travel">&nbsp;<label>Travel</label></div>
+                                </div>
+                            
+                                <div class="catagory-box">
+                                      <div class="check-box-md"><input type="checkbox" name="category" value="EverythingElse">&nbsp;<label>Everything Else</label></div>
+                                </div>
+                            </div><!--END Column Three-->
+             			    <br clear="all"/> 
+						</div><!--END customer-pref-container-->
+                               
+                               <!--End Checkbox options--> 
+                              
+                            </div>
+                        </div>
+                    </li>
+                
+                
+                    <li>
+                        <h3><span class="cc-step-title"><strong>2:</strong>Set Coupon Sale Value</span><a href="#help-step1" class="fancybox help-icon" >[&nbsp;?&nbsp;]</a></h3>
+                        <div class="acc-section">
+                            <div class="acc-content">
+                                <p><span class="step-copy">What is the original retail price and sale price with this coupon of the produact or service being featured in this coupon?</span></p>
+                              <br clear="all"/><br clear="all"/>
+                               <div style="width:600px;"><span class="step-copy">Display mark down by:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span> 
+                              
+                               <div  style="width:160px; float:left;"><span><input type="radio" value="1" class="required"  id="step1-dollars" name="toggler" style="border:none;"/> <label for="step1-dollars"><span class="step-copy">Dollars off ($)</span></label></span></div>
+                               
+                               <div  style="width:160px; float:left;"><span><input type="radio" value="2" class="required"  id="step1-percent" name="toggler" style="border:none;"/> <label for="step1-percent"><span class="step-copy">Percent off (%)</span></label></span></div>
+                               </div>
+                              
+                                <br clear="all"/>
+                                
+                                <div style="height:auto;">
+                                
+                                <!--Start Dollar amount section-->
+                                <div class="toHide" style="display:none; float:left; margin:0px 0px;" id="blk-1">
+                                <p class="step-copy">
+                                
+                                <div style="width:260px; float:left; margin-right:20px;">
+                                <span class="step-field-title-box">Retail Value: $&nbsp;</span><input type="number" name="retail_price" id="retail-price" class="required apretail" value="" style="width:80px;"/>
+                                </div>
+                                
+                                <div style="width:260px; float:left;">        
+                                <span class="step-field-title-box">Price with Coupon: $&nbsp;</span><input type="number" name="sale_price" id="sale-price" class="required apsale"  value="" style="width:80px; margin-left:1px;"/>
+                                </div>
+                                
+                                </p>
+                                </div>
+                                <!--End Dollar amount section-->
+                                
+                                <!--Start Percent amount section-->
+                                <div class="toHide" style="display:none; float:left; margin:0px 0px;" id="blk-2">
+                                <p class="step-copy">
+                                
+                                <div style="width:260px; float:left; margin-right:20px;">
+                                <span class="step-field-title-box">Percent Off: &nbsp;</span><input type="number" name="percent_off" id="percent-off" class="required appercentoff" value="" style="width:80px;"/>&nbsp;<font color="#603912">%</font>
+                                </div>
+                                
+                                <div style="width:320px; float:left;">        
+                                <span class="step-field-title-box">Minimum Purchase: $&nbsp;</span><input type="number" name="min_purchase" id="minimum-purchase" class="required apminpurch" value="" style="width:80px; margin-left:1px;"/>
+                                </div>
+                                
+                                </p>
+                                </div>
+                                <!--End Percent amount section-->        
+                                
+                              </div>
+                              <br clear="all"/>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li>
+                        <h3><span class="cc-step-title"><strong>3:</strong>Create Coupon Title</span></h3>
+                        <div class="acc-section">
+                            <div class="acc-content">
+                                <p><span class="step-copy">What is the product or service being featured in this coupon?</span></p>
+        <br clear="all"/><br clear="all"/>
+        <input type="text" name="featured_item" id="featured-item" class="required apfeaturename"  value="Enter Product or Service Featured" maxlength="35" style="width:696px; margin-left:3px;"/>
+        
+        <p id="footnote">&nbsp;&nbsp;<strong>examples:</strong> "lunch and a drink" , "a hair coloring" , "purchase at Joe's Store" , "an oil change", "a message" , "a mani pedi" </p>
+
+        <div id="select-title-format">Select Title Format</div>
+        <div class="step-3-dollars toHide" style="display:none;" id="blk-b-1">
+        <input type="radio" class="required" value="Style1" id="step-2-dollars-op1" name="title_format" /> <label for="step-2-dollars-op1"><p class="step-copy step-3-copy">$<span class="apsale-field autopop-pricing-copy"></span> for <span class="apfeaturename-field autopop-pricing-copy"></span> at Company Name (Regularly $<span class="apretail-field autopop-pricing-copy"></span>)</p></label>
+        <br clear="all"/>
+        <input type="radio" class="required" value="Style2" id="step-2-dollars-op2" name="title_format" /> <label for="step-2-dollars-op2"><p class="step-copy step-3-copy">$<span class="apsale-field autopop-pricing-copy"></span> for a $<span class="apretail-field autopop-pricing-copy"></span> <span class="apfeaturename-field autopop-pricing-copy"></span> at Company Name</p></label>
+        <br clear="all"/>
+        <input type="radio" class="required" value="Style3" id="step-2-dollars-op3" name="title_format" /> <label for="step-2-dollars-op3"><p class="step-copy step-3-copy">$<span class="apsale-field autopop-pricing-copy"></span> for $<span class="apretail-field autopop-pricing-copy"></span> worth of <span class="apfeaturename-field autopop-pricing-copy"></span> at Company Name</p></label>
+        </div>
+        
+        <div class="step-3-dollars toHide" style="display:none;" id="blk-b-2">
+        <input type="radio" class="required" value="Style4" id="step-2-percent-op1" name="title_format" /> <label for="step-2-percent-op1"><p class="step-copy step-3-copy"><span class="appercentoff-field autopop-pricing-copy"></span>% off $<span class="apminpurch-field autopop-pricing-copy"></span> or more at Company Name</p></label>
+        <br clear="all"/>
+        <input type="radio" class="required" value="Style5" id="step-2-percent-op2" name="title_format" /> <label for="step-2-percent-op2"><p class="step-copy step-3-copy"><span class="appercentoff-field autopop-pricing-copy"></span>% off <span class="apfeaturename-field autopop-pricing-copy"></span> when you spend $<span class="apminpurch-field autopop-pricing-copy"></span> or more at Company Name</p></label>
+        <br clear="all"/>
+        <input type="radio" class="required" value="Style6" id="step-2-percent-op3" name="title_format" /> <label for="step-2-percent-op3"><p class="step-copy step-3-copy">Spend $<span class="apminpurch-field autopop-pricing-copy"></span> on <span class="apfeaturename-field autopop-pricing-copy"></span> at Company Name and get <span class="appercentoff-field autopop-pricing-copy"></span>% off</p></label>
+        </div>
+        
+        <br clear="all"/>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li>
+                       <h3><span class="cc-step-title"><strong>4:</strong>Select Coupon Image</span></h3>
+                        <div class="acc-section">
+                            <div class="acc-content">
+                                 <p><span class="step-copy">What image would you like to use on this coupon?</span></p>
+                                  <br clear="all"/><br clear="all"/>
+                                    <div style="float:left; width:400px;">
+                                        
+                                            <div class="upload-image"></div>
+                                            <div class="use-profile-pic"></div>
+                                            <div class="reuse-image"></div>
+                                         </div>
+                                      
+                                        <div style="float:left; margin:-30px 0px 0px 20px; width:200px; height:200px; border:1px solid #CCC; background-image:url(images/create-coupon-image-preview.jpg)">
+                                  </div>
+                                  <br clear="all"/>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    
+                    <li>
+                        <h3><span class="cc-step-title"><strong>5:</strong>Create Coupon Description</span></h3>
+                        <div class="acc-section">
+                            <div class="acc-content">
+                                <p><span class="step-copy">Describe the product or service in which this coupon is featuring. </span></p>
+                                   <br clear="all"/><br clear="all"/>
+                                   
+                                   <div>
+                            
+                                    <font style="font-weight:bold; color:#f26625">*425 character max.  &nbsp; &nbsp; 
+                                    *Sepatare words or phrases with with commas</font> </span>
+                                      <textarea name="description" cols="93" rows="5" onkeypress="textCounterDesc(this,this.form.counter,425);" value="Enter a description of the product or service featured in this coupon"></textarea>
+                                      <script type="text/javascript"/>
+                                            function textCounterDesc( field, countfield, maxlimit ) {
+                                              if ( field.value.length > maxlimit )
+                                              {
+                                                field.value = field.value.substring( 0, maxlimit );
+                                                alert( 'There is a 425 characters in length limit to the Coupon Description.' );
+                                                return false;
+                                              }
+                                              else
+                                              {
+                                                countfield.value = maxlimit - field.value.length;
+                                              }
+                                            }
+                                      </script>
+                                      
+                                  </div> 
+                            </div>
+                        </div>
+                    </li>
+                    
+                    
+                    <li>
+                        <h3><span class="cc-step-title"><strong>6:</strong>Select Coupon Run Dates & Maximum Purchases</span></h3>
+                        <div class="acc-section">
+                            <div class="acc-content">
+                                <p><span class="step-copy">What date range would you like this coupon to appear on CouZoo.com and what is the maximum number total purchases (if any) you would like to allow for this coupon?</span><br clear="all"/><br clear="all"/></p>
+                                
+                                
+                                      <div style="width:310px; height:100px; float:left; margin:0px 30px 0px 0px; padding:0px 20px 0px 0px;">
+                                          <span class="step-field-title-box" style="width:120px;">Posting Date*&nbsp;:</span><input type="text" name="posting_date" id="from" class="required" style="width:150px;"/>
+                                          <br clear="all"/>
+                                          <span class="step-field-title-box" style="width:120px;">Removal Date**&nbsp;:</span><input type="text" name="removal_date" id="to" class="required" value="3-month max" style="width:150px;"/>
+                                       </div>
+                                      
+                                      
+                                      
+                                      <div style="width:340px; height:140px; float:left;">
+                                         
+                                         <br clear="all"/>
+                                         
+                                         <div style="margin:0px 0px 0px 0px;">
+                                            <input type="checkbox" name="max_purchases" value="yes"><label for="remove-sales">enable max purchases</label>
+                                         </div>
+                                         
+                                         <br clear="all"/>
+                                
+                                          <div class="toHide" style="display:none; float:left; margin:0px 0px;" id="paymaxp-1">
+                                                <div style="width:320px; height:40px; margin-top:20px;"><span class="step-field-title-box">Max. Purchases***&nbsp;:&nbsp;</span><input type="number" name="max_purchases_num" value="10,000" style="width:80px;" /></div>
+                                          </div>
+                                          
+                                       </div>   
+                                    <br clear="all"/>
+                                      <p id="footnote">
+                                      *Date this coupon will start to appear on CouZoo.com<br/>
+                                      **Date this coupon will no longer appear on CouZoo.com<br/>
+                                      ***Coupon will be removed from CouZoo after this many purchases.
+                                      </p>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li>
+                        <h3><span class="cc-step-title"><strong>7:</strong>Select Coupon Valid Dates</span></h3>
+                        <div class="acc-section">
+                            <div class="acc-content">
+                               <p><span class="step-copy">What date range would you like your coupon to be valid for redemption?</span></p>
+                               
+                              
+                               <!--Start Redemption Validity Period-->
+                                <div style="float:left; margin:0px 0px;"">
+                                <p class="step-copy">
+                                
+                                <div style="width:330px; float:left; margin-right:20px;">
+                                <span class="step-field-title-box" style="padding-bottom:10px;">Coupon becomes valid on*:</span>
+                                <input type="text" id="from2" name="valid_date" class="required" value="DD/MM/YYYY" style="width:150px; margin-left:3px;"/>
+                                </div>
+                                
+                                <div style="width:330px; float:left;">        
+                                <span class="step-field-title-box" style="padding-bottom:10px;">Coupon is no longer valid after**:</span><br />
+                                <input type="text" id="to2" name="exp_date" class="required" value="DD/MM/YYYY" style="width:150px;"/>
+                                </div>
+                                
+                                </p>
+                                </div>
+                                <!--End Redemption Validity Period--> 
+                                <br clear="all"/>
+                              <p id="footnote">
+                              *This is the date this coupon will <strong>become valid</strong> and customers may begin to redeem it at your place of business.<br/>
+                              **This is the date this coupon is <strong>no longer valid</strong> and customers may no longer redeem it at your place of business.<br />
+                              **May NOT be earlier than "Removal Date" in previous step.
+                              </p>
+                              <br clear="all"/>
+                              <br clear="all"/>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li>
+                        <h3><span class="cc-step-title"><strong>8:</strong>Create Coupon Restrictions</span></h3>
+                        <div class="acc-section">
+                            <div class="acc-content">
+                                <p><span class="step-copy">What redemption restrictions would you like to put on this coupon?</span></p>
+                                   <br clear="all"/><br clear="all"/>
+                                        
+                                   <div>
+                                      <textarea name="restrictions" cols="93" rows="9" value="Enter all coupon restrictions here"></textarea>
+                                          <p id="footnote">
+                                      &nbsp;&nbsp;<strong>examples:</strong> 1 per customer. Dine in only. Not valid on weekends. Cannot be combined with other offers.
+                                      </p>
+                                   </div>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li>
+                        <h3><span class="cc-step-title"><strong>9:</strong>Create Search Key Words</span></h3>
+                        <div class="acc-section">
+                            <div class="acc-content">
+                                <p><span class="step-copy">What key words or phrases do you think customers interested in this coupon and your product or service may use to search?</span></p>
+                                   <br clear="all"/><br clear="all"/>
+                                   
+                                   <div>
+                            
+                                    <font style="font-weight:bold; color:#f26625">*250 character max.  &nbsp; &nbsp; 
+                                    *Sepatare words or phrases with with commas</font> </span>
+                                      <textarea name="keywords" cols="93" rows="5" onkeypress="textCounter(this,this.form.counter,250);" value="Enter search terms that are relevant to your coupon"></textarea>
+                                      <script type="text/javascript"/>
+                                            function textCounter( field, countfield, maxlimit ) {
+                                              if ( field.value.length > maxlimit )
+                                              {
+                                                field.value = field.value.substring( 0, maxlimit );
+                                                alert( 'There is a 250 characters in length limit to the Search Tags you may use.' );
+                                                return false;
+                                              }
+                                              else
+                                              {
+                                                countfield.value = maxlimit - field.value.length;
+                                              }
+                                            }
+                                      </script>
+                                      <p id="footnote">
+                                  &nbsp;&nbsp;<strong>examples:</strong> If you are an Italian Restaurant you may list menu items such as pasta, pizza, ravioli, gnocchi...yum<br />
+                                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                  If you are a Spa you may list all of your services, i.e. manicure, pedicure, facial, waxing...ouch!
+                                  </p>
+                                  </div> 
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li>
+                        <h3><span class="cc-step-title"><strong>10:</strong>Select Featured Coupon Ad Options</span></h3>
+                        <div class="acc-section">
+                            <div class="acc-content">
+                                <p><span class="step-copy">Would you like to create an Ad representing this coupon that will appear at the top of the results page when customer search words or phrases realted to your coupon?</span></p>
+                        <br clear="all"/><br clear="all"/>
+                          <div style="width:700px; overflow:hidden;">
+                      
+                      <div  style="width:150px; height:auto; float:left; margin-right:15px; overflow:hidden;">
+                          <span>
+                          <input type="radio" name="featured_ad" value="no" class="required"  id="step8-no" name="ad" style="border:none;"/> 
+                          <label for="step8-no"><span class="step-copy">No, Thanks</span></label>
+                          </span>
+                          <br clear="all"/>
+                          <span>
+                          <input type="radio" name="featured_ad" value="yes" class="required"  id="step8-yes" name="ad" style="border:none;"/> 
+                          <label for="step8-yes"><span class="step-copy">Yes, Please</span></label>
+                          </span>
+              		  </div>
+                      
+
+             	 <div class="toHide" style="float:left;" id="adblk-1"></div> 
+                       
+                       <span class="toHide" id="adblk-2"><!--Start hidden section-->
+                                              
+                       <div  style="width:250px; float:left;">
+                           <span>
+                               <input type="checkbox" name="large_ad" value="yes" id="foo" class="required"/>
+                               <span class="step-copy">Large, Search-Based Ad</span><br />
+                               <span class="step-copy" style="margin-top:2px;">Cost: $5 per sale from Ad</span><br />
+                            <div style="float:left; width:125px; margin:8px 4px 0px 25px;"><img src="images/large-ad-thumb.jpg"/></div>
+                               <div style="float:left; margin:8px 0px 0px 0px;">
+                               <a href="#large-ad-example" class="fancybox" >larger ad<br/>example</a><br /><br />
+                               <a href="#large-ad-info" class="fancybox" >more info</a>
+                               </div>
+                               <br clear="all"/>
+                               <div style="display:none; height:40px; margin:6px 0px 0px 24px;" id="checked-a" >
+                                   <span class="step-field-title-box">Max Budget: $&nbsp;</span><input type="number" name="budget_large_ad" class="required" value="" style="width:60px;"/>
+                               </div>
+                          </span>
+                          <br clear="all"/>
+                      </div>
+                       
+                       
+                     <div  style="width:250px; float:left;">
+                       	<span>
+                       		   <input type="checkbox" name="side_ad" value="yes" id="foo2"/>
+                               <span class="step-copy">Side, Location-Based Ad</span><br />
+                               <span class="step-copy" style="margin-top:2px;">Cost: $3 per sale from Ad<br /></span>
+                           <div style="float:left; width:125px; margin:8px 4px 0px 25px;"><img src="images/side-ad-thumb.jpg"/></div>
+                               <div style="float:left; ; margin:8px 0px 0px 0px;">
+                               <a href="#side-ad-example" class="fancybox" >side ad<br/>example</a><br /><br />
+                               <a href="#side-ad-info" class="fancybox" >more info</a>
+                               </div>
+                       			<br clear="all"/>
+                               <div style="display:none; height:40px; margin:6px 0px 0px 24px;" id="checked-b" >
+                                   <span class="step-field-title-box">Max Budget: $&nbsp;</span><input type="number" name="budget_side_ad" class="required" value="" style="width:60px;"/>
+                               </div>
+                          </span>
+                          <br clear="all"/>
+                   </div>
+     
+                       
+                      </span><!--END hidden section-->
+                              
+                                         
+                            <br clear="all"/>
+                           </div>
+                           </div>
+                        </div>
+                    </li>
+                    
+                    <li>
+                        <h3><span class="cc-step-title"><strong>Publish</strong></span></h3>
+                        <div class="acc-section">
+                            <div class="acc-content">
+                                <div id="payment-left-column">
+                                  <ul class="priceList">
+                                        <li>
+                                          <strong>Coupon</strong>
+                                          <em>$100</em>
+                                        </li>
+                                        <li>
+                                            <strong>Large Ad</strong>
+                                            <em>$0*</em>
+                                        </li>
+                                        <li>
+                                            <strong>Side Ad</strong>
+                                            <em>$0*</em>
+                                        </li>
+                                        <li class="last">
+                                          <strong>Order Total</strong>
+                                          <em>$100</em>
+                                        </li>
+                                 </ul>
+                                 <br clear="all"/>
+                                 <div id="footnote">*Ad price is based on total number of purchase originating from the Ad. Billing for Ads will occur after Ad is finished running on COUZOO.</div>
+                            </div>
+                            
+                            <div id="payment-right-column">
+                                <h2>Billing Info</h2>
+                                
+                                <div style="width:160px; float:left;"><span><input type="radio" value="1" class="required"  id="step9-creditcard" name="paymentForm" style="border:none;"/> <label for="step9-creditcard"><span class="step-copy">Use Credit Card</span></label></span></div>
+                                
+                                <div style="width:180px; float:left;"><span><input type="radio" value="2" class="required"  id="step9-prepurchased" name="paymentForm" style="border:none;"/> <label for="step9-prepurchased"><span class="step-copy">Use Subscription</span></label></span></div>
+                                
+                                <br clear="all"/>
+                                
+                                <div class="toHide" style="float:left; margin:0px 0px;" id="payblk-1">
+                                    <div class="dIB">
+                                    <input type="radio" class="required" checked="checked" id="cc-1" name="select-cc" style="border:none;"/> <label for="cc-1">
+                                    <span>Visa</span>&nbsp;&nbsp;<em>Ends in xxxx-1234</em></label>                
+                                    </div>
+                                    
+                                    <div class="dIB">
+                                    <input type="radio" class="required"  id="cc-2" name="select-cc" /> <label for="cc-2" style="border:none;">
+                                    <span>MC</span>&nbsp;&nbsp;<em>Ends in xxxx-3456</em></label>              
+                                    </div>
+                                    
+                                    <div class="dIB">
+                                    <input type="radio" class="required" id="cc-3" name="select-cc" /> <label for="cc-3" style="border:none;">
+                                    <span>Visa</span>&nbsp;&nbsp;<em>Ends in xxxx-5678</em></label>          
+                                    </div>
+                                    
+                                    <br clear="all"/>
+                                    <a href="#change-ccard" class="fancybox change" >add another credit card</a>
+                                
+                                </div>
+                                
+                                 <div class="toHide" style="float:left; margin:0px 0px; color:#603912;" id="payblk-2">
+                                    <span class="step-copy">You have <span class="prepurchase-remaining">X</span> days left of your subscription...just FYI.</span>
+                                    <br clear="all"/><br clear="all"/>
+                                    <span class="step-copy">Would you like to auto-renew each month?&nbsp;&nbsp;&nbsp;</span>
+                                    <br clear="all"/><br clear="all"/>
+                                    <input type="radio" name="customer-subscribe-auto-renew" value="yes" CHECKED  />yes  &nbsp;&nbsp;&nbsp;
+                                    <br clear="all"/>
+                                    <input type="radio" name="customer-subscribe-auto-renew" value="no" />no
+                                </div>
+						   <button type="submit" class="login-btn"></button>
+                            
+                            </div>
+                            <br clear="all"/>
+                            
+                         </div>
+                    </div>
+                 </li>        
+                </ul>
+            	</form>
+                </div><!--End Advanced Call-->
+         </div>
+         
+         
+         
+          <!--Start Auto-populate text from form fields javascript-->
+  <script type="text/javascript"/>              
+		(function() {
+                var $input = $('input.apretail');
+                $input.keyup(function(event) {
+                     var apretailtext = $input.val();
+			         $('.apretail-field').text(apretailtext);
+					 console.log('apretail-field',$('.apretail-field'));
+			});
+		})();
+	</script>
+    
+     <script type="text/javascript"/>              
+		(function() {
+                var $input = $('input.apsale');
+                $input.keyup(function(event) {
+                     var apsaletext = $input.val();
+			         $('.apsale-field').text(apsaletext);
+					 console.log('apsale-field',$('.apsale-field'));
+			});
+		})();
+	</script>
+    
+     <script type="text/javascript"/>              
+		(function() {
+                var $input = $('input.apfeaturename');
+                $input.keyup(function(event) {
+                     var apfeaturenametext = $input.val();
+			         $('.apfeaturename-field').text(apfeaturenametext);
+					 console.log('apfeaturename-field',$('.apfeaturename-field'));
+			});
+		})();
+	</script>    
+    
+      <script type="text/javascript"/> <!--percent off, step 1-->             
+		(function() {
+                var $input = $('input.appercentoff');
+                $input.keyup(function(event) {
+                     var appercentofftext = $input.val();
+			         $('.appercentoff-field').text(appercentofftext);
+					 console.log('appercentoff-field',$('.appercentoff-field'));
+			});
+		})();
+	</script>
+    
+     <script type="text/javascript"/> <!--minimum purchase amount, percent off section, step 1-->             
+		(function() {
+                var $input = $('input.apminpurch');
+                $input.keyup(function(event) {
+                     var apminpurchtext = $input.val();
+			         $('.apminpurch-field').text(apminpurchtext);
+					 console.log('apminpurch-field',$('.apminpurch-field'));
+			});
+		})();
+	</script>
+    
+      <!--Show/Hide Div check box-->
+        <script>
+        $("#foo").change(function(){
+           var ischecked=$(this).is(':checked');
+            if(ischecked)
+            {
+                 $("#checked-a").fadeIn(200);
+            }
+            else
+            {
+                $("#checked-a").fadeOut(200);   
+             }
+         });
+                         
+        
+        $(function(){
+            var ischecked=$("#foo").is(':checked');
+           if(ischecked)
+           {
+               $("#checked-a").fadeIn(200);
+           }
+            else
+            {
+                $("#checked-a").fadeOut(200);   
+             }
+        });
+		
+		        $("#foo2").change(function(){
+           var ischecked=$(this).is(':checked');
+            if(ischecked)
+            {
+                 $("#checked-b").fadeIn(200);
+            }
+            else
+            {
+                $("#checked-b").fadeOut(200);   
+             }
+         });
+                         
+        
+        $(function(){
+            var ischecked=$("#foo2").is(':checked');
+           if(ischecked)
+           {
+               $("#checked-b").fadeIn(200);
+           }
+            else
+            {
+                $("#checked-b").fadeOut(200);   
+             }
+        });
+        </script>          
+    </div>
+
+</div>
+
+
+
+</div><!--END MAIN-COLUMN-->
+
+
+
+
+<div id="side-column"><!--start right side column-->
+
+</div><!--END right side column-->
+<div class="push-box"></div>
+<div class="push"></div>
+</div><!--end container-->
+<br clear="all"/>
+
+
+
+<!--START FOOTER-->
+	<?php include "footer.php"; ?>
+<!--END FOOTER-->
+
+
+<!--Help Modals-->
+<!--#include virtual="help-create-a-coupon.html" -->
+<!--End Help Modals-->
+
+
+
+<!--For Accordion coupons pods-->
+<script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript"><!--normal, for live section-->
+var parentAccordion=new TINY.accordion.slider("parentAccordion");
+parentAccordion.init("acc", "h3", 0,-1, 'selected');
+
+var expiredAccordion=new TINY.accordion.slider("expiredAccordion");
+expiredAccordion.init("accx", "h3", 0,-1, 'selected');
+
+var savedAccordion=new TINY.accordion.slider("savedAccordion");
+savedAccordion.init("accs", "h3", 0,-1, 'selected');
+
+var createAccordion=new TINY.accordion.slider("createAccordion");
+createAccordion.init("acccreate", "h3", 1,-1, 'selected');
+
+</script>
+
+<!--End Accordion coupons pods-->
+
+
+<!--For div content changer box (must be just above body closing tag--> 
+    <script type="text/javascript" src="js/box/jquery.content.changer.js"></script>
+   
+    <script type="text/javascript">
+    $(function() {
+        $('#box').contentChanger({
+            triggerClassName: 'box-trigger',
+            triggerScope: 'body'
+        });
+    });
+    </script>
+    
+	<script type="text/javascript">
+    $(function() {
+        $('#box2').contentChanger({
+            triggerClassName: 'box-trigger',
+            triggerScope: 'body'
+        });
+    });
+    </script>
+    
+	<script type="text/javascript">
+    $(function() {
+        $('#box3').contentChanger({
+            triggerClassName: 'box-trigger',
+            triggerScope: 'body'
+        });
+    });
+    </script>
+   
+    <script type="text/javascript">
+    $(function() {
+        $('#box4').contentChanger({
+            triggerClassName: 'box-trigger',
+            triggerScope: 'body'
+        });
+    });
+    </script>
+<!--END For div content changer box (must be just above body closing tag-->     
+
+
+</body>
+</html>

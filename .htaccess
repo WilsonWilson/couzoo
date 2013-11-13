@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "Access to /New"
+AuthUserFile /kunden/homepages/23/d384953523/htpasswd
+Require user robert

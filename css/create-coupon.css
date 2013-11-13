@@ -1,0 +1,162 @@
+body,html{
+ width:100%;
+ height:100%;
+ padding:0px;
+ margin:0px;
+ font-family:arial;
+ font-size:14px;
+ font-weight:bold;
+ color:#6e6e6e; 
+}
+
+
+/*buttons*/
+button,select{
+outline:0px;
+font-weight:normal;
+} 
+
+textarea{
+outline:0px;
+resize: none;
+} 
+
+img{
+border:0px;
+}
+
+input{
+	height:20px;
+	text-align:left;
+    font-size:14px;
+    font-weight:200;
+    padding-left:2px;
+	margin-bottom:4px;
+	background:#F4F4F4;
+	-moz-border-radius: 4px;
+	border-radius: 4px;	
+}
+
+<!--STEP Buttons Slider create a coupon version 1-->
+.step_bar{
+ margin-right:9px;
+ display:inline-block;
+ text-align:center;
+ width:34px;
+ padding:8px 0px; 
+ background:#603912;
+ border-radius: 5px 5px;
+ border-radius: 5px 5px;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+cursor:pointer;
+color:#fff;
+text-shadow:0px 0px 0px;
+margin-bottom:5px;
+ font-size:10pt;
+}
+
+.step_bar_last{
+	margin-right:0px;
+}
+
+.step_highlight{
+ background:#f26625;
+}
+
+input[type=text].error,input[type=password].error,textarea.error,select.error{
+ background: #FFE8E8 url(img/bg_input_errore.png) top left no-repeat;
+}
+
+.myButton {
+margin:5px;
+	-moz-box-shadow:inset 0px 1px 0px 0px #a4e271;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #a4e271;
+	box-shadow:inset 0px 1px 0px 0px #a4e271;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #89c403), color-stop(1, #77a809) );
+	background:-moz-linear-gradient( center top, #89c403 5%, #77a809 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#89c403', endColorstr='#77a809');
+	background-color:#89c403;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #74b807;
+	display:inline-block;
+	color:#ffffff;
+	font-family:arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #528009;
+}.myButton:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #77a809), color-stop(1, #89c403) );
+	background:-moz-linear-gradient( center top, #77a809 5%, #89c403 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#77a809', endColorstr='#89c403');
+	background-color:#77a809;
+}.myButton:active {
+	position:relative;
+	top:1px;
+}
+<!--End STEP Buttons Sliderr -->
+
+<!--STEP Accordion create a coupon version 2-->
+
+#create-a-coupon #acccreate {width:761px; list-style:none; color:#033; margin:0px auto;}
+#create-a-coupon .acc h3 {width:755px; height:36px; margin-top:12px; cursor:pointer; z-index:5; border:#f26625 3px solid; -moz-border-radius: 12px; border-radius: 12px; background-color:#FFF; color:#603912;}
+#create-a-coupon .acc h3.selected {-moz-border-radius-bottomright:0px;	-webkit-border-bottom-right-radius: 0px; border-bottom-right-radius:0px;  -moz-border-radius-bottomleft:0px; -webkit-border-bottom-left-radius: 0px;  border-bottom-left-radius:0px; border-bottom:none; background-color:#f26625; color:#FFF;}
+#create-a-coupon .acc h3:hover {z-index:5; background-color:#FEF8E2;}
+#create-a-coupon .acc h3.selected:hover {-moz-border-radius: 12px; border-radius: 12px; -moz-border-radius-bottomright:0px;	-webkit-border-bottom-right-radius: 0px; border-bottom-right-radius:0px;  -moz-border-radius-bottomleft:0px; -webkit-border-bottom-left-radius: 0px;  border-bottom-left-radius:0px; border-bottom:none;  background-color:#f26625; color:#FFF;}
+#create-a-coupon .acc .acc-section {overflow:hidden;}
+#create-a-coupon .acc .acc-content {width:725px; height:auto; padding:15px; border:#f26625 3px solid; -moz-border-radius: 12px; border-radius: 12px;  -moz-border-radius-topright:0px;	-webkit-border-top-right-radius: 0px; margin-right:1px;  -moz-border-radius-topleft:0px;	-webkit-border-top-left-radius: 0px;  border-top-right-radius:0px;  border-top-left-radius:0px; border-top:none; background-color:#FFF;}
+
+
+#create-a-coupon .acc h3 .cc-step-title {padding-left:15px; font-size:18px; line-height:34px;}
+#create-a-coupon .acc h3 .cc-step-title strong {padding-right:10px; font-size:18px; font-weight:bold;}
+
+#create-a-coupon .error {float: right; padding-right:15px; line-height:34px; color: red;}
+#create-a-coupon img.checkmark {padding-top: 5px;}
+
+<!--END Accordion create a coupon version 2-->
+
+
+
+/*content styling*/
+.main-title {font-family:Arial, Helvetica, sans-serif; font-size:22px; color:#f26625; text-align:left; line-height:24px; font-weight:bold; letter-spacing:-1px; clear:both; margin:0px 0px 14px -2px;}
+
+.steps-title {font-family:Arial, Helvetica, sans-serif; font-size:18px; color:#f26625; text-align:left; line-height:28px; font-weight:bold; letter-spacing:-1px; clear:both;}
+
+.step-box {padding:16px;}
+.step-copy {font-family:Arial, Helvetica, sans-serif; font-size:16px; color:#603912; margin:-2px 10px 0px 0px; float:left; display:block;}
+.autopop-pricing-copy {font-family:Arial, Helvetica, sans-serif; font-size:16px; color:#603912; }
+.step-field-title-box {padding-top:17px; float:left; font-family:Arial, Helvetica, sans-serif; font-size:16px; color:#603912;}
+
+.step-title {font-family:Arial, Helvetica, sans-serif; font-size:22px; color:#f26625; text-align:left; font-weight:bold; letter-spacing:-1px; clear:both; padding:0px 0px 16px 0px;}
+.step-title-name {font-family:Arial, Helvetica, sans-serif; font-size:22px; color:#603912;}
+.step-3-copy {padding-bottom:8px;}
+
+#select-title-format {font-family:Arial, Helvetica, sans-serif; font-size:18px; color:#f26625; text-align:left; line-height:28px; font-weight:bold; letter-spacing:-1px; clear:both; margin:10px 0px 10px 0px;}
+
+.upload-image {width:144px; height:37px; margin:12px 0px 4px 0px; background-image:url(../images/upload-image.jpg); background-repeat:no-repeat; background-position: 2px 0px;}
+.upload-image input {opacity: 0;}
+.upload-image:hover, .upload-image input:hover {cursor:pointer; background-image:url(../images/upload-image.jpg); background-repeat:no-repeat; background-position:2px -37px;}
+
+.use-profile-pic {width:144px; height:37px; margin:2px 0px 4px 0px; background-image:url(../images/use-profile-pic.jpg); background-repeat:no-repeat; background-position: 2px 0px;}
+.use-profile-pic:hover {cursor:pointer; background-image:url(../images/use-profile-pic.jpg); background-repeat:no-repeat; background-position: 2px -37px}
+
+.reuse-image {width:144px; height:37px; margin:2px 0px 12px 0px; background-image:url(../images/reuse-image.jpg); background-repeat:no-repeat; background-position: 2px 0px;}
+.reuse-image:hover {cursor:pointer; background-image:url(../images/reuse-image.jpg); background-repeat:no-repeat; background-position: 2px -37px}
+
+.img-helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.img-upload {
+    background: #fff;
+    vertical-align: middle;
+    max-height: 200px;
+    max-width: 200px;
+    margin-left: -4px;
+}

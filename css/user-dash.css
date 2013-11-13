@@ -1,0 +1,115 @@
+#editProfile_c h2 {
+	font-family: Arial, Helvetica, sans-serif; 
+	color: #f26625; 
+	font-size: 22px;
+	text-align: center;
+	padding-bottom: 5px;
+}
+
+#editProfile_c ul {
+    display: block;
+    list-style: none;
+    padding: 0;
+    width: 500px;
+}
+
+#editProfile_c li {
+    display: block;
+    list-style: none;
+    padding: 10px 0 0 0;
+    margin: 0 0 0 0;
+}
+
+#editProfile_c li label {
+    font-size: 11px;
+    font-weight: bold;
+    width: 200px;
+    float: left;
+}
+
+#editProfile_c li input {
+    width: 250px;
+    float: left;
+}
+
+#editProfile_m h2 {
+	font-family: Arial, Helvetica, sans-serif; 
+	color: #f26625; 
+	font-size: 22px;
+	text-align: center;
+	padding-bottom: 5px;
+}
+
+#editProfile_m ul {
+    display: block;
+    list-style: none;
+    padding: 0;
+    width: 500px;
+}
+
+#editProfile_m li {
+    display: block;
+    list-style: none;
+    padding: 10px;
+    margin: 0 0 0 0;
+}
+
+#editProfile_m li label {
+    font-size: 11px;
+    font-weight: bold;
+    width: 100px;
+    float: left;
+    padding-left: 10px;
+
+}
+
+#editProfile_m li input {
+    width: 250px;
+    float: left;
+}
+
+#editImg h2 {
+	font-family: Arial, Helvetica, sans-serif; 
+	color: #f26625; 
+	font-size: 22px;
+	text-align: center;
+	padding-bottom: 5px;
+}
+
+.editImg:hover {
+	opacity: .7;
+}
+
+#addContact h2 {
+	font-family: Arial, Helvetica, sans-serif; 
+	color: #f26625; 
+	font-size: 22px;
+	text-align: center;
+	padding-bottom: 5px;
+}
+
+#addContact ul {
+    display: block;
+    list-style: none;
+    padding: 0;
+    width: 250px;
+}
+
+#addContact li {
+    display: block;
+    list-style: none;
+    padding: 10px 0 0 0;
+    margin: 0 0 0 0;
+}
+
+#addContact li label {
+    font-size: 11px;
+    font-weight: bold;
+    width: 100px;
+    float: left;
+}
+
+#addContact li input {
+    width: 125px;
+    float: left;
+}

@@ -1,0 +1,173 @@
+#login_page {
+	position: absolute;
+	top: 150px;
+	left: 33%;
+}
+
+#login_page fieldset
+{
+   width: 230px;
+   padding:20px;
+   border:1px solid #ccc;
+-moz-border-radius: 10px;
+-webkit-border-radius: 10px;
+-khtml-border-radius: 10px;
+border-radius: 10px;   
+}
+
+#login_page legend, #login_page h2
+{
+   font-family : Arial, sans-serif;
+   font-size: 1.3em;
+   font-weight:bold;
+   color:#333;
+}
+
+#login_page label
+{
+   font-family : Arial, sans-serif;
+   font-size:0.8em;
+   font-weight: bold;
+}
+
+#login_page input[type="text"],#login_page textarea,
+#login_page input[type="password"]
+{
+  font-family : Arial, Verdana, sans-serif;
+  font-size: 0.8em;
+  line-height:140%;
+  color : #000; 
+  padding : 3px; 
+  border : 1px solid #999;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    border-radius: 5px;
+
+}
+
+#login_page input[type="text"],
+#login_page input[type="password"]
+{
+  height:18px;
+  width:220px;
+}
+
+ #login_page #scaptcha
+{
+  width:60px;
+  height:18px;
+}
+
+#login_page input[type="submit"]
+{
+   width:100px;
+   height:30px;
+   padding-left:0px;
+}
+
+#login_page textarea
+{
+  height:120px;
+  width:310px;
+}
+
+#login_page input[type="text"]:focus,
+#login_page textarea:focus
+{
+  color : #009;
+  border : 1px solid #990000;
+  background-color : #ffff99;
+  font-weight:bold;
+}
+
+#login_page .container
+{
+   margin-top:8px;
+   margin-bottom: 10px;
+}
+
+#login_page .error
+{
+   font-family: Verdana, Arial, sans-serif; 
+   font-size: 8pt;
+   font-weight: bold;
+   color: red;
+}
+
+#login_page #register_password_errorloc
+{
+    clear:both;
+}
+
+#login_page  fieldset#antispam
+{
+   padding:2px;
+   border-top:1px solid #EEE;
+   border-left:0;
+   border-right:0;
+   border-bottom:0;
+   width:350px;
+}
+
+#login_page fieldset#antispam legend
+{
+   font-family : Arial, sans-serif;
+   font-size: 0.8em;
+   font-weight:bold;
+   color:#333;   
+}
+
+#login_page .short_explanation
+{
+   font-family : Arial, sans-serif;
+   font-size: 0.6em;
+   color:#333;   
+}
+
+/* spam_trap: This input is hidden. This is here to trick the spam bots*/
+#login_page .spmhidip
+{
+   display:none;
+   width:10px;
+   height:3px;
+}
+#login_page #fg_crdiv
+{
+   font-family : Arial, sans-serif;
+   font-size: 0.3em;
+   opacity: .2;
+   -moz-opacity: .2;
+   filter: alpha(opacity=20);   
+}
+#login_page  #fg_crdiv p
+{
+    display:none;
+}
+
+#login_page_content li
+{
+font-family : Arial, sans-serif;
+padding-top:10px;
+padding-bottom:10px;
+}
+#login_page_content
+{
+    font-family : Arial, sans-serif;
+    font-size: 0.9em;
+    line-height: 150%
+}
+
+#login_page_content h2
+{
+   font-family : Arial, sans-serif;
+   font-size: 1.5em;
+   font-weight:bold;
+   color:#333;
+}
+
+.center-reg {
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px
+}

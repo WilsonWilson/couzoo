@@ -1,0 +1,83 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*Start Search box*/
+.search-btn {width:102px; height:42px; background-image:url(../images/search-btn.jpg); background-repeat:no-repeat; background-position: 1px 1px; float: left; margin:-41px 0px 0px 370px;}
+#search-box {width:760px; height:134px; border:none; background-color:transparent; }
+#search-box-title {width:760px;height:67px; padding-top:67px; margin:0px; background-image:url(../images/search-results.png); background-repeat:no-repeat; background-position:top;  border:none;  background-color:transparent; }
+#stickyheader {height:auto; width:760px; height:67px; margin:0px; background-image:url(../images/search-results-stick.png);  border:none; background-color:transparent; }
+ /*End Search Box*/
+
+/*START COUPODS*/      
+#acc {width:760px; height:76px; list-style:none; color:#033; margin:0px auto;}
+#acc h3 {width:760px; height:76px; margin-top:20px; background:url(../images/2-dollar-coupon-header-bg-o.png); background-repeat:no-repeat; background-position: left -0px; cursor:pointer; z-index:5;  border:none;  background-color:transparent; }
+#acc h3.selected {width:760px; height:76px; margin-top:20px; background:url(../images/2-dollar-coupon-header-bg-o.png); background-repeat:no-repeat; background-position: left -165px; cursor:pointer; border:none;  background-color:transparent; }
+#acc h3:hover {width:760px; height:76px; cursor:pointer; background:url(../images/2-dollar-coupon-header-bg-o.png); background-repeat:no-repeat; background-position: left -83px; z-index:5; border:none;  background-color:transparent; }
+#acc h3.selected:hover {width:760px; height:76px; background:url(../images/2-dollar-coupon-header-bg-o.png); background-repeat:no-repeat; background-position: left -165px; border:none; background-color:transparent; }
+
+#acc .acc-section {overflow:hidden;border:none;  background-color:transparent; }
+#acc .acc-content {width:730px; height:328px; padding:15px; background-image:url(../images/2-dollar-open-bg.png); background-repeat:no-repeat; border:none;  background-color:transparent; }
+
+
+.price-box-1-dollar { border:none;  background-color:transparent; }
+.price-box-2-dollar { border:none;  background-color:transparent; }
+.price-box-3-dollar { border:none;  background-color:transparent; }
+.price-box-4-dollar { border:none;  background-color:transparent; }
+.price-box-5-dollar { border:none;  background-color:transparent; }
+#price-box { border:none;  background-color:transparent; }
+
+#header-right {width:660px; height:51px; float:right; padding:11px 10px 10px 10px;}
+/*END COUPODS*/
+
+
+/* START LARGE AD STYING */
+#large-ad-container {width:760px; height:171px; margin-top:20px; z-index:1px;  border:none; background-color:transparent; }
+.large-ad-1-dollar-bg {background-image:url(../images/large-ad-1-dollars.png); background-repeat:no-repeat;}
+.large-ad-2-dollar-bg {background-image:url(../images/large-ad-2-dollars.png); background-repeat:no-repeat;}
+.large-ad-3-dollar-bg {background-image:url(../images/large-ad-3-dollars.png); background-repeat:no-repeat;}
+.large-ad-4-dollar-bg {background-image:url(../images/large-ad-4-dollars.png); background-repeat:no-repeat;}
+.large-ad-5-dollar-bg {background-image:url(../images/large-ad-5-dollars.png); background-repeat:no-repeat;}
+.price-box {width:55px; height:55px; font-family:Arial, Helvetica, sans-serif; font-size:46px; color:#FFF; float:left; padding:10px; text-align:center; border:none;  background-color:transparent;}
+#large-ad-container .price-box-1-dollar {border:none;  background-color:transparent;}
+#large-ad-container .price-box-2-dollar {border:none;  background-color:transparent;}
+#large-ad-container .price-box-3-dollar {border:none;  background-color:transparent;}
+#large-ad-container .price-box-4-dollar {border:none;  background-color:transparent;}
+#large-ad-container .price-box-5-dollar {border:none;  background-color:transparent;}
+.large-ad-image {width:222px; height:165px; margin:3px 2px; float:left; overflow:hidden;}
+#large-ad-buttons-box {width:103px; height:110px; float:right; z-index:20; top:0px; left:652px; margin:-110px 8px;}
+/* END LARGE AD STYLES */
+
+
+
+/* START SMALL AD STYLES */
+#side-ad-container {width:192px; height:171px; margin-top:20px; clear:both; border:none; background-color:transparent; }
+a.sideAdLink:link {border:none; outline:none;}
+#side-ad-container .side-ad-1-dollar-bg {background-image:url(../images/ad-sml-1-dollar.png); background-repeat:no-repeat; float:left; z-index:20; height:171px; width:192px; position:absolute; border:none;}
+#side-ad-container .side-ad-2-dollar-bg {background-image:url(../images/ad-sml-2-dollar.png); background-repeat:no-repeat; float:left; z-index:20; height:171px; width:192px; position:absolute; border:none;}
+#side-ad-container .side-ad-3-dollar-bg {background-image:url(../images/ad-sml-3-dollar.png); background-repeat:no-repeat; float:left; z-index:20; height:171px; width:192px; position:absolute; border:none;}
+#side-ad-container .side-ad-4-dollar-bg {background-image:url(../images/ad-sml-4-dollar.png); background-repeat:no-repeat; float:left; z-index:20; height:171px; width:192px; position:absolute; border:none;}
+#side-ad-container .side-ad-5-dollar-bg {background-image:url(../images/ad-sml-5-dollar.png); background-repeat:no-repeat; float:left; z-index:20; height:171px; width:192px; position:absolute; border:none;}
+.side-ad-image {width:190px; height:120px; margin-top:50px; float:left; overflow:hidden; z-index:0; border:0px; position:absolute; border:none;}
+.side-ad-price-box {width:40px; height:40px; font-family:Arial, Helvetica, sans-serif; font-size:36px; color:#FFF; float:left; padding:5px 4px; text-align:center;}
+.side-ad-item-title { max-width:136px; max-height:38px; overflow:hidden; margin:8px 0px 0px 4px;; text-align:left; font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#603912; text-align:left; line-height:18px; font-weight:bold; letter-spacing:-1px; float:left; overflow:hidden;}
+#side-ad-bottom-bg{position:relative; margin-top:89px; padding-top:3px; width:186px; height:23px; background:none; z-index:999; border:none;}
+#side-ad-distance {font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#fff; text-align:left; font-weight:200; letter-spacing:-1px; margin:6px 0px 0px 10px; float:left; width:110px; font-weight:bold;}
+.side-ad-distance-number {font-weight:bold;}
+.side-ad-view-box {font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#fff; text-align:left; font-weight:200;  margin:6px 15px 0px 0px; float:right; font-weight:bold;}
+.side-ad-1-dollar-bg .side-ad-image{ border:none;}
+.side-ad-2-dollar-bg .side-ad-image{ border:none;}
+.side-ad-3-dollar-bg .side-ad-image{ border:none;}
+.side-ad-4-dollar-bg .side-ad-image{ border:none;}
+.side-ad-5-dollar-bg .side-ad-image{ border:none;}
+/* END SMALL AD STYLES */
+
+
+/*Merch-Dash*/
+#merch-dash-header-container #le-tabs.oldlook #le-tabs_tab_container a.tab-2{width:180px; height:52px; padding-top:8px; margin:0px; background-color:#fff;border:#603912 3px solid; -moz-border-radius: 12px; border-radius: 12px; margin:0px 0px 0px 0px; text-align:center; color:#603912;}
+
+
+
+
+
+
+
