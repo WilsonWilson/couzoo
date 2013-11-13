@@ -1,4 +1,4 @@
 AuthType Basic
 AuthName "Access to /New"
-AuthUserFile /kunden/homepages/23/d384953523/htdocs/robert.couzoo.com/.htpasswd
+AuthUserFile /kunden/homepages/23/d384953523/htdocs/.htpasswd
 Require user demo
