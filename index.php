@@ -131,7 +131,7 @@ $couzoo->CheckLogin();
 
 <div id="container-home-slide">
 
-<div id="home-top-push"></div>
+<!--<div id="home-top-push"></div>-->
 	
 <ul class="my_asyncslider" id="slider_2">
 		<li id="slide-01" style="height:374px;">
