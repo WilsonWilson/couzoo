@@ -131,7 +131,7 @@ $couzoo->CheckLogin();
 
 <div id="container-home-slide">
 
-<!--<div id="home-top-push"></div>-->
+<div id="home-top-push"></div>
 	
 <ul class="my_asyncslider" id="slider_2">
 		<li id="slide-01" style="height:374px;">
@@ -155,7 +155,7 @@ $couzoo->CheckLogin();
           </div><!--End home Search-Container-->
             
           <div id="home-copy-container">
-            With CouZoo TEst you can find tons of great, local coupons for only $1 to $5. Or subscribe and get as many as you want for just $10 a month. 
+            With CouZoo you can find tons of great, local coupons for only $1 to $5. Or subscribe and get as many as you want for just $10 a month. 
               <br />
               <br />
             It's easy - just search and save. 
