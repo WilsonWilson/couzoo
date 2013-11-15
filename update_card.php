@@ -90,8 +90,23 @@ switch ($_GET['q'])
 		// Add CC to database
 		$qry = mysql_query("INSERT INTO CouZoo_Cards (card_id,payer_id,type,number,exp_month,exp_year,fname,lname,valid)
 				    	VALUES ('$cc_res[id]','$payer_id','$cc[type]','$cc_res[number]','$cc[exp_month]','$cc[exp_year]','$cc[fname]','$cc[lname]','') ");
+
+		$cc_id = mysql_insert_id();
+
+		if ($cc['type'] == 'amex') { $cc_type = "American Express"; } else { $cc_type = ucfirst($cc['type']); }
+
+       	$ccs = mysql_query("SELECT * FROM CouZoo_Cards WHERE payer_id = '".$payer_id."'");
+		$total_cc = mysql_num_rows($ccs);
+
+              $new_card = '<div id="cart-check-out-table-row" class="'.$cc_id.'">
+		     		<input type="radio" id="cc_id" name="cc_id" value="'.$cc_id.'">
+                   		<div class="card-name">'.$cc['fname'].' '.$cc['lname'].'</div>
+                   		<div class="card-type">'.$cc_type.'</div>
+                   		<div class="card-number">'.$cc_res['number'].'</div>
+		     		<div id="'.$cc_id.'" class="card-delete"><img src="/images/red-x.png" width="15"></img></div>
+               	      </div><!--end table header-->';
 	 
-	$data = array('success'=> true, 'message'=>'<font color="#017c04">Credit Card Added!</font>');
+	$data = array('success'=> true, 'message'=>'<font color="#017c04">Your credit card has been added!</font>', 'new_card' => $new_card, 'cc_total' => $total_cc);
 	echo json_encode($data);
 	break;
 	}
