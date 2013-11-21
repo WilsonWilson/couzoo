@@ -91,7 +91,7 @@ if ($url != "/merchant-dash.php") {
 		<div class="acc-section">
 			<div class="acc-content">
 				<div id="item-image"><img src="../uploads/coupons/<?=$id_coupon?>.jpg?<?=$last_modified?>" border="0" class="coupon-image"/>
-                <div class="company-profile"><a class="company-profile" href="/<?=$link?>">View Company Profile</a></div>
+                <div class="company-profile"><a class="company-profile" href="/merchant/<?=$link?>">View Company Profile</a></div>
 
                 	<div id="inline1<?=$i?>" style="width:600px;display: none;">
                         <p>

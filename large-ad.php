@@ -174,7 +174,7 @@ $formatted_edate = $edate->format("l, F j");
 			<?=$description?>
             </div><!--End Blurb-->
             
-            <div class="large-ad-company-profile changeable other-stuff"><a class="company-profile" href="<?=$link?>">View Company Profile</a></div>  
+            <div class="large-ad-company-profile changeable other-stuff"><a class="company-profile" href="/merchant/<?=$link?>">View Company Profile</a></div>  
             
             
 		</div>

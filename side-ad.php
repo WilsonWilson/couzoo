@@ -87,7 +87,7 @@
 
     <div class="description"><a href="#inline1_<?=$i?>" class="description-link fancybox" >Description</a></div>
     <div class="need-to-know"><a href="#inline2_<?=$i?>" class="need-to-know-link fancybox" >Need to know</a></div>    
-    <div class="company-profile"><a class="company-profile" href="<?=$link?>">View Company Profile</a></div>
+    <div class="company-profile"><a class="company-profile" href="/merchant/<?=$link?>">View Company Profile</a></div>
     
     <div id="buttons-box-2">
 

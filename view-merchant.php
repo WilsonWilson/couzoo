@@ -10,67 +10,12 @@ $bus = mysql_query("SELECT * FROM CouZoo_Members WHERE link = '$link' AND mercha
 $res = mysql_fetch_array($bus);
 $valid = mysql_num_rows($bus);
 
-if (!$valid) { header('Location: results.php'); }
+if (!$valid) { header('Location: ../results.php'); }
 
 $id_merchant = $res['id_user'];
 
 $views = mysql_query("UPDATE CouZoo_Members SET profile_views = profile_views + 1 WHERE id_user = '$id_merchant'");
-?>
 
-<!--START HEADER & Log-in, Log-out, Register, My Account-->
-	<?php include ("header.php") ?>
-<!--END HEADER & Log-in, Log-out, Register, My Account-->
-
-
-<!-- START VIEW MERCH PAGE ADD-ONS -->
-
-<!--[if IE]>
-<style type='text/css'>
-* html .myButton { display:inline; }  /* hack per IE 6 */
-* + html .myButton { display:inline; }  /* hack per IE 7 */
-</style>
-<![endif]-->	
-
-    <!--Form Highlighter plugin-->
-    <script src="js/jquery.formHighlighter.js" type="text/javascript"></script>
-
-	<!-- Add fancyBox main JS and CSS files -->
-	<?php include ("fancybox.html"); ?>
-	<script type="text/javascript" src="fancybox/source/jquery.fancybox.js?v=2.0.6"></script>
-	<link rel="stylesheet" type="text/css" href="fancybox/source/jquery.fancybox.css?v=2.0.6" media="screen" />
-
-	<script type="text/javascript">
-		$(document).ready(function() {
-
-			$('.fancybox').fancybox();
-
-			$("#fancybox-manual-a").click(function() {
-				$.fancybox.open('1_b.jpg');
-			});
-			
-		});
-	</script>
-
-<!--START OPEN and CLOSE ALL SIDE BUTTON-->
-<?php include ("open-close-all-tab.html") ?>
-<!--END OPEN and CLOSE ALL SIDE BUTTON-->
-
-<link rel="stylesheet" href="css/create-coupon.css" type="text/css"/>
-
-<!-- END VIEW MERCH PAGE ADD-ONS -->
-
-
-<div id="container">
-
-<div id="page-top-push"></div>
-
-<div id="main-column">
-
-<!--Start Merchant Header-->
-<div id="merch-dash-header-container">
-<div id="merch-dash-header">
-
-<?php
 //Get Coupon Data
 $couzoo->DBLogin();
 
@@ -102,7 +47,62 @@ $totalNum = mysql_num_rows(mysql_query("SELECT * FROM CouZoo_Coupons WHERE id_us
 
 if (!$cDescription) { $cDescription = "This company has not filled out a company description yet."; }
 
+$up_dir = "../";
+$page_title = $bname;
 ?>
+
+<!--START HEADER & Log-in, Log-out, Register, My Account-->
+	<?php include ("header.php") ?>
+<!--END HEADER & Log-in, Log-out, Register, My Account-->
+
+
+<!-- START VIEW MERCH PAGE ADD-ONS -->
+
+<!--[if IE]>
+<style type='text/css'>
+* html .myButton { display:inline; }  /* hack per IE 6 */
+* + html .myButton { display:inline; }  /* hack per IE 7 */
+</style>
+<![endif]-->	
+
+    <!--Form Highlighter plugin-->
+    <script src="<?=$up_dir?>js/jquery.formHighlighter.js" type="text/javascript"></script>
+
+	<!-- Add fancyBox main JS and CSS files -->
+	<?php include ("fancybox.html"); ?>
+	<script type="text/javascript" src="<?=$up_dir?>fancybox/source/jquery.fancybox.js?v=2.0.6"></script>
+	<link rel="stylesheet" type="text/css" href="<?=$up_dir?>fancybox/source/jquery.fancybox.css?v=2.0.6" media="screen" />
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+
+			$('.fancybox').fancybox();
+
+			$("#fancybox-manual-a").click(function() {
+				$.fancybox.open('<?=$up_dir?>1_b.jpg');
+			});
+			
+		});
+	</script>
+
+<!--START OPEN and CLOSE ALL SIDE BUTTON-->
+<?php include ("open-close-all-tab.html") ?>
+<!--END OPEN and CLOSE ALL SIDE BUTTON-->
+
+<link rel="stylesheet" href="<?=$up_dir?>css/create-coupon.css" type="text/css"/>
+
+<!-- END VIEW MERCH PAGE ADD-ONS -->
+
+
+<div id="container">
+
+<div id="page-top-push"></div>
+
+<div id="main-column">
+
+<!--Start Merchant Header-->
+<div id="merch-dash-header-container">
+<div id="merch-dash-header">
 
 <h1><?=$bname?></h1>
 
@@ -115,7 +115,7 @@ if (!$cDescription) { $cDescription = "This company has not filled out a company
 
 <div class="merch-profile-left-column">
 <div class="merch-profile-image">
-  <img src="uploads/merchants/<?=$prof_img?>?<?=$last_upd?>" />
+  <img src="<?=$up_dir?>uploads/merchants/<?=$prof_img?>?<?=$last_upd?>" />
 </div><!--END merch-profile-image-->
 
 <div class="merch-profile-left-copy">
