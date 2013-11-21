@@ -724,6 +724,8 @@
 				<span class="error" id="err-publish"></span></h3>
                         <div class="acc-section">
                             <div class="acc-content">
+
+			<!-- Not needed
                                 <div id="payment-left-column">
                                   <ul class="priceList">
                                         <li>
@@ -745,7 +747,7 @@
                                  </ul>
                                  <br clear="all"/>
                                  <div id="footnote">*Ad price is based on total number of purchase originating from the Ad. Billing for Ads will occur after Ad is finished running on COUZOO.</div>
-                            </div>
+                            </div> -->
                             
                             <div id="payment-right-column">
                                 <h2>Billing Info</h2>
@@ -755,15 +757,14 @@
 <?php
        $qry = mysql_query("SELECT * FROM CouZoo_Cards WHERE payer_id = '$id_user'");
 	$total_cc = mysql_num_rows($qry);
-	if ($total_cc) {
 ?>
-               <div id="cart-check-out-table-header" class="card-headers">
+               <div id="cart-check-out-table-header" class="card-headers" style="<?=$total_cc < 1 ? "display: none;" : "";?>">
 		     <div class="card-name">Saved Cards</div>
                    <div class="card-type">Card Type</div>
                    <div class="card-number">Card Number</div>
                </div><!--end table header-->
 <?php
-	} while ($cc = mysql_fetch_array($qry)) {
+	  while ($cc = mysql_fetch_array($qry)) {
 		if ($cc['type'] == 'amex') { $cc_type = "American Express"; } else { $cc_type = ucfirst($cc['type']); }
 ?>
                <div id="cart-check-out-table-row" class="<?=$cc['id']?>">
@@ -775,11 +776,13 @@
                </div><!--end table header-->
 <?php } ?>
 
+   <div id="new-card-holder-coupon"></div>
+
    <div id="payment-left-column">
-             <p id="no-card-added" class="step-copy" style="margin-bottom:10px; <?=$total_cc > 0 ? "display: none;" : "";?>">
+             <p class="no-card-added step-copy" style="margin-bottom:10px; <?=$total_cc > 0 ? "display: none;" : "";?>">
                 You have not yet entered a credit card to be used with your CouZoo Merchant Account. There is a $25 per month subscription fee, which allows you to create and post as many coupons as you wish to CouZoo.com. You may cancel at any time.
              </p>
-             <a href="#add-card" id="card-text" class="fancybox change" style="font-size:14px;"><?=!$total_cc ? "Add a Credit Card" : "Add Another Credit Card";?></a>  &nbsp; |  &nbsp; <a href="javascript:;" style="font-size:14px;" onmousedown="slidedown('payment-right-column-coupon');">Use a Promo Code</a>
+             <a href="#add-card" class="card-text fancybox change" style="font-size:14px;"><?=!$total_cc ? "Add a Credit Card" : "Add Another Credit Card";?></a>  &nbsp; |  &nbsp; <a href="javascript:;" style="font-size:14px;" onmousedown="slidedown('payment-right-column-coupon');">Use a Promo Code</a>
         </div>
 
     <div id="payment-right-column-coupon" style="display:none; overflow:hidden; height:128px; width:100%;">
@@ -803,8 +806,7 @@
         </div>
      </div>
 
-<?php if ($total_cc > 0) { ?>
-	<div id="sub-renew-info">    
+	<div class="sub-renew-info" style="<?=$total_cc < 1 ? "display: none;" : "";?>">    
         	<br clear="all"/>
         	<p class="step-copy" style="margin:10px 0px 10px 0px">
             		You are subscribed with the selected credit card above to create unlimited coupons.<br/> 
@@ -815,7 +817,6 @@
             		<input type="radio" name="customer-subscribe-auto-renew" value="no" />&nbsp;no
         	</form>
 	</div>
-<?php } ?>
 
 					</div>
                             

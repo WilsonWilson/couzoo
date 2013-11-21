@@ -2,3 +2,8 @@ AuthType Basic
 AuthName "Access to /New"
 AuthUserFile /kunden/homepages/23/d384953523/htdocs/.htpasswd
 Require user demo
+
+
+RewriteEngine On
+RewriteBase /
+RewriteRule ^merchant/([^/]*)$ view-merchant.php?bname=$1 [L]
