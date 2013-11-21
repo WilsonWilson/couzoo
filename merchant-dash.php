@@ -169,17 +169,16 @@ if (isset($_POST['image']) && $_FILES['prof_img']['name']) {
         });//]]&gt; 
     </script>
     
-    <script type="text/javascript">//&lt;![CDATA[
-        $(window).load(function(){
-        $(function() {
-            $("[name=maxPurchases]").click(function() {
-                $('.toHide').hide();
-                $("#paymaxp-" + $(this).val()).show('slow');
-				$("#paymaxp-b-" + $(this).val()).show('slow');
-            });
+<!-- NEW JS for Check box. Also add maxpurchchbx class to checkbox HTML
+Show/Hide Max Purchase Div on check box status - added by Pete Nov 19, 2013 -->
+    <script type="text/javascript">    
+    $(document).ready(function(){
+        $(".maxpurchchbx").click(function(){
+            $("#paymaxp-1").toggle('slow');
         });
-        });//]]&gt; 
-    </script>
+    
+    });
+	</script>
     
     <script type="text/javascript">//&lt;![CDATA[
         $(window).load(function(){
@@ -946,7 +945,7 @@ var savedAccordion=new TINY.accordion.slider("savedAccordion");
 savedAccordion.init("accs", "h3", 0,-1, 'selected');
 
 var createAccordion=new TINY.accordion.slider("createAccordion");
-createAccordion.init("acccreate", "h3", 1,-1, 'selected');
+createAccordion.init("acccreate", "h3", 1,0, 'selected');
 
 </script>
 
@@ -1058,6 +1057,218 @@ createAccordion.init("acccreate", "h3", 1,-1, 'selected');
     });
     </script>
 <!--END For div content changer box (must be just above body closing tag-->
+
+<!--Start Only allow one field selected in dollars on step 1 - added by Pete Nov 19, 2013-->
+<script type="text/javascript">
+	$(document).ready(function(){
+        $("#titletype1").click(function(){
+            $(".product-service-title").show('slow');
+			$(".retail-minimum-selector").hide('slow');
+			$(".dollars-or-percent-selector").hide('slow');			
+			$('.item-discount').show();	
+			$('.item-discount-p').show();	
+			$('.store-discont').hide();			
+			$(".lower-set-price-container").show('slow');
+			$(".step-3-dollars").hide('slow');
+			$('#minimum-purchase').val('', '');
+			$('#sale-price-off').val('', '');
+			$('#percent-off').val('', '');	
+        });
+    
+    });
+	
+	$(document).ready(function(){
+        $("#titletype2").click(function(){
+            $(".product-service-title").hide('slow');
+			$('.item-discount').hide();	
+			$('.retail-minimum-selector').show('slow');
+			$('.item-discount-p').hide();			
+			$('.store-discont').show();
+			$('.lower-set-price-container').hide('slow');
+			$(".dollars-or-percent-selector").hide('slow');
+			$(".step-3-dollars").hide('slow');
+			$('#featured-item').val('', '');
+			$('#retail-price').val('', '');
+			$('#sale-price-off').val('', '');
+			$('#percent-off').val('', '');
+			$('#sale-price').val('', '');
+        });
+    
+    });
+	
+	$('#dollars-off').keydown(function(){<!--Show Dollars Off Title Options-->
+		if($(this).val().length > 0){
+			$('.step-3-dollars').show('slow');					
+			$('.dollars-off-option').show('slow');
+			$('.percent-off-option').hide('slow');
+			$('.sale-price-option').hide('slow');
+			$('.percent-off-total-option').hide();
+			$('.dollars-off-total-option').hide();
+		}      
+	});
+	
+	$('#percent-off').keydown(function(){<!--Show Percent Off Title Options-->
+		if($(this).val().length > 0){
+			$('.step-3-dollars').show('slow');		
+			$('.dollars-off-option').hide('slow');			
+			$('.percent-off-option').show('slow');
+			$('.sale-price-option').hide('slow');
+			$('.percent-off-total-option').hide();
+			$('.dollars-off-total-option').hide();
+		}      
+	});
+	
+	$('#sale-price').keydown(function(){<!--Show Lower Price Title Options-->
+		if($(this).val().length > 0){
+			$('.step-3-dollars').show('slow');		
+			$('.dollars-off-option').hide('slow');			
+			$('.percent-off-option').hide('slow');
+			$('.sale-price-option').show('slow');
+			$('.percent-off-total-option').hide();
+			$('.dollars-off-total-option').hide();
+		}      
+	});
+	
+	$('#dollars-off-total').keydown(function(){<!--Show Lower Price Title Options-->
+		if($(this).val().length > 0){
+			$('.step-3-dollars').show('slow');
+			$('.dollars-off-option').hide();			
+			$('.percent-off-option').hide();
+			$('.sale-price-option').hide();			
+			$('.percent-off-total-option').hide('slow');
+			$('.dollars-off-total-option').show('slow');
+		}      
+	});
+	
+		$('#percent-off-total').keydown(function(){<!--Show Lower Price Title Options-->
+		if($(this).val().length > 0){
+			$('.step-3-dollars').show('slow');
+			$('.dollars-off-option').hide();			
+			$('.percent-off-option').hide();
+			$('.sale-price-option').hide();			
+			$('.percent-off-total-option').show('slow');
+			$('.dollars-off-total-option').hide('slow');
+		}      
+	});
+	
+
+	<!-- Open Dollars and Percent fields buttons 1.8 seconds after title typing begins-->
+	$("#retail-price").keyup(function() {
+		setTimeout(func, 300);
+			function func() {
+				$('.dollars-or-percent-selector').fadeIn('slow');
+				$('.off-total-selector').hide();
+				$('.off-item-selector').fadeIn('slow');
+			}
+	});
+	$("#minimum-purchase").keyup(function() {
+		setTimeout(func, 300);
+			function func() {
+				$('.dollars-or-percent-selector').fadeIn('slow');
+				$('.off-total-selector').fadeIn('slow');
+				$('.off-item-selector').hide();				
+			}
+	});
+
+	<!-- Open retail and mimimum fields 1.8 seconds after title typing begins-->
+	$(".apfeaturename").keyup(function() {
+		setTimeout(func, 1500);
+			function func() {
+				$('.retail-minimum-selector').fadeIn(850);
+			}
+	});	
+
+	<!--step 2 if 'sale price off' field populated other two clear-->
+	$('#dollars-off').keydown(function(){
+		if($(this).val().length != 0){
+			$('#sale-price').val('', '');
+			$('#percent-off').val('', '');
+		}       
+	});
+	
+	<!--step 2 if 'sale price' field populated other two clear-->
+	$('#sale-price').keydown(function(){
+		if($(this).val().length != 0){
+			$('#dollars-off').val('', '');
+			$('#percent-off').val('', '');
+		}       
+	});
+	
+	<!--step 2 if sale 'percent off' field populated other two clear-->
+	$('#percent-off').keydown(function(){
+		if($(this).val().length != 0){
+			$('#dollars-off').val('', '');
+			$('#sale-price').val('', '');
+		}       
+	});	
+	
+	<!--step 2 if sale 'percent off total' field populated other clears-->
+	$('#percent-off-total').keydown(function(){
+		if($(this).val().length != 0){
+			$('#dollars-off-total').val('', '');
+		}       
+	});	
+	
+		<!--step 2 if sale 'dollars off total' field populated other clears-->
+	$('#dollars-off-total').keydown(function(){
+		if($(this).val().length != 0){
+			$('#percent-off-total').val('', '');
+		}       
+	});	
+	
+	
+	<!--Start Run Dates custom selection -->
+	$(document).ready(function(){
+        $("#run-date-custom").click(function(){
+            $(".custom-date-range-container").show('slow');
+			setTimeout(func, 1000);
+			function func() {
+				$('.exp-date-container').show('slow');			
+			}		
+        });
+		$("#run-date-30").click(function(){
+            $(".custom-date-range-container").hide('slow');
+			setTimeout(func, 1000);
+			function func() {
+				$('.exp-date-container').show('slow');			
+			}		
+        });
+		$("#run-date-60").click(function(){
+            $(".custom-date-range-container").hide('slow');
+			setTimeout(func, 1000);
+			function func() {
+				$('.exp-date-container').show('slow');			
+			}		
+        });
+		$("#run-date-90").click(function(){
+            $(".custom-date-range-container").hide('slow');
+			setTimeout(func, 1000);
+			function func() {
+				$('.exp-date-container').show('slow');			
+			}		
+        });
+    
+    });
+	
+	<!--Exp Dates custom selection-->
+	$(document).ready(function(){
+        $("#exp-date-custom").click(function(){
+            $(".custom-exp-date-range-container").show('slow');		
+        });
+		 $("#exp-date-3m").click(function(){
+            $(".custom-exp-date-range-container").hide('slow');		
+        });;
+		 $("#exp-date-6m").click(function(){
+            $(".custom-exp-date-range-container").hide('slow');		
+        });
+		 $("#exp-date-1y").click(function(){
+            $(".custom-exp-date-range-container").hide('slow');		
+        });
+    });
+</script>
+<!--End Only allow one filed selected in dollazrs on step 1-->
+
+
 
 <script type="text/javascript">
 

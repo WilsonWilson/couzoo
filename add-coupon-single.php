@@ -9,259 +9,392 @@
                 <ul class="acc" id="acccreate">
 
  					<li>
-                        <h3 id="step-1"><span class="cc-step-title"><strong>1:</strong>Select Coupon Category</span>
-				<span class="error" id="err-step-1"></span></h3>
+                 		 <h3><span class="cc-step-title"><strong>1:</strong>Create Coupon Title</span><a href="#help-step3" class="fancybox help-icon" >[&nbsp;?&nbsp;]</a></h3>
                         <div class="acc-section">
-                            <div class="acc-content">
-                               <p><span class="step-copy">What is the category or industry your coupon represents?</span></p>
-                               
-                                <!--Start Checkbox options-->
-                               
-                        <br clear="all"/>
-                        <br clear="all"/>
-
-                        <div id="customer-pref-container">
-                           
-                            <div id="customer-pref-column-two">
-                                    <div id="catagory-top">
-						<div id='checkAll_1'>
-                                        <div id="catagory-title">
-                                        <span class="check-all-title" name='checkall'><h1>Food & Drink</h1></span>
-                                        </div>               
-                                        <div id="check-all"><span class="check-all-btn" name='checkall'>all</span></div>
-					   	</div>
-                                    </div><!--END catagory top-->
-                                	<br clear="all"/>
-                                    <div class="catagory-box" id="cat_1">
-                                      <div class="check-box-md"><input type="checkbox" name="category[]" id="cat" value="Restauants">&nbsp;<label>Restauants</label></div>
-                                      <div class="check-box-md"><input type="checkbox" name="category[]" id="cat" value="Bar">&nbsp;<label>Bars & Nightlife</label></div>
-                                    </div>
+                           <div class="acc-content">
                             
-                                    <div id="catagory-top">
-						<div id='checkAll_2'>
-                                        <div id="catagory-title">
-                                        <span class="check-all-title" name='checkall'><h1>Beauty</h1></span>
-                                        </div>               
-                                        <div id="check-all"><span class="check-all-btn" name='checkall'>all</span></div>
-						</div>
-                                    </div><!--END catagory top-->
-                                    <br clear="all"/>
-                                    <div class="catagory-box" id="cat_2">
-                                      <div class="check-box-md"><input type="checkbox" name="category[]" id="cat" value="Massage">&nbsp;<label>Massage</label></div>
-                                      <div class="check-box-md"><input type="checkbox" name="category[]" id="cat" value="Facial">&nbsp;<label>Facial</label></div>
-                                      <div class="check-box-md"><input type="checkbox" name="category[]" id="cat" value="NailCare">&nbsp;<label>Nail Care</label></div>
-                                      <div class="check-box-md"><input type="checkbox" name="category[]" id="cat" value="Tanning">&nbsp;<label>Tanning</label></div>
-                                      <div class="check-box-md"><input type="checkbox" name="category[]" id="cat" value="Hair">&nbsp;<label>Hair</label></div>
-                                      <div class="check-box-md"><input type="checkbox" name="category[]" id="cat" value="Waxing">&nbsp;<label>Waxing</label></div>
-                                      <div class="check-box-md"><input type="checkbox" name="category[]" id="cat" value="Spa">&nbsp;<label>Spa</label></div>
-                                      <div class="check-box-md"><input type="checkbox" name="category[]" id="cat" value="TeethWhitening">&nbsp;<label>Teeth Whitening</label></div>
-                                    </div>
-                                
-                                    <div id="catagory-top">
-						<div id='checkAll_3'>
-                                        <div id="catagory-title">
-                                        <span class="check-all-title" name='checkall'><h1>Fitness</h1></span>
-                                        </div>               
-                                        <div id="check-all"><span class="check-all-btn" name='checkall'>all</span></div>
-						</div>
-                                    </div><!--END catagory top-->
-                                    <br clear="all"/>
-                                    <div class="catagory-box" id="cat_3">
-                                      <div class="check-box-md"><input type="checkbox" name="category[]" id="cat" value="Yoga">&nbsp;<label>Yoga & Pilates</label></div>
-                                      <div class="check-box-md"><input type="checkbox" name="category[]" id="cat" value="Gym">&nbsp;<label>Gym</label></div>
-                                      <div class="check-box-md"><input type="checkbox" name="category[]" id="cat" value="BootCamp">&nbsp;<label>Boot Camp</label></div>
-                                      <div class="check-box-md"><input type="checkbox" name="category[]" id="cat" value="MartialArts">&nbsp;<label>Martial Arts</label></div>
-                                      <div class="check-box-md"><input type="checkbox" name="category[]" id="cat" value="Classes">&nbsp;<label>Classes</label></div>
-                                      <div class="check-box-md"><input type="checkbox" name="category[]" id="cat" value="PersonalTraining">&nbsp;<label>Personal Training</label></div>
-                                    </div>
-                                
-                            </div><!--END Column One-->
-                    
-                    
-                            <div id="customer-pref-column-two">
-                               
-                                <div id="catagory-top">
-						<div id='checkAll_4'>
-                                    <div id="catagory-title">
-                                    <span class="check-all-title" name='checkall'><h1>Medical</h1></span>
-                                    </div>               
-                                    <div id="check-all"><span class="check-all-btn" name='checkall'>all</span></div>
-						</div>
-                                </div><!--END catagory top-->
-                                <br clear="all"/>
-                                <div class="catagory-box" id="cat_4">
-                                      <div class="check-box-md"><input type="checkbox" name="category[]" id="cat" value="Vision">&nbsp;<label>Vision & Eye Care</label></div>
-                                      <div class="check-box-md"><input type="checkbox" name="category[]" id="cat" value="Dental">&nbsp;<label>Dental</label></div>
-                                      <div class="check-box-md"><input type="checkbox" name="category[]" id="cat" value="Chiropractor">&nbsp;<label>Chiropractor</label></div>
-                                      <div class="check-box-md"><input type="checkbox" name="category[]" id="cat" value="SkinCare">&nbsp;<label>Skin Care</label></div>
-                                </div>
-                            
-                                    <div id="catagory-top">
-						<div id='checkAll_5'>
-                                        <div id="catagory-title">
-                                        <span class="check-all-title" name='checkall'><h1>Activities</h1></span>
-                                        </div>               
-                                        <div id="check-all"><span class="check-all-btn" name='checkall'>all</span></div>
-						</div>
-                                    </div><!--END catagory top-->
-                                        <br clear="all"/>
-                                    <div class="catagory-box" id="cat_5">
-                                      <div class="check-box-md"><input type="checkbox" name="category[]" id="cat" value="Museums">&nbsp;<label>Museums</label></div>
-                                      <div class="check-box-md"><input type="checkbox" name="category[]" id="cat" value="WineTasting">&nbsp;<label>Wine Tasting</label></div>
-                                      <div class="check-box-md"><input type="checkbox" name="category[]" id="cat" value="Tours">&nbsp;<label>Tours</label></div>
-                                      <div class="check-box-md"><input type="checkbox" name="category[]" id="cat" value="ComedyClubs">&nbsp;<label>Comedy Clubs</label></div>
-                                      <div class="check-box-md"><input type="checkbox" name="category[]" id="cat" value="Shows">&nbsp;<label>Shows</label></div>
-                                      <div class="check-box-md"><input type="checkbox" name="category[]" id="cat" value="LifeSkill">&nbsp;<label>Life Skill Classes</label></div>
-                                      <div class="check-box-md"><input type="checkbox" name="category[]" id="cat" value="Golf">&nbsp;<label>Golf</label></div>
-                                      <div class="check-box-md"><input type="checkbox" name="category[]" id="cat" value="Bowling">&nbsp;<label>Bowling</label></div>
-                                      <div class="check-box-md"><input type="checkbox" name="category[]" id="cat" value="SkyDiving">&nbsp;<label>Sky Diving</label></div>
-                                      <div class="check-box-md"><input type="checkbox" name="category[]" id="cat" value="OutdoorAdventure">&nbsp;<label>Outdoor Adventure</label></div>
-                                    </div>                            
-                                       
-                            </div><!--END Column Two-->
-                        
-                            <div id="customer-pref-column-two">
-                                                         
-                                 <div id="catagory-top">
-						<div id='checkAll_6'>
-                                      <div id="catagory-title">
-                                      <span class="check-all-title" name='checkall'><h1>Retail & Services</h1></span>
-                                      </div>               
-                                    <div id="check-all"><span class="check-all-btn" name='checkall'>all</span></div>
-						</div>
-                                 </div><!--END catagory top-->
-                                   <br clear="all"/>
-                                <div class="catagory-box" id="cat_6">
-                                      <div class="check-box-md"><input type="checkbox" name="category[]" id="cat" value="Home Services">&nbsp;<label>Home Services</label></div>
-                                      <div class="check-box-md"><input type="checkbox" name="category[]" id="cat" value="Clothing">&nbsp;<label>Clothing</label></div>
-                                      <div class="check-box-md"><input type="checkbox" name="category[]" id="cat" value="Automotive">&nbsp;<label>Automotive</label></div>
-                                      <div class="check-box-md"><input type="checkbox" name="category[]" id="cat" value="Photography">&nbsp;<label>Photography</label></div>
-                                </div>
-                            
-						<div id='checkAll_7'>
-                                <div id="catagory-title">
-                                     <span class="check-all-title" name='checkall'><h1>Other</h1></span>
-                                </div>               
-                                <div id="check-all"><span class="check-all-btn" name='checkall'>all</span></div>
-						</div>
-                                     <br clear="all"/>
-                                <div class="catagory-box" id="cat_7">
-                                      <div class="check-box-md"><input type="checkbox" name="category[]" id="cat" value="Wedding">&nbsp;<label>Wedding</label></div>
-                                      <div class="check-box-md"><input type="checkbox" name="category[]" id="cat" value="Pregnancy">&nbsp;<label>Pregnancy</label></div>
-                                      <div class="check-box-md"><input type="checkbox" name="category[]" id="cat" value="Baby">&nbsp;<label>Baby</label></div>
-                                      <div class="check-box-md"><input type="checkbox" name="category[]" id="cat" value="Children">&nbsp;<label>Children</label></div>
-                                      <div class="check-box-md"><input type="checkbox" name="category[]" id="cat" value="Gay">&nbsp;<label>Gay</label></div>
-                                      <div class="check-box-md"><input type="checkbox" name="category[]" id="cat" value="Travel">&nbsp;<label>Travel</label></div>
-                                </div>
-                            
-                                <div class="catagory-box">
-                                      <div class="check-box-md"><input type="checkbox" name="category[]" id="cat" value="EverythingElse">&nbsp;<label>Everything Else</label></div>
-                                </div>
-                            </div><!--END Column Three-->
-             			    <br clear="all"/> 
-						</div><!--END customer-pref-container-->
-                               
-                               <!--End Checkbox options--> 
-                              
+                            <div style="width:100%; height:68px; margin:0px; overflow:hidden; position:relative; top:1px;">
+                            <p><span class="step-copy" style="margin-top:1px;">What is this coupon for?</span></p>
+                            <br clear="all"/>
+                                <span>
+                                <input type="radio" value="0" class="required"  id="titletype1" name="coupontype" style="border:none;"/> 
+                                <label for="titletype1"><span class="step-copy">Specific Product or Service</span></label>
+                                </span>                              
+                                <span>
+                                <input type="radio" value="0" class="required"  id="titletype2" name="coupontype" style="border:none; margin-left:25px;"/> 
+                                <label for="titletype2"><span class="step-copy">Any Purchase at <?=$bname?></span></label>
+                                </span>
                             </div>
-                        </div>
-                    </li>     
-       
-
-                    <li>
-                        <h3 id="step-2"><span class="cc-step-title"><strong>2:</strong>Set Coupon Sale Value</span><a href="#help-step1" class="fancybox help-icon" >[&nbsp;?&nbsp;]</a>
-				<span class="error" id="err-step-2"></span></h3>
-                        <div class="acc-section">
-                            <div class="acc-content">
-                                <p><span class="step-copy">What is the original retail price and sale price with this coupon of the produact or service being featured in this coupon?</span></p>
-                              <br clear="all"/><br clear="all"/>
-                               <div style="width:600px;"><span class="step-copy">Display mark down by:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span> 
-                              
-                               <div  style="width:160px; float:left;"><span><input type="radio" name="markDown" value="1" class="required"  id="step1-dollars" style="border:none;"/> <label for="step1-dollars"><span class="step-copy">Dollars off ($)</span></label></span></div>
+                                    
+                            <div class="product-service-title" style="display:none; width:720px; margin:15px 0px;">
+                                 <p style="padding-bottom:4px;"><span class="step-copy">What is the product or service being featured in this coupon?</span></p>
+                                 <input type="text" name="featureditemselect" id="featured-item" class="required apfeaturename"  value="Enter Product or Service Featured" maxlength="35" style="width:696px; margin-left:3px;"/>
+                                    
+                                 <p id="footnote">&nbsp;&nbsp;<strong>examples:</strong> "lunch and a drink" , "a hair coloring" , "an oil change" , "a massage" , "a mani pedi" </p>
+                             </div><!--End product service title-->
+                             
+                             
+                             
+                             
+                             <!--Start Percent amount section-->
+                                   <div class="retail-minimum-selector" style="display:none; width:720px; float:left; margin:0px 0px;" id="blk-2">
+                                       <p class="step-copy">
+                                                                               
+                                           <div class="store-discont" style="width:720px;">        
+                                               <span class="step-field-title-box">What is the mimimum purchase required for this coupon to be valid?&nbsp; $&nbsp;</span>
+                                               <input type="number" name="minimum-purchase" id="minimum-purchase" class="required apminpurch" value="" style="width:70px; margin-left:1px;"/>
+                                           </div>
+                                           
+                                           <div class="item-discount" style="width:720px; margin-top:2px">
+                                               <span class="step-field-title-box">What is the retail value of the <span class="apfeaturename-field item-discount autopop-pricing-copy"></span>?&nbsp; $&nbsp;</span>
+                                               <input type="number" name="retail_price" id="retail-price" class="required apretail" value="" style="width:70px; text-align:center; padding-left:0px;"/>
+                                           </div>
+                                        
+                                       </p>
+                                   </div>
+                             <!--End Percent amount section--> 
+                             
+                             
                                
-                               <div  style="width:160px; float:left;"><span><input type="radio" name="markDown" value="2" class="required"  id="step1-percent" style="border:none;"/> <label for="step1-percent"><span class="step-copy">Percent off (%)</span></label></span></div>
-                               </div>
-                              
-                                <br clear="all"/>
                                 
-                                <div style="height:auto;">
-                                
-                                <!--Start Dollar amount section-->
-                                <div class="toHide" style="display:none; float:left; margin:0px 0px;" id="blk-1">
-                                <p class="step-copy">
-                                
-                                <div style="width:260px; float:left; margin-right:20px;">
-                                <span class="step-field-title-box">Retail Value: $&nbsp;</span><input type="text" name="retail_price" id="retail-price" class="required apretail" value="" style="width:80px;"/>
-                                </div>
-                                
-                                <div style="width:260px; float:left;">
-                                <span class="step-field-title-box">Price with Coupon: $&nbsp;</span><input type="text" name="sale_price" id="sale-price" class="required apsale"  value="" style="width:80px; margin-left:1px;"/>
-                                </div>
-                                
-                                </p>
-                                </div>
-                                <!--End Dollar amount section-->
-                                
-                                <!--Start Percent amount section-->
-                                <div class="toHide" style="display:none; float:left; margin:0px 0px;" id="blk-2">
-                                <p class="step-copy">
-                                
-                                <div style="width:260px; float:left; margin-right:20px;">
-                                <span class="step-field-title-box">Percent Off: &nbsp;</span><input type="number" name="percent_off" id="percent-off" class="required appercentoff" value="" style="width:80px;"/>&nbsp;<font color="#603912">%</font>
-                                </div>
-                                
-                                <div style="width:320px; float:left;">        
-                                <span class="step-field-title-box">Minimum Purchase: $&nbsp;</span><input type="number" name="min_purchase" id="minimum-purchase" class="required apminpurch" value="" style="width:80px; margin-left:1px;"/>
-                                </div>
-                                
-                                </p>
-                                </div>
-                                <!--End Percent amount section-->        
-                                
+                              <div class="dollars-or-percent-selector" style="width:auto; display:none;">
+                                   <span class="step-copy" style="margin:-10px 0px 10px 0px;">
+                                   		How will the <span class="store-discont" style="font-size:inherit;">customer's purchase</span><span class="apfeaturename-field item-discount autopop-pricing-copy"></span> be discounted?<br />
+                                   		<span id="footnote"><strong>note:</strong> you may only select one</span>
+                                   </span> 
+                                      
+                                   <!--Start Off Item amount section-->
+                                   <div class="toHide off-item-selector" style="float:left; margin:0px 0px;" id="blk-1">
+                                       <p class="step-copy">
+                                        
+                                           <div style="width:auto; float:left;"> 
+                                               <span class="step-field-title-box">
+                                               Dollars Off: $&nbsp;
+                                               </span>
+                                               <input type="number" name="dollars-off" id="dollars-off" class="required apdollarsoff"  value="" style="width:70px; margin-left:1px; text-align:center; padding-left:0px;"/>
+                                           </div>
+                                           
+                                           <div style="width:auto; float:left;">
+                                               <span class="step-field-title-box">
+                                                   <span style="color:#f26625; font-weight:bold; font-size:14px;" >
+                                                   &nbsp;&nbsp;&nbsp;-OR-&nbsp;&nbsp;
+                                                   </span> 
+                                                   Percent Off: &nbsp;
+                                                </span>
+                                                <input type="number" name="percent_off" id="percent-off" class="required appercentoff" value="" style="width:70px; margin-left:1px; text-align:center; padding-left:0px;"/>&nbsp;<font color="#603912">%</font>
+                                           </div>
+                                           
+                                           <div style="width:auto; float:left;">  
+											   <span class="step-field-title-box">
+                                                   <span style="color:#f26625; font-weight:bold; font-size:14px;" >
+                                                   &nbsp;&nbsp;&nbsp;-OR-&nbsp;&nbsp;
+                                                   </span>
+	                                               A Lower Price: $&nbsp;
+                                               </span>
+                                               <input type="number" name="sale_price" id="sale-price" class="required apsale"  value="" style="width:70px; margin-left:1px; text-align:center; padding-left:0px;"/>    
+                                           </div>
+                                           </p>
+                                   </div>
+                                   <!--End Dollar amount section-->
+                                   
+                                   <!--Start Off Total amount section-->
+                                   <div class="toHide off-total-selector" style="float:left; margin:0px 0px;" id="blk-1">
+                                       <p class="step-copy">                                           
+                                                                                     
+                                           <div style="width:auto; float:left;"> 
+                                               <span class="step-field-title-box">
+                                               Dollars Off: $&nbsp;
+                                               </span>
+                                               <input type="number" name="dollars-off-total" id="dollars-off-total" class="required apdollarsofftotal"  value="" style="width:70px; margin-left:1px; text-align:center; padding-left:0px;"/>
+                                           </div>
+                                           
+                                           <div style="width:auto; float:left;">
+                                               <span class="step-field-title-box">
+                                                   <span style="color:#f26625; font-weight:bold; font-size:14px;" >
+                                                   &nbsp;&nbsp;&nbsp;-OR-&nbsp;&nbsp;
+                                                   </span> 
+                                                   Percent Off: &nbsp;
+                                                </span>
+                                                <input type="number" name="percent-off-total" id="percent-off-total" class="required appercentofftotal" value="" style="width:70px; margin-left:1px; text-align:center; padding-left:0px;"/>&nbsp;<font color="#603912">%</font>
+                                           </div>
+                                        
+                                       </p>
+                                   </div>
+                                   <!--End Dollar amount section-->
+                                   
+                                   <br clear="all"/>       
                               </div>
-                              <br clear="all"/>
-                            </div>
+                              
+                                                            
+                              <div class="step-3-dollars" style="display:none;"><!--START  Title Options-->
+                                 <br clear="all"/>
+                                  <div id="select-title-format">Select the Final Title of Your Coupon</div>
+                                  	<input type="hidden" name="id_user" value="<?=$id_user?>">
+	 								<input type="hidden" name="bname" value="<?=$bname?>">
+                              
+                              	  <div class="dollars-off-option" style="display:none;"><!--START Dollars Off Item Title Options-->         
+                                      <span>                                      
+                                          <input type="radio" class="required" value="step-2-dollars-op1" id="step-2-dollars-op1" name="title_format" />
+                                          <label for="step-2-dollars-op1">
+                                                <p class="step-copy step-3-copy">
+                                                    $<span class="apdollarsoff-field autopop-pricing-copy"></span> off a $<span class="apretail-field autopop-pricing-copy"></span> <span class="apfeaturename-field autopop-pricing-copy"></span> at <?=$bname?>
+                                                </p>
+                                          </label>
+                                          <br clear="all"/> 
+                                      </span>
+                                      
+                                      <span>                                      
+                                          <input type="radio" class="required" value="step-2-dollars-op2" id="step-2-dollars-op2" name="title_format" />
+                                          <label for="step-2-dollars-op2">
+                                                <p class="step-copy step-3-copy">
+                                                    $<span class="apdollarsoff-field autopop-pricing-copy"></span> off $<span class="apretail-field autopop-pricing-copy"></span> worth of <span class="apfeaturename-field autopop-pricing-copy"></span> at <?=$bname?>
+                                                </p>
+                                          </label>
+                                          <br clear="all"/> 
+                                      </span>
+                                      
+                                      <span>                                  
+                                          <input type="radio" class="required" value="step-2-dollars-op3" id="step-2-dollars-op3" name="title_format" />
+                                          <label for="step-2-dollars-op3">
+                                                <p class="step-copy step-3-copy">
+                                                Save $<span class="apdollarsoff-field autopop-pricing-copy"></span> on a $<span class="apretail-field autopop-pricing-copy"></span> <span class="apfeaturename-field autopop-pricing-copy"></span> at <?=$bname?>
+                                                </p>
+                                          </label>
+                                          <br clear="all"/> 
+                                      </span>
+                                      
+                                      <span>                                  
+                                          <input type="radio" class="required" value="step-2-dollars-op4" id="step-2-dollars-op4" name="title_format" />
+                                          <label for="step-2-dollars-op4">
+                                                <p class="step-copy step-3-copy">
+                                                Save $<span class="apdollarsoff-field autopop-pricing-copy"></span> on <span class="apfeaturename-field autopop-pricing-copy"></span> at <?=$bname?>
+                                                </p>
+                                          </label>
+                                          <br clear="all"/> 
+                                      </span>
+                                      
+                                      <span>                                      
+                                          <input type="radio" class="required" value="step-2-dollars-op5" id="step-2-dollars-op5" name="title_format" />
+                                          <label for="step-2-dollars-op5">
+                                                <p class="step-copy step-3-copy">
+                                                    $<span class="apdollarsoff-field autopop-pricing-copy"></span> off <span class="apfeaturename-field autopop-pricing-copy"></span> at <?=$bname?>
+                                                </p>
+                                          </label>
+                                          <br clear="all"/> 
+                                      </span>
+                                      
+                                      <span>                                      
+                                          <input type="radio" class="required" value="step-2-dollars-op6" id="step-2-dollars-op6" name="title_format" />
+                                          <label for="step-2-dollars-op6">
+                                                <p class="step-copy step-3-copy">
+                                                    $<span class="apdollarsoff-field autopop-pricing-copy"></span> off <span class="apfeaturename-field autopop-pricing-copy"></span> at <?=$bname?> (Regularly $<span class="apretail-field autopop-pricing-copy"></span>)
+                                                </p>
+                                          </label>
+                                          <br clear="all"/> 
+                                      </span>
+                                  </div><!--END Dollars Off Item Title Options-->
+                              	  
+                                  <div class="percent-off-option" style="display:none;"><!--START Percent Off Item Title Options-->         
+                                      <span>                                      
+                                          <input type="radio" class="required" value="step-2-percent-op1" id="step-2-percent-op1" name="title_format" />
+                                          <label for="step-2-percent-op1">
+                                                <p class="step-copy step-3-copy">
+                                                    <span class="appercentoff-field autopop-pricing-copy"></span>% off a $<span class="apretail-field autopop-pricing-copy"></span> <span class="apfeaturename-field autopop-pricing-copy"></span> at <?=$bname?>
+                                                </p>
+                                          </label>
+                                          <br clear="all"/> 
+                                      </span>
+                                      
+                                      <span>                                      
+                                          <input type="radio" class="required" value="step-2-percent-op2" id="step-2-percent-op2" name="title_format" />
+                                          <label for="step-2-percent-op2">
+                                                <p class="step-copy step-3-copy">
+                                                    <span class="appercentoff-field autopop-pricing-copy"></span>% off $<span class="apretail-field autopop-pricing-copy"></span> worth of <span class="apfeaturename-field autopop-pricing-copy"></span> at <?=$bname?>
+                                                </p>
+                                          </label>
+                                          <br clear="all"/> 
+                                      </span>
+                                      
+                                      <span>                                  
+                                          <input type="radio" class="required" value="step-2-percent-op3" id="step-2-percent-op3" name="title_format" />
+                                          <label for="step-2-percent-op3">
+                                                <p class="step-copy step-3-copy">
+                                                Save <span class="appercentoff-field autopop-pricing-copy"></span>% on a $<span class="apretail-field autopop-pricing-copy"></span> <span class="apfeaturename-field autopop-pricing-copy"></span> at <?=$bname?>
+                                                </p>
+                                          </label>
+                                          <br clear="all"/> 
+                                      </span>
+                                      
+                                      <span>                                  
+                                          <input type="radio" class="required" value="step-2-percent-op4" id="step-2-percent-op4" name="title_format" />
+                                          <label for="step-2-percent-op4">
+                                                <p class="step-copy step-3-copy">
+                                                Save <span class="appercentoff-field autopop-pricing-copy"></span>% on <span class="apfeaturename-field autopop-pricing-copy"></span> at <?=$bname?>
+                                                </p>
+                                          </label>
+                                          <br clear="all"/> 
+                                      </span>
+                                      
+                                      <span>                                      
+                                          <input type="radio" class="required" value="step-2-percent-op5" id="step-2-percent-op5" name="title_format" />
+                                          <label for="step-2-percent-op5">
+                                                <p class="step-copy step-3-copy">
+                                                    <span class="appercentoff-field autopop-pricing-copy"></span>% off <span class="apfeaturename-field autopop-pricing-copy"></span> at <?=$bname?>
+                                                </p>
+                                          </label>
+                                          <br clear="all"/> 
+                                      </span>
+                                      
+                                      <span>                                      
+                                          <input type="radio" class="required" value="step-2-percent-op6" id="step-2-percent-op6" name="title_format" />
+                                          <label for="step-2-percent-op6">
+                                                <p class="step-copy step-3-copy">
+                                                    <span class="appercentoff-field autopop-pricing-copy"></span>% off <span class="apfeaturename-field autopop-pricing-copy"></span> at <?=$bname?> (Regularly $<span class="apretail-field autopop-pricing-copy"></span>)
+                                                </p>
+                                          </label>
+                                          <br clear="all"/> 
+                                      </span>
+                                  </div><!--END Percent Off Item Title Options-->
+                                  
+                                  <div class="sale-price-option" style="display:none;"><!--START Sale Price Title Options-->
+                                  	  <span>                                  
+                                          <input type="radio" class="required" value="step-2-saleprice-op1" id="step-2-saleprice-op1" name="title_format" />
+                                          <label for="step-2-saleprice-op1">
+                                                <p class="step-copy step-3-copy">
+                                                	$<span class="apsale-field autopop-pricing-copy"></span> for a $<span class="apretail-field autopop-pricing-copy"></span> <span class="apfeaturename-field autopop-pricing-copy"></span> at <?=$bname?>
+                                                </p>
+                                          </label>
+                                          <br clear="all"/> 
+                                      </span>
+                                                                                                                                                    
+                                      <span>                                  
+                                          <input type="radio" class="required" value="step-2-saleprice-op2" id="step-2-saleprice-op2" name="title_format" />
+                                          <label for="step-2-saleprice-op2">
+                                                <p class="step-copy step-3-copy">
+                                                	$<span class="apsale-field autopop-pricing-copy"></span> for $<span class="apretail-field autopop-pricing-copy"></span> worth of <span class="apfeaturename-field autopop-pricing-copy"></span> at <?=$bname?>
+                                                </p>
+                                          </label>
+                                          <br clear="all"/> 
+                                      </span>
+                                      
+                                      <span>                                  
+                                          <input type="radio" class="required" value="step-2-saleprice-op3" id="step-2-saleprice-op3" name="title_format" />
+                                          <label for="step-2-saleprice-op3">
+                                                <p class="step-copy step-3-copy">
+                                                	$<span class="apretail-field autopop-pricing-copy"></span> <span class="apfeaturename-field autopop-pricing-copy"></span> for only $<span class="apsale-field autopop-pricing-copy"></span> at <?=$bname?>
+                                                </p>
+                                          </label>
+                                          <br clear="all"/> 
+                                      </span> 
+                                      
+                                      <span>                                  
+                                          <input type="radio" class="required" value="step-2-saleprice-op4" id="step-2-saleprice-op4" name="title_format" />
+                                          <label for="step-2-saleprice-op4">
+                                                <p class="step-copy step-3-copy">
+                                                	$<span class="apretail-field autopop-pricing-copy"></span> worth of <span class="apfeaturename-field autopop-pricing-copy"></span> for only $<span class="apsale-field autopop-pricing-copy"></span> at <?=$bname?>
+                                                </p>
+                                          </label>
+                                          <br clear="all"/> 
+                                      </span> 
+                                      
+                                      <span>
+                                          <input type="radio" class="required" value="step-2-saleprice-op5" id="step-2-saleprice-op5" name="title_format" />
+                                          <label for="step-2-saleprice-op5">
+                                                <p class="step-copy step-3-copy">
+                                                	$<span class="apsale-field autopop-pricing-copy"></span> for <span class="apfeaturename-field autopop-pricing-copy"></span> at <?=$bname?> (Regularly $<span class="apretail-field autopop-pricing-copy"></span>)
+                                                </p>
+                                          </label>
+                                          <br clear="all"/> 
+                                      </span>   
+                                      
+                                      <span>                                  
+                                          <input type="radio" class="required" value="step-2-saleprice-op6" id="step-2-saleprice-op6" name="title_format" />
+                                          <label for="step-2-saleprice-op6">
+                                                <p class="step-copy step-3-copy">
+                                                	$<span class="apsale-field autopop-pricing-copy"></span> for a <span class="apfeaturename-field autopop-pricing-copy"></span> at <?=$bname?>
+                                                </p>
+                                          </label>
+                                          <br clear="all"/> 
+                                      </span>                    
+                                  </div><!--END Sale Price Title Options-->
+                                  
+                         <!-- START Discount on Purchs (not item)-->
+                         			
+                                  <!--START Dollars Off Item Title Options-->
+                                  <div class="dollars-off-total-option" style="display:none;">         
+                                      <span>                                      
+                                          <input type="radio" class="required" value="step-2-dollarst-op1" id="step-2-dollarst-op1" name="title_format" />
+                                          <label for="step-2-dollarst-op1">
+                                                <p class="step-copy step-3-copy">
+                                                    $<span class="apdollarsofftotal-field autopop-pricing-copy"></span> off your purchase at <?=$bname?> when you spend $<span class="apminpurch-field autopop-pricing-copy"></span> or more
+                                                </p>
+                                          </label>
+                                          <br clear="all"/> 
+                                       </span>
+                                       
+                                       <span>                                      
+                                          <input type="radio" class="required" value="step-2-dollarst-op2" id="step-2-dollarst-op2" name="title_format" />
+                                          <label for="step-2-dollarst-op2">
+                                                <p class="step-copy step-3-copy">
+                                                    $<span class="apdollarsofftotal-field autopop-pricing-copy"></span> off at <?=$bname?> when you spend $<span class="apminpurch-field autopop-pricing-copy"></span> or more
+                                                </p>
+                                          </label>
+                                          <br clear="all"/> 
+                                       </span>
+                                       
+                                       <span>                                      
+                                          <input type="radio" class="required" value="step-2-dollarst-op3" id="step-2-dollarst-op3" name="title_format" />
+                                          <label for="step-2-dollarst-op3">
+                                                <p class="step-copy step-3-copy">
+                                                    $<span class="apdollarsofftotal-field autopop-pricing-copy"></span> off your purchase of $<span class="apminpurch-field autopop-pricing-copy"></span> or more at Company Name
+                                                </p>
+                                          </label>
+                                          <br clear="all"/> 
+                                       </span>
+                                  </div><!--END Dollars Off Item Title Options-->
+                              	  
+                                  <!--START Percent Off Item Title Options-->
+                                  <div class="percent-off-total-option" style="display:none;">         
+                                      <span>                                      
+                                          <input type="radio" class="required" value="step-2-percentt-op1" id="step-2-percentt-op1" name="title_format" />
+                                          <label for="step-2-percentt-op1">
+                                                <p class="step-copy step-3-copy">
+                                                    <span class="appercentofftotal-field autopop-pricing-copy"></span>% off your purchase at <?=$bname?> when you spend $<span class="apminpurch-field autopop-pricing-copy"></span> or more
+                                                </p>
+                                          </label>
+                                          <br clear="all"/> 
+                                       </span>
+                                       
+                                       <span>                                      
+                                          <input type="radio" class="required" value="step-2-percentt-op2" id="step-2-percentt-op2" name="title_format" />
+                                          <label for="step-2-percentt-op2">
+                                                <p class="step-copy step-3-copy">
+                                                    <span class="appercentofftotal-field autopop-pricing-copy"></span>% off at <?=$bname?> when you spend $<span class="apminpurch-field autopop-pricing-copy"></span> or more
+                                                </p>
+                                          </label>
+                                          <br clear="all"/> 
+                                       </span>
+                                       
+                                       <span>                                      
+                                          <input type="radio" class="required" value="step-2-percentt-op3" id="step-2-percentt-op3" name="title_format" />
+                                          <label for="step-2-percentt-op3">
+                                                <p class="step-copy step-3-copy">
+                                                    <span class="appercentofftotal-field autopop-pricing-copy"></span>% off your purchase of $<span class="apminpurch-field autopop-pricing-copy"></span> or more at <?=$bname?>
+                                                </p>
+                                          </label>
+                                          <br clear="all"/> 
+                                       </span>
+                                  </div><!--END Percent Off Item Title Options-->                       
+                                  
+                                
+                              </div><!--END Title Options-->
+                                  <br clear="all"/>
+                          </div>
                         </div>
-                    </li>
-                    
-                    <li>
-                        <h3 id="step-3"><span class="cc-step-title"><strong>3:</strong>Create Coupon Title</span>
-				<span class="error" id="err-step-3"></span></h3>
-                        <div class="acc-section">
-                            <div class="acc-content">
-                                <p><span class="step-copy">What is the product or service being featured in this coupon?</span></p>
-        <br clear="all"/><br clear="all"/>
-        <input type="text" name="featured_item" id="featured-item" class="required apfeaturename"  value="Enter Product or Service Featured" maxlength="35" style="width:696px; margin-left:3px;"/>
-        
-        <p id="footnote">&nbsp;&nbsp;<strong>examples:</strong> "lunch and a drink" , "a hair coloring" , "purchase at Joe's Store" , "an oil change", "a message" , "a mani pedi" </p>
-
-        <div id="select-title-format">Select Title Format</div>
-	 <input type="hidden" name="id_user" value="<?=$id_user?>">
-	 <input type="hidden" name="bname" value="<?=$bname?>">
-
-        <div class="step-3-dollars toHide" style="display:none;" id="blk-b-1">
-        <input type="radio" class="required" value="style1" id="step-2-dollars-op1" name="title_format" /> <label for="step-2-dollars-op1"><p class="step-copy step-3-copy">$<span class="apsale-field autopop-pricing-copy"></span> for <span class="apfeaturename-field autopop-pricing-copy"></span> at <?=$bname?> Name (Regularly $<span class="apretail-field autopop-pricing-copy"></span>)</p></label>
-        <br clear="all"/>
-        <input type="radio" class="required" value="style2" id="step-2-dollars-op2" name="title_format" /> <label for="step-2-dollars-op2"><p class="step-copy step-3-copy">$<span class="apsale-field autopop-pricing-copy"></span> for a $<span class="apretail-field autopop-pricing-copy"></span> <span class="apfeaturename-field autopop-pricing-copy"></span> at <?=$bname?></p></label>
-        <br clear="all"/>
-        <input type="radio" class="required" value="style3" id="step-2-dollars-op3" name="title_format" /> <label for="step-2-dollars-op3"><p class="step-copy step-3-copy">$<span class="apsale-field autopop-pricing-copy"></span> for $<span class="apretail-field autopop-pricing-copy"></span> worth of <span class="apfeaturename-field autopop-pricing-copy"></span> at <?=$bname?></p></label>
-        </div>
-        
-        <div class="step-3-dollars toHide" style="display:none;" id="blk-b-2">
-        <input type="radio" class="required" value="style1" id="step-2-percent-op1" name="title_format" /> <label for="step-2-percent-op1"><p class="step-copy step-3-copy"><span class="appercentoff-field autopop-pricing-copy"></span>% off $<span class="apminpurch-field autopop-pricing-copy"></span> or more at <?=$bname?></p></label>
-        <br clear="all"/>
-        <input type="radio" class="required" value="style2" id="step-2-percent-op2" name="title_format" /> <label for="step-2-percent-op2"><p class="step-copy step-3-copy"><span class="appercentoff-field autopop-pricing-copy"></span>% off <span class="apfeaturename-field autopop-pricing-copy"></span> when you spend $<span class="apminpurch-field autopop-pricing-copy"></span> or more at <?=$bname?></p></label>
-        <br clear="all"/>
-        <input type="radio" class="required" value="style3" id="step-2-percent-op3" name="title_format" /> <label for="step-2-percent-op3"><p class="step-copy step-3-copy">Spend $<span class="apminpurch-field autopop-pricing-copy"></span> on <span class="apfeaturename-field autopop-pricing-copy"></span> at <?=$bname?> and get <span class="appercentoff-field autopop-pricing-copy"></span>% off</p></label>
-        </div>
-        
-        <br clear="all"/>
-                            </div>
-                        </div>
-                    </li>
+                	</li>
                    
                     <li>
-                       <h3 id="step-4"><span class="cc-step-title"><strong>4:</strong>Select Coupon Image</span>
+                       <h3 id="step-4"><span class="cc-step-title"><strong>2:</strong>Select Coupon Image</span>
 				<span class="error" id="err-step-4"></span></h3>
                         <div class="acc-section">
                             <div class="acc-content">
@@ -311,7 +444,7 @@
                     </li>
                     
                     <li>
-                        <h3 id="step-5"><span class="cc-step-title"><strong>5:</strong>Create Coupon Description</span>
+                        <h3 id="step-5"><span class="cc-step-title"><strong>3:</strong>Create Coupon Description</span>
 				<span class="error" id="err-step-5"></span></h3>
                         <div class="acc-section">
                             <div class="acc-content">
@@ -347,89 +480,117 @@
                     
                     
                     <li>
-                        <h3 id="step-6"><span class="cc-step-title"><strong>6:</strong>Select Coupon Run Dates & Maximum Purchases</span>
-				<span class="error" id="err-step-6"></span></h3>
+                        <h3><span class="cc-step-title"><strong>4:</strong>Select Coupon Dates & Purchase Limit</span><a href="#help-step6" class="fancybox help-icon" >[&nbsp;?&nbsp;]</a></h3>
                         <div class="acc-section">
                             <div class="acc-content">
-                                <p><span class="step-copy">What date range would you like this coupon to appear on CouZoo.com and what is the maximum number total purchases (if any) you would like to allow for this coupon?</span><br clear="all"/><br clear="all"/></p>
-                                	
-					<input type="hidden" id="posting_date_formatted" name="posting_date_formatted" class="required">
-					<input type="hidden" id="removal_date_formatted" name="removal_date_formatted" class="required">
-
-                			<div style="width:310px; height:100px; float:left; margin:0px 30px 0px 0px; padding:0px 20px 0px 0px;">
-                                          <span class="step-field-title-box" style="width:120px;">Posting Date*&nbsp;:</span><input type="text" id="posting_date" name="posting_date" class="required" placeholder="click to select" style="width:150px;"/>
-                                          <br clear="all"/>
-                                          <span class="step-field-title-box" style="width:120px;">Removal Date**&nbsp;:</span><input type="text" id="removal_date" name="removal_date" class="required" placeholder="3-month max" style="width:150px;"/>
-                                  	</div>
+                                <p><span class="step-copy">What date range would you like this coupon to appear on CouZoo.com and what is the maximum number total purchases (if any) you would like to allow for this coupon?</span></p>
+                                
+                            <div  style="width:100%; height:26px; padding-top:10px; margin:0px; overflow:hidden;">
+                                <span>
+                                <input type="radio" value="1" class="required"  id="run-date-30" name="run-dates" style="border:none;"/> 
+                                <label for="run-date-30"><span class="step-copy" style="margin-right:30px;">30 days from now</span></label>
+                                </span>                              
+                                <span>
+                                <input type="radio" value="0" class="required"  id="run-date-60" name="run-dates" style="border:none;"/> 
+                                <label for="run-date-60"><span class="step-copy" style="margin-right:30px;">60 days from now</span></label>
+                                </span>
+                                <span>
+                                <input type="radio" value="0" class="required"  id="run-date-90" name="run-dates" style="border:none;"/> 
+                                <label for="run-date-90"><span class="step-copy" style="margin-right:15px;">90 days from now</span></label>
+                                </span>                              
+                                <span>
+                                <input type="radio" value="0" class="required"  id="run-date-custom" name="run-dates" style="border:none; margin-left:15px;"/> 
+                                <label for="run-date-custom"><span class="step-copy">Custom date range</span></label>
+                                </span>
+                            </div>
+                                
+                                
+                                      <div style="width:310px; height:auto; float:left; margin:0px 20px 0px 0px; padding:0px 20px 0px 0px;">
+                                             <div style="margin:8px 0px 0px 0px;">
+                                                <input type="checkbox" value="1" class="maxpurchchbx" id="maxpurchchbx" name="maxPurch"/><label for="maxpurchchbx"><span class="step-copy">Enable Maximum Purchases Amount</span></label>
+                                              </div>
+                                       	   <br clear="all"/>
+                                              <div class="toHide" style="display:none; float:left; margin:0px 0px;" id="paymaxp-1">
+                                                    <div style="width:320px; height:55px; margin-top:15px; ">
+                                                        <span class="step-field-title-box">Purchase Limit*&nbsp;:&nbsp;</span>
+                                                        <input type="number" name="maxPurchases_num" id="maxPurchases_num" placeholder="2,500" style="width:80px;" />
+                                                    </div>
+                                          <p id="footnote" style="margin:10px 0px;">
+                                          *This coupon will be removed from CouZoo after it has been purchased the amount of times entered in the "Purchase Limit" field.<br clear="all"/>
+                                          </p>
+                                          </div> 
+                                          <br clear="all"/>    
+                                      </div>
                                       
-                                      <div style="width:340px; height:140px; float:left;">
-                                         
-                                         <br clear="all"/>
-                                         
-                                         <div style="margin:0px 0px 0px 0px;">
-                                            <input type="checkbox" name="maxPurchases" id="maxPurchases" value="1"><label for="remove-sales">enable max purchases</label>
-                                         </div>
-                                         
-                                         <br clear="all"/>
-                                
-                                          <div class="toHide" style="display:none; float:left; margin:0px 0px;" id="paymaxp-1">
-                                                <div style="width:320px; height:40px; margin-top:20px;"><span class="step-field-title-box">Max. Purchases***&nbsp;:&nbsp;</span><input type="number" name="maxPurchases_num" id="maxPurchases_num" placeholder="10,000" style="width:80px;" /></div>
-                                          </div>
+                                      
+                                      
+                                    <div style="width:340px; height:auto; display:none; float:right;" class="custom-date-range-container">
+                                    <p class="step-copy" style="margin:8px 0px 6px 45px;">Select Custom Date Range</p><br clear="all"/>
+                                    	<input type="hidden" id="posting_date_formatted" name="posting_date_formatted" class="required">
+										<input type="hidden" id="removal_date_formatted" name="removal_date_formatted" class="required">
+                                    <span class="step-field-title-box" style="width:130px;">Posting Date*&nbsp;:</span><input type="text" id="posting_date" name="posting_date" class="required" placeholder="click to select" style="width:150px;"/>
+                                          <br clear="all"/>
+                                          <span class="step-field-title-box" style="width:130px;">Removal Date**&nbsp;:</span><input type="text" id="removal_date" name="removal_date" class="required" placeholder="3-month max" style="width:150px;"/>
                                           
-                                       </div>   
+                                          <p id="footnote" style="margin:2px 0px 10px 0px;">
+                                              *Date this coupon will start to appear on CouZoo.com<br/>
+                                              **Date this coupon will no longer appear on CouZoo.com
+                                               <br clear="all"/>
+                                          </p>
+                                    </div>  
+                                    <br clear="all"/> 
+                                    
+                                    <div class="exp-date-container" style="display:none;">
+                                    <p style="width:100%; border-top:1px solid #f26625; padding-top:15px;">
+                                    	<span class="step-copy">When would you like this coupon to expire (no longer be valid for redemption at <?=$bname?>)?</span>
+                                    </p>
+                                    <div  style="width:100%; height:30px; padding-top:10px; margin:0px; overflow:hidden;">
+                                        <span>
+                                        <input type="radio" value="1" class="required"  id="exp-date-3m" name="exp-date" style="border:none;"/> 
+                                        <label for="exp-date-3m"><span class="step-copy" style="margin-right:30px;">3 months from now</span></label>
+                                        </span>                              
+                                        <span>
+                                        <input type="radio" value="0" class="required"  id="exp-date-6m" name="exp-date" style="border:none;"/> 
+                                        <label for="exp-date-6m"><span class="step-copy" style="margin-right:30px;">6 months from now</span></label>
+                                        </span>
+                                        <span>
+                                        <input type="radio" value="0" class="required"  id="exp-date-1y" name="exp-date" style="border:none;"/> 
+                                        <label for="exp-date-1y"><span class="step-copy" style="margin-right:15px;">1 year from now</span></label>
+                                        </span>                              
+                                        <span>
+                                        <input type="radio" value="0" class="required"  id="exp-date-custom" name="exp-date" style="border:none; margin-left:15px;"/> 
+                                        <label for="exp-date-custom"><span class="step-copy">Custom date range</span></label>
+                                        </span>
+                           			 </div>
+                                    
+                                    <!--Start Redemption Validity Period-->
+                                    <div style="width:440px; height:auto; display:none; float:right;" class="custom-exp-date-range-container">
+                                    	<input type="hidden" id="valid_date_formatted" name="valid_date_formatted" class="required">
+										<input type="hidden" id="exp_date_formatted" name="exp_date_formatted" class="required">
+                                    <p class="step-copy">
+                                        <div style="width:420px; float:left; margin-right:20px;">
+                                            <p class="step-copy" style="margin:8px 0px 6px 70px;">Select Custom Valid Time Frame</p><br clear="all"/>
+                                            <span class="step-field-title-box" style="width:240px;">Coupon becomes valid on*&nbsp;:</span>
+                                            <input type="text" id="valid_date" name="valid_date" class="required" placeholder="click to select" style="width:150px;"/>
+                                            	<br clear="all"/>
+                                            <span class="step-field-title-box" style="width:240px;">Coupon is no longer valid after**&nbsp;: &nbsp;</span>
+                                            <input type="text" id="exp_date" name="exp_date" class="required" placeholder="click to select" style="width:150px;"/>
+                                        </div>
+                                    </p>
+                                    <p id="footnote">
+                                      *This is the date this coupon will <strong>become valid</strong> and customers may begin to redeem it at your place of business.<br/>
+                                      **This is the date this coupon is <strong>no longer valid</strong> and customers may no longer redeem it at your place of business.
+                             		</p>
+                                    </div>
+                                    <!--End Redemption Validity Period-->
+                                    </div><!--END exp-date-container-->
                                     <br clear="all"/>
-                                      <p id="footnote">
-                                      *Date this coupon will start to appear on CouZoo.com<br/>
-                                      **Date this coupon will no longer appear on CouZoo.com<br/>
-                                      ***Coupon will be removed from CouZoo after this many purchases.
-                                      </p>
                             </div>
                         </div>
                     </li>
                     
                     <li>
-                        <h3 id="step-7"><span class="cc-step-title"><strong>7:</strong>Select Coupon Valid Dates</span>
-				<span class="error" id="err-step-7"></span></h3>
-                        <div class="acc-section">
-                            <div class="acc-content">
-                               <p><span class="step-copy">What date range would you like your coupon to be valid for redemption?</span></p>
-
-					<input type="hidden" id="valid_date_formatted" name="valid_date_formatted" class="required">
-					<input type="hidden" id="exp_date_formatted" name="exp_date_formatted" class="required">
-                               
-                               <!--Start Redemption Validity Period-->
-                                <div style="float:left; margin:0px 0px;"">
-                                <p class="step-copy">
-                                
-                                <div style="width:330px; float:left; margin-right:20px;">
-                                <span class="step-field-title-box" style="padding-bottom:10px;">Coupon becomes valid on*:</span>
-                                <input type="text" id="valid_date" name="valid_date" class="required" placeholder="click to select" style="width:150px; margin-left:3px;"/>
-                                </div>
-                                
-                                <div style="width:330px; float:left;">        
-                                <span class="step-field-title-box" style="padding-bottom:10px;">Coupon is no longer valid after**:</span><br />
-                                <input type="text" id="exp_date" name="exp_date" class="required" placeholder="click to select" style="width:150px;"/>
-                                </div>
-                                
-                                </p>
-                                </div>
-                                <!--End Redemption Validity Period-->
-                                <br clear="all"/>
-                              <p id="footnote">
-                              *This is the date this coupon will <strong>become valid</strong> and customers may begin to redeem it at your place of business.<br/>
-                              **This is the date this coupon is <strong>no longer valid</strong> and customers may no longer redeem it at your place of business.<br />
-                              **May NOT be earlier than "Removal Date" in previous step.
-                              </p>
-                              <br clear="all"/>
-                              <br clear="all"/>
-                              <br clear="all"/>
-                              <br clear="all"/>
-                            </div>
-                        </div>
-                    </li>
-                    
-                    <li>
-                        <h3 id="step-8"><span class="cc-step-title"><strong>8:</strong>Create Coupon Restrictions</span>
+                        <h3 id="step-8"><span class="cc-step-title"><strong>5:</strong>Create Coupon Restrictions</span>
 				<span class="error" id="err-step-8"></span></h3>
                         <div class="acc-section">
                             <div class="acc-content" id="restrictions">
@@ -447,7 +608,7 @@
                     </li>
                     
                     <li>
-                        <h3 id="step-9"><span class="cc-step-title"><strong>9:</strong>Create Search Key Words</span>
+                        <h3 id="step-9"><span class="cc-step-title"><strong>6:</strong>Create Search Key Words</span>
 				<span class="error" id="err-step-9"></span></h3>
                         <div class="acc-section">
                             <div class="acc-content">
@@ -486,7 +647,7 @@
                     </li>
                     
                     <li>
-                        <h3 id="step-10"><span class="cc-step-title"><strong>10:</strong>Select Featured Coupon Ad Options</span>
+                        <h3 id="step-10"><span class="cc-step-title"><strong>7:</strong>Select Featured Coupon Ad Options</span>
 				<span class="error" id="err-step-10"></span></h3>
                         <div class="acc-section" id="faRadio">
                             <div class="acc-content">
@@ -673,8 +834,8 @@
          </div>         
          
          
-          <!--Start Auto-populate text from form fields javascript-->
-  <script type="text/javascript"/>              
+   <!--Start Auto-populate text from form fields javascript - updated/added by Pete Nov 19, 2013-->
+ 	<script type="text/javascript"/>     <!--Retail Price-->         
 		(function() {
                 var $input = $('input.apretail');
                 $input.keyup(function(event) {
@@ -685,7 +846,7 @@
 		})();
 	</script>
     
-     <script type="text/javascript"/>              
+     <script type="text/javascript"/> <!--Sale Price -->             
 		(function() {
                 var $input = $('input.apsale');
                 $input.keyup(function(event) {
@@ -696,7 +857,7 @@
 		})();
 	</script>
     
-     <script type="text/javascript"/>              
+     <script type="text/javascript"/>  <!--featured item name-->             
 		(function() {
                 var $input = $('input.apfeaturename');
                 $input.keyup(function(event) {
@@ -707,7 +868,18 @@
 		})();
 	</script>    
     
-      <script type="text/javascript"/> <!--percent off, step 1-->             
+    <script type="text/javascript"/> <!--dollars off, step 1-->
+		(function() {
+                var $input = $('input.apdollarsoff');
+                $input.keyup(function(event) {
+                     var apdollarsofftext = $input.val();
+			         $('.apdollarsoff-field').text(apdollarsofftext);
+					 console.log('apdollarsoff-field',$('.apdollarsoff-field'));
+			});
+		})();
+	</script>
+    
+    <script type="text/javascript"/> <!--percent off, step 1-->             
 		(function() {
                 var $input = $('input.appercentoff');
                 $input.keyup(function(event) {
@@ -718,7 +890,30 @@
 		})();
 	</script>
     
-     <script type="text/javascript"/> <!--minimum purchase amount, percent off section, step 1-->             
+    
+	<script type="text/javascript"/> <!--dollars off, step 1-->
+		(function() {
+                var $input = $('input.apdollarsofftotal');
+                $input.keyup(function(event) {
+                     var apdollarsofftotaltext = $input.val();
+			         $('.apdollarsofftotal-field').text(apdollarsofftotaltext);
+					 console.log('apdollarsofftotal-field',$('.apdollarsofftotal-field'));
+			});
+		})();
+	</script>
+    
+    <script type="text/javascript"/> <!--percent off, step 1-->             
+		(function() {
+                var $input = $('input.appercentofftotal');
+                $input.keyup(function(event) {
+                     var appercentofftotaltext = $input.val();
+			         $('.appercentofftotal-field').text(appercentofftotaltext);
+					 console.log('appercentofftotal-field',$('.appercentofftotal-field'));
+			});
+		})();
+	</script>
+    
+    <script type="text/javascript"/> <!--minimum purchase amount, percent off section, step 1-->             
 		(function() {
                 var $input = $('input.apminpurch');
                 $input.keyup(function(event) {
@@ -728,6 +923,15 @@
 			});
 		})();
 	</script>
+    <script type="text/javascript"/><!--scroll to CAC on click-->
+		$('.tab-2x3').click(function(){
+			$('html, body').animate({
+				scrollTop: $( $(this).attr('href') ).offset().top+110
+			}, 1800);
+			return false;
+		})
+	</script>
+     <!--END Auto-populate text from form fields javascript - updated/added by Pete Nov 19, 2013-->
     
       <!--Show/Hide Div check box-->
         <script>
@@ -780,7 +984,7 @@
                 $("#checked-b").fadeOut(200);   
              }
         });
-        </script>
+        </script>  
 
 
 	<script type="text/javascript">
