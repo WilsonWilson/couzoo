@@ -1102,15 +1102,16 @@ class CouZoo
 	 $categories = implode(",", $cat_array);
         $formvars['category'] = $categories;
 
-        $formvars['mark_down'] = $this->Sanitize($_POST['markDown']);
+        $formvars['mark_down'] = $this->Sanitize($_POST['mark_down']);
         $formvars['retail_price'] = $this->Sanitize($_POST['retail_price']);
-        $formvars['sale_price'] = $this->Sanitize($_POST['sale_price']);
+        $formvars['dollars_off'] = $this->Sanitize($_POST['dollars_off']);
         $formvars['percent_off'] = $this->Sanitize($_POST['percent_off']);
-        $formvars['min_purchase'] = $this->Sanitize($_POST['min_purchase']);
-        $formvars['featured_item'] = $this->Sanitize($_POST['featured_item']);
+	 $formvars['lower_price'] = $this->Sanitize($_POST['lower_price']);
+        $formvars['min_purchase_any'] = $this->Sanitize($_POST['min_purchase_any']);
+	 $formvars['dollars_off_any'] = $this->Sanitize($_POST['dollars_off_any']);
+	 $formvars['percent_off_any'] = $this->Sanitize($_POST['percent_off_any']);
         $formvars['id_user'] = $this->Sanitize($_POST['id_user']);
-        $formvars['bname'] = $this->Sanitize($_POST['bname']);
-        $formvars['title_format'] = $this->Sanitize($_POST['title_format']);
+        $formvars['title_final'] = $this->Sanitize($_POST['title_final']);
         $formvars['description'] = $this->Sanitize($_POST['description']);
         $formvars['posting_date'] = $this->Sanitize($_POST['posting_date_formatted']);
         $formvars['removal_date'] = $this->Sanitize($_POST['removal_date_formatted']);
@@ -1213,48 +1214,18 @@ function SaveToDatabaseCoupon(&$formvars)
     
     function InsertIntoDBCoupon(&$formvars)
     {
-// Create Coupon Title
-	$mark_down = $formvars['mark_down'];
+	// Specific product
 	$retail_price = $formvars['retail_price'];
-	$sale_price = $formvars['sale_price'];
+	$dollars_off = $formvars['dollars_off'];
 	$percent_off = $formvars['percent_off'];
-	$min_purchase = $formvars['min_purchase'];
-	$featured_item = $formvars['featured_item'];
-	$bname = $formvars['bname'];
-	$title_format = $formvars['title_format'];
+	$lower_price = $formvars['lower_price'];
 
-	if($mark_down == "1")
-	{
-		if($title_format == "style1")
-		{
-			$title = "$$sale_price for $featured_item at $bname (Regularly $$retail_price)";
-		}
-		elseif($title_format == "style2")
-		{
-			$title = "$$sale_price for a $$retail_price $featured_item at $bname";
-		}
-		elseif($title_format == "style3")
-		{
-			$title = "$$sale_price for $$retail_price worth of $featured_item at $bname";
-		}
-	}
-	elseif($mark_down == "2")
-	{
-		if($title_format == "style1")
-		{
-			$title = "$percent_off% off $$min_purchase or more at $bname";
-		}
-		elseif($title_format == "style2")
-		{
-			$title = "$percent_off% off $featured_item when you spend $$min_purchase or more at $bname";
-		}
-		elseif($title_format == "style3")
-		{
-			$title = "Spend $$min_purchase on $featured_item at $bname and get $percent_off% off";
-		}
-	}
+	// Any product
+	$min_purchase_any = $formvars['min_purchase_any'];
+	$dollars_off_any = $formvars['dollars_off_any'];
+	$percent_off_any = $formvars['percent_off_any'];
 
-// Find Savings
+      // Find savings and determine price of coupon
 	$savings1 = $retail_price - $sale_price;
 	$percent = $percent_off * .01;
 	$savings2 = $percent * $min_purchase;
@@ -1332,7 +1303,7 @@ function SaveToDatabaseCoupon(&$formvars)
                 values
                 (
                 "' . $this->SanitizeForSQL($formvars['id_user']) . '",
-                "' . $this->SanitizeForSQL($title) . '",
+                "' . $this->SanitizeForSQL($formvars['title_final']) . '",
                 "' . $this->SanitizeForSQL($price) . '",
                 "' . $this->SanitizeForSQL($formvars['category']) . '",
                 "' . $this->SanitizeForSQL($formvars['retail_price']) . '",

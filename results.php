@@ -300,7 +300,7 @@ if ($keywords) {
 	$kws = explode(" ", strtolower($keywords));
 	foreach ($kws as $kw) {
 		if (strlen(trim($kw)) > 0) {
-		    $search .= " AND (lower(CouZoo_Coupons.title) LIKE '%$kw%' OR lower(CouZoo_Coupons.categories) LIKE '%$kw%' OR lower(CouZoo_Coupons.description) LIKE '%$kw%' OR lower(CouZoo_Coupons.keywords) LIKE '%$kw%')";
+		    $search .= " AND (lower(CouZoo_Members.city) LIKE '%$kw%' OR CouZoo_Members.zip = '$kw' OR lower(CouZoo_Coupons.title) LIKE '%$kw%' OR lower(CouZoo_Coupons.categories) LIKE '%$kw%' OR lower(CouZoo_Coupons.description) LIKE '%$kw%' OR lower(CouZoo_Coupons.keywords) LIKE '%$kw%')";
 		}
 	}
 }

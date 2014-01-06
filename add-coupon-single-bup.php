@@ -788,7 +788,7 @@
 
 // -- Step 1 Functions -- //
 	$('#step-1').one("click", function() {
-       	$('#err-step-1').html('**Please select a category');
+       	$('#err-step-1').html('**Please select a title for your coupon');
 	});
 
 	$('.catagory-box').change(function() {
@@ -798,7 +798,7 @@
          		$('#err-step-1').html('<img class="checkmark" src="images/green-check.png" width=30 height=25>');
     			$('#step-1').data('completed', true);
 		} else {
-         		$('#err-step-1').html('**Please select a category');
+         		$('#err-step-1').html('**Please select a title for your coupon');
 		}
 	});
 
