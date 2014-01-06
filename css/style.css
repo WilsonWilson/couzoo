@@ -904,8 +904,8 @@ a.side-ad-view-box:link, a.side-ad-view-box:active, a.side-ad-view-box:visited, 
 /*General Pages*/
 #general-page-container {width:757px; height:auto; position:relative; z-index:0; clear:both;}
 #general-page-header {width:754px; height:auto; padding-top:0px; margin:0px; background-color:#fff;border:#f26625 3px solid; -moz-border-radius: 12px; border-radius: 12px; -moz-border-radius-topright:42px;	-webkit-border-top-right-radius: 42px; border-top-right-radius: 42px;}
-#general-page-header h1 {font-family:Arial, Helvetica, sans-serif; color:#f26625; font-size:32px; margin:10px 14px; font-weight:200;}
-#general-page-header p {font-family:Arial, Helvetica, sans-serif; font-size:16px; color:#603912; line-height:22px; margin:10px 14px;  font-weight:200;}
+#general-page-header h1 {font-family:Arial, Helvetica, sans-serif; color:#f26625; font-size:32px; margin:15px 20px; font-weight:200;}
+#general-page-header p {font-family:Arial, Helvetica, sans-serif; font-size:16px; color:#603912; line-height:22px; margin:10px 20px;  font-weight:200;}
 
 
 #overlay, #overlay2 {
@@ -933,3 +933,10 @@ margin:10px 0px;
 
 a:link, a:active, a:visited {font-family:Arial, Helvetica, sans-serif; color:#00988d; text-decoration:underline; font-weight:100; font-size:12px;}
 a:hover {color:#f26625; font-size:12px;}
+
+/* Remove Stupid Spinner buttons on Chrome and Safari */
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
+-webkit-appearance: none;
+margin: 0; }
+
+.merch-account-dynamic-message-container{width:90%; min-height:20px; height:auto; margin:8px 12px 12px 14px; clear:right;}
