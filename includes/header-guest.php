@@ -38,8 +38,8 @@
                     <form action="login.php" method="post" id="login" name="login">
                         <input type='hidden' name='url' id='url' value='<?=$url?>'/>
                         <input type='hidden' name='submitted' id='submitted' value='1'/>
-                           <input class="myclass" type="text" name="email" id="email" value="customer email" />
-                           <input class="myclass" type="password" name="password" id="password" value="customer password" /> <br>
+                           <input class="myclass" type="text" name="email" id="email" value="email" />
+                           <input class="myclass" type="password" name="password" id="password" value="password" /> <br>
                            <div style="height:6px;"></div>
 						   <div id="login_main" class="login-btn"></div>
 						   <input type="submit" style="position: absolute; left: -9999px; width: 1px; height: 1px;"/>

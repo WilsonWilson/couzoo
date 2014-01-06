@@ -155,7 +155,7 @@ $couzoo->CheckLogin();
           </div><!--End home Search-Container-->
             
           <div id="home-copy-container">
-            With CouZoo you can find tons of great, local coupons for only $1 to $5. Or subscribe and get as many as you want for just $10 a month. 
+            With CouZoo you can find local coupons and deals easily with little up-front cost or subscribe and get as many as you want for the cost of a $7.49 cup of coffee. 
               <br />
               <br />
             It's easy - just search and save. 

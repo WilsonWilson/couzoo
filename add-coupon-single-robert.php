@@ -9,8 +9,12 @@
                 <ul class="acc" id="acccreate">
 
  					<li>
+<<<<<<< HEAD
                  		 <h3 id="step-1"><span class="cc-step-title"><strong>1:</strong>Create Coupon Title</span><a href="#help-step3" class="fancybox help-icon" >[&nbsp;?&nbsp;]</a>
 				 <span class="error" id="err-step-1">**Please select a final title for your coupon</span></h3>
+=======
+                 		 <h3 id="step-1"><span class="cc-step-title"><strong>1:</strong>Create Coupon Title</span><a href="#help-step3" class="fancybox help-icon" >[&nbsp;?&nbsp;]</a></h3>
+>>>>>>> 55dcdc406643a189b6c471b2c21f49f155fc52e7
                         <div class="acc-section">
                            <div id="step-1-change" class="acc-content">
                             
@@ -134,7 +138,7 @@
                               
                               	  <div class="dollars-off-option" style="display:none;"><!--START Dollars Off Item Title Options-->         
                                       <span>                                      
-                                          <input type="radio" class="required" value="step-2-dollars-op1" id="step-2-dollars-op1" name="title_format" />
+                                          <input type="radio" class="required title-option" value="step-2-dollars-op1" id="step-2-dollars-op1" name="title_format" />
                                           <label for="step-2-dollars-op1">
                                                 <p id="p-step-2-dollars-op1" class="step-copy step-3-copy">
                                                     $<span class="apdollarsoff-field autopop-pricing-copy"></span> off a $<span class="apretail-field autopop-pricing-copy"></span> <span class="apfeaturename-field autopop-pricing-copy"></span> at <?=$bname?>
@@ -144,7 +148,7 @@
                                       </span>
                                       
                                       <span>                                      
-                                          <input type="radio" class="required" value="step-2-dollars-op2" id="step-2-dollars-op2" name="title_format" />
+                                          <input type="radio" class="required title-option" value="step-2-dollars-op2" id="step-2-dollars-op2" name="title_format" />
                                           <label for="step-2-dollars-op2">
                                                 <p id="p-step-2-dollars-op2" class="step-copy step-3-copy">
                                                     $<span class="apdollarsoff-field autopop-pricing-copy"></span> off $<span class="apretail-field autopop-pricing-copy"></span> worth of <span class="apfeaturename-field autopop-pricing-copy"></span> at <?=$bname?>
@@ -154,7 +158,7 @@
                                       </span>
                                       
                                       <span>                                  
-                                          <input type="radio" class="required" value="step-2-dollars-op3" id="step-2-dollars-op3" name="title_format" />
+                                          <input type="radio" class="required title-option" value="step-2-dollars-op3" id="step-2-dollars-op3" name="title_format" />
                                           <label for="step-2-dollars-op3">
                                                 <p id="p-step-2-dollars-op3" class="step-copy step-3-copy">
                                                 Save $<span class="apdollarsoff-field autopop-pricing-copy"></span> on a $<span class="apretail-field autopop-pricing-copy"></span> <span class="apfeaturename-field autopop-pricing-copy"></span> at <?=$bname?>
@@ -164,7 +168,7 @@
                                       </span>
                                       
                                       <span>                                  
-                                          <input type="radio" class="required" value="step-2-dollars-op4" id="step-2-dollars-op4" name="title_format" />
+                                          <input type="radio" class="required title-option" value="step-2-dollars-op4" id="step-2-dollars-op4" name="title_format" />
                                           <label for="step-2-dollars-op4">
                                                 <p id="p-step-2-dollars-op4" class="step-copy step-3-copy">
                                                 Save $<span class="apdollarsoff-field autopop-pricing-copy"></span> on <span class="apfeaturename-field autopop-pricing-copy"></span> at <?=$bname?>
@@ -174,7 +178,7 @@
                                       </span>
                                       
                                       <span>                                      
-                                          <input type="radio" class="required" value="step-2-dollars-op5" id="step-2-dollars-op5" name="title_format" />
+                                          <input type="radio" class="required title-option" value="step-2-dollars-op5" id="step-2-dollars-op5" name="title_format" />
                                           <label for="step-2-dollars-op5">
                                                 <p id="p-step-2-dollars-op5" class="step-copy step-3-copy">
                                                     $<span class="apdollarsoff-field autopop-pricing-copy"></span> off <span class="apfeaturename-field autopop-pricing-copy"></span> at <?=$bname?>
@@ -184,7 +188,7 @@
                                       </span>
                                       
                                       <span>                                      
-                                          <input type="radio" class="required" value="step-2-dollars-op6" id="step-2-dollars-op6" name="title_format" />
+                                          <input type="radio" class="required title-option" value="step-2-dollars-op6" id="step-2-dollars-op6" name="title_format" />
                                           <label for="step-2-dollars-op6">
                                                 <p id="p-step-2-dollars-op6" class="step-copy step-3-copy">
                                                     $<span class="apdollarsoff-field autopop-pricing-copy"></span> off <span class="apfeaturename-field autopop-pricing-copy"></span> at <?=$bname?> (Regularly $<span class="apretail-field autopop-pricing-copy"></span>)
@@ -196,7 +200,7 @@
                               	  
                                   <div class="percent-off-option" style="display:none;"><!--START Percent Off Item Title Options-->         
                                       <span>                                      
-                                          <input type="radio" class="required" value="step-2-percent-op1" id="step-2-percent-op1" name="title_format" />
+                                          <input type="radio" class="required title-option" value="step-2-percent-op1" id="step-2-percent-op1" name="title_format" />
                                           <label for="step-2-percent-op1">
                                                 <p id="p-step-2-percent-op1" class="step-copy step-3-copy">
                                                     <span class="appercentoff-field autopop-pricing-copy"></span>% off a $<span class="apretail-field autopop-pricing-copy"></span> <span class="apfeaturename-field autopop-pricing-copy"></span> at <?=$bname?>
@@ -206,7 +210,7 @@
                                       </span>
                                       
                                       <span>                                      
-                                          <input type="radio" class="required" value="step-2-percent-op2" id="step-2-percent-op2" name="title_format" />
+                                          <input type="radio" class="required title-option" value="step-2-percent-op2" id="step-2-percent-op2" name="title_format" />
                                           <label for="step-2-percent-op2">
                                                 <p id="p-step-2-percent-op2" class="step-copy step-3-copy">
                                                     <span class="appercentoff-field autopop-pricing-copy"></span>% off $<span class="apretail-field autopop-pricing-copy"></span> worth of <span class="apfeaturename-field autopop-pricing-copy"></span> at <?=$bname?>
@@ -216,7 +220,7 @@
                                       </span>
                                       
                                       <span>                                  
-                                          <input type="radio" class="required" value="step-2-percent-op3" id="step-2-percent-op3" name="title_format" />
+                                          <input type="radio" class="required title-option" value="step-2-percent-op3" id="step-2-percent-op3" name="title_format" />
                                           <label for="step-2-percent-op3">
                                                 <p id="p-step-2-percent-op3" class="step-copy step-3-copy">
                                                 Save <span class="appercentoff-field autopop-pricing-copy"></span>% on a $<span class="apretail-field autopop-pricing-copy"></span> <span class="apfeaturename-field autopop-pricing-copy"></span> at <?=$bname?>
@@ -226,7 +230,7 @@
                                       </span>
                                       
                                       <span>                                  
-                                          <input type="radio" class="required" value="step-2-percent-op4" id="step-2-percent-op4" name="title_format" />
+                                          <input type="radio" class="required title-option" value="step-2-percent-op4" id="step-2-percent-op4" name="title_format" />
                                           <label for="step-2-percent-op4">
                                                 <p id="p-step-2-percent-op4" class="step-copy step-3-copy">
                                                 Save <span class="appercentoff-field autopop-pricing-copy"></span>% on <span class="apfeaturename-field autopop-pricing-copy"></span> at <?=$bname?>
@@ -236,7 +240,7 @@
                                       </span>
                                       
                                       <span>                                      
-                                          <input type="radio" class="required" value="step-2-percent-op5" id="step-2-percent-op5" name="title_format" />
+                                          <input type="radio" class="required title-option" value="step-2-percent-op5" id="step-2-percent-op5" name="title_format" />
                                           <label for="step-2-percent-op5">
                                                 <p id="p-step-2-percent-op5" class="step-copy step-3-copy">
                                                     <span class="appercentoff-field autopop-pricing-copy"></span>% off <span class="apfeaturename-field autopop-pricing-copy"></span> at <?=$bname?>
@@ -246,7 +250,7 @@
                                       </span>
                                       
                                       <span>                                      
-                                          <input type="radio" class="required" value="step-2-percent-op6" id="step-2-percent-op6" name="title_format" />
+                                          <input type="radio" class="required title-option" value="step-2-percent-op6" id="step-2-percent-op6" name="title_format" />
                                           <label for="step-2-percent-op6">
                                                 <p id="p-step-2-percent-op6" class="step-copy step-3-copy">
                                                     <span class="appercentoff-field autopop-pricing-copy"></span>% off <span class="apfeaturename-field autopop-pricing-copy"></span> at <?=$bname?> (Regularly $<span class="apretail-field autopop-pricing-copy"></span>)
@@ -258,7 +262,7 @@
                                   
                                   <div class="sale-price-option" style="display:none;"><!--START Sale Price Title Options-->
                                   	  <span>                                  
-                                          <input type="radio" class="required" value="step-2-saleprice-op1" id="step-2-saleprice-op1" name="title_format" />
+                                          <input type="radio" class="required title-option" value="step-2-saleprice-op1" id="step-2-saleprice-op1" name="title_format" />
                                           <label for="step-2-saleprice-op1">
                                                 <p id="p-step-2-saleprice-op1" class="step-copy step-3-copy">
                                                 	$<span class="apsale-field autopop-pricing-copy"></span> for a $<span class="apretail-field autopop-pricing-copy"></span> <span class="apfeaturename-field autopop-pricing-copy"></span> at <?=$bname?>
@@ -268,7 +272,7 @@
                                       </span>
                                                                                                                                                     
                                       <span>                                  
-                                          <input type="radio" class="required" value="step-2-saleprice-op2" id="step-2-saleprice-op2" name="title_format" />
+                                          <input type="radio" class="required title-option" value="step-2-saleprice-op2" id="step-2-saleprice-op2" name="title_format" />
                                           <label for="step-2-saleprice-op2">
                                                 <p id="p-step-2-saleprice-op2" class="step-copy step-3-copy">
                                                 	$<span class="apsale-field autopop-pricing-copy"></span> for $<span class="apretail-field autopop-pricing-copy"></span> worth of <span class="apfeaturename-field autopop-pricing-copy"></span> at <?=$bname?>
@@ -278,7 +282,7 @@
                                       </span>
                                       
                                       <span>                                  
-                                          <input type="radio" class="required" value="step-2-saleprice-op3" id="step-2-saleprice-op3" name="title_format" />
+                                          <input type="radio" class="required title-option" value="step-2-saleprice-op3" id="step-2-saleprice-op3" name="title_format" />
                                           <label for="step-2-saleprice-op3">
                                                 <p id="p-step-2-saleprice-op3" class="step-copy step-3-copy">
                                                 	$<span class="apretail-field autopop-pricing-copy"></span> <span class="apfeaturename-field autopop-pricing-copy"></span> for only $<span class="apsale-field autopop-pricing-copy"></span> at <?=$bname?>
@@ -288,7 +292,7 @@
                                       </span> 
                                       
                                       <span>                                  
-                                          <input type="radio" class="required" value="step-2-saleprice-op4" id="step-2-saleprice-op4" name="title_format" />
+                                          <input type="radio" class="required title-option" value="step-2-saleprice-op4" id="step-2-saleprice-op4" name="title_format" />
                                           <label for="step-2-saleprice-op4">
                                                 <p id="p-step-2-saleprice-op4" class="step-copy step-3-copy">
                                                 	$<span class="apretail-field autopop-pricing-copy"></span> worth of <span class="apfeaturename-field autopop-pricing-copy"></span> for only $<span class="apsale-field autopop-pricing-copy"></span> at <?=$bname?>
@@ -298,7 +302,7 @@
                                       </span> 
                                       
                                       <span>
-                                          <input type="radio" class="required" value="step-2-saleprice-op5" id="step-2-saleprice-op5" name="title_format" />
+                                          <input type="radio" class="required title-option" value="step-2-saleprice-op5" id="step-2-saleprice-op5" name="title_format" />
                                           <label for="step-2-saleprice-op5">
                                                 <p id="p-step-2-saleprice-op5" class="step-copy step-3-copy">
                                                 	$<span class="apsale-field autopop-pricing-copy"></span> for <span class="apfeaturename-field autopop-pricing-copy"></span> at <?=$bname?> (Regularly $<span class="apretail-field autopop-pricing-copy"></span>)
@@ -308,7 +312,7 @@
                                       </span>   
                                       
                                       <span>                                  
-                                          <input type="radio" class="required" value="step-2-saleprice-op6" id="step-2-saleprice-op6" name="title_format" />
+                                          <input type="radio" class="required title-option" value="step-2-saleprice-op6" id="step-2-saleprice-op6" name="title_format" />
                                           <label for="step-2-saleprice-op6">
                                                 <p id="p-step-2-saleprice-op6" class="step-copy step-3-copy">
                                                 	$<span class="apsale-field autopop-pricing-copy"></span> for a <span class="apfeaturename-field autopop-pricing-copy"></span> at <?=$bname?>
@@ -323,7 +327,7 @@
                                   <!--START Dollars Off Item Title Options-->
                                   <div class="dollars-off-total-option" style="display:none;">         
                                       <span>                                      
-                                          <input type="radio" class="required" value="step-2-dollarst-op1" id="step-2-dollarst-op1" name="title_format" />
+                                          <input type="radio" class="required title-option" value="step-2-dollarst-op1" id="step-2-dollarst-op1" name="title_format" />
                                           <label for="step-2-dollarst-op1">
                                                 <p id="p-step-2-dollarst-op1" class="step-copy step-3-copy">
                                                     $<span class="apdollarsofftotal-field autopop-pricing-copy"></span> off your purchase at <?=$bname?> when you spend $<span class="apminpurch-field autopop-pricing-copy"></span> or more
@@ -333,7 +337,7 @@
                                        </span>
                                        
                                        <span>                                      
-                                          <input type="radio" class="required" value="step-2-dollarst-op2" id="step-2-dollarst-op2" name="title_format" />
+                                          <input type="radio" class="required title-option" value="step-2-dollarst-op2" id="step-2-dollarst-op2" name="title_format" />
                                           <label for="step-2-dollarst-op2">
                                                 <p id="p-step-2-dollarst-op2" class="step-copy step-3-copy">
                                                     $<span class="apdollarsofftotal-field autopop-pricing-copy"></span> off at <?=$bname?> when you spend $<span class="apminpurch-field autopop-pricing-copy"></span> or more
@@ -343,7 +347,7 @@
                                        </span>
                                        
                                        <span>                                      
-                                          <input type="radio" class="required" value="step-2-dollarst-op3" id="step-2-dollarst-op3" name="title_format" />
+                                          <input type="radio" class="required title-option" value="step-2-dollarst-op3" id="step-2-dollarst-op3" name="title_format" />
                                           <label for="step-2-dollarst-op3">
                                                 <p id="p-step-2-dollarst-op3" class="step-copy step-3-copy">
                                                     $<span class="apdollarsofftotal-field autopop-pricing-copy"></span> off your purchase of $<span class="apminpurch-field autopop-pricing-copy"></span> or more at <?=$bname?>
@@ -356,7 +360,7 @@
                                   <!--START Percent Off Item Title Options-->
                                   <div class="percent-off-total-option" style="display:none;">         
                                       <span>                                      
-                                          <input type="radio" class="required" value="step-2-percentt-op1" id="step-2-percentt-op1" name="title_format" />
+                                          <input type="radio" class="required title-option" value="step-2-percentt-op1" id="step-2-percentt-op1" name="title_format" />
                                           <label for="step-2-percentt-op1">
                                                 <p id="p-step-2-percentt-op1" class="step-copy step-3-copy">
                                                     <span class="appercentofftotal-field autopop-pricing-copy"></span>% off your purchase at <?=$bname?> when you spend $<span class="apminpurch-field autopop-pricing-copy"></span> or more
@@ -366,7 +370,7 @@
                                        </span>
                                        
                                        <span>                                      
-                                          <input type="radio" class="required" value="step-2-percentt-op2" id="step-2-percentt-op2" name="title_format" />
+                                          <input type="radio" class="required title-option" value="step-2-percentt-op2" id="step-2-percentt-op2" name="title_format" />
                                           <label for="step-2-percentt-op2">
                                                 <p id="p-step-2-percentt-op2" class="step-copy step-3-copy">
                                                     <span class="appercentofftotal-field autopop-pricing-copy"></span>% off at <?=$bname?> when you spend $<span class="apminpurch-field autopop-pricing-copy"></span> or more
@@ -376,7 +380,7 @@
                                        </span>
                                        
                                        <span>                                      
-                                          <input type="radio" class="required" value="step-2-percentt-op3" id="step-2-percentt-op3" name="title_format" />
+                                          <input type="radio" class="required title-option" value="step-2-percentt-op3" id="step-2-percentt-op3" name="title_format" />
                                           <label for="step-2-percentt-op3">
                                                 <p id="p-step-2-percentt-op3" class="step-copy step-3-copy">
                                                     <span class="appercentofftotal-field autopop-pricing-copy"></span>% off your purchase of $<span class="apminpurch-field autopop-pricing-copy"></span> or more at <?=$bname?>
@@ -386,10 +390,14 @@
                                        </span>
                                   </div><!--END Percent Off Item Title Options-->                       
                                   
+<<<<<<< HEAD
 
 					<!-- Final input text sent to server for saving -->
 					<input type="hidden" value="" id="title_final" name="title_final" />
                                 
+=======
+                                  <div class="next-step-button next-step2"><a href="" id="open2">Next Step</a></div>
+>>>>>>> 55dcdc406643a189b6c471b2c21f49f155fc52e7
                               </div><!--END Title Options-->
                                   <br clear="all"/>
                           </div>
@@ -398,7 +406,11 @@
                    
                     <li>
                        <h3 id="step-2"><span class="cc-step-title"><strong>2:</strong>Select Coupon Image</span>
+<<<<<<< HEAD
 				<span class="error" id="err-step-2"></span></h3>
+=======
+				<span class="error" id="err-step-4"></span></h3>
+>>>>>>> 55dcdc406643a189b6c471b2c21f49f155fc52e7
                         <div class="acc-section">
                             <div class="acc-content">
 
@@ -427,13 +439,17 @@
                                   <br clear="all"/><br clear="all"/>
                                     <div style="float:left; width:400px;">
 
-						  <input type="hidden" id="img_type" name="img_type">
-						  <input type="hidden" id="reuse_id" name="reuse_id">
+						  <input type="hidden" id="img_type" class="select-image-btn" name="img_type">
+						  <input type="hidden" id="reuse_id" class="select-image-btn" name="reuse_id">
 
-						  <div class="upload-image"><input type="file" name="coupon_img" id="uploadImg" /></div>
+						  <div class="upload-image"><input type="file" class="select-image-btn" name="coupon_img" id="uploadImg" /></div>
                                             <div class="use-profile-pic"></div>
                                             <a href="#reuse-img" class="fancybox"><div class="reuse-image"></div></a>
-						  <div id="rmImg" style="display: none; cursor: pointer; width: 100%"><font color="red">Remove current image</font></div>
+						  <div id="rmImg" style="display: none; cursor: pointer; width: 100%">
+                          		  <font color="red">Remove current image</font>
+		                          <br clear="all"/>
+                                  <div class="next-step-button next-step3"><a href="" id="open3">Next Step</a></div>
+                          </div>
 						  <div id="img-loader" style="display: none;"><img src="images/ajax-loader.gif"></img></div>
                                          </div>
                                       
@@ -448,18 +464,20 @@
                     
                     <li>
                         <h3 id="step-3"><span class="cc-step-title"><strong>3:</strong>Create Coupon Description</span>
+<<<<<<< HEAD
 				<span class="error" id="err-step-3"></span></h3>
+=======
+				<span class="error" id="err-step-5"></span></h3>
+>>>>>>> 55dcdc406643a189b6c471b2c21f49f155fc52e7
                         <div class="acc-section">
                             <div class="acc-content">
                                 <p><span class="step-copy">Describe the product or service in which this coupon is featuring. </span></p>
-                                   <br clear="all"/><br clear="all"/>
                                    
-                                   <div>
-                            
+                                   <div style="margin-top:12p; clear:both;">
                                     <font style="font-weight:bold; color:#f26625">*425 character max.  &nbsp; &nbsp; 
                                     *Sepatare words or phrases with with commas</font> </span>
 					<div id="description">
-                                      <textarea name="description" cols="93" rows="5" onkeypress="textCounterDesc(this,this.form.counter,425);" value="Enter a description of the product or service featured in this coupon"></textarea>
+                                      <textarea name="description" class="coupon-description-field" cols="93" rows="5" onkeypress="textCounterDesc(this,this.form.counter,425);" value="Enter a description of the product or service featured in this coupon"></textarea>
 					</div>
                                       <script type="text/javascript"/>
                                             function textCounterDesc( field, countfield, maxlimit ) {
@@ -476,18 +494,23 @@
                                             }
                                       </script>
                                       
-                                  </div> 
+                                  </div>
+                                  <div class="next-step-button next-step4"><a href="" id="open4">Next Step</a></div>
                             </div>
                         </div>
                     </li>
                     
                     
                     <li>
+<<<<<<< HEAD
                         <h3 id="step-4"><span class="cc-step-title"><strong>4:</strong>Select Coupon Dates & Purchase Limit</span><a href="#help-step6" class="fancybox help-icon" >[&nbsp;?&nbsp;]</a>
   			       <span class="error" id="err-step-4"></span></h3>
+=======
+                        <h3 id="step-4"><span class="cc-step-title"><strong>4:</strong>Select Coupon Dates & Purchase Limit</span><a href="#help-step6" class="fancybox help-icon" >[&nbsp;?&nbsp;]</a></h3>
+>>>>>>> 55dcdc406643a189b6c471b2c21f49f155fc52e7
                         <div class="acc-section">
                             <div class="acc-content">
-                                <p><span class="step-copy">What date range would you like this coupon to appear on CouZoo.com and what is the maximum number total purchases (if any) you would like to allow for this coupon?</span></p>
+                                <p><span class="step-copy">For how long would you like this coupon to appear on CouZoo.com and would you like there to be a maximum number of total coupons that can be sold on couzoo.com?</span></p>
                                 
                             <div  style="width:100%; height:26px; padding-top:10px; margin:0px; overflow:hidden;">
                                 <span>
@@ -546,23 +569,23 @@
                                     
                                     <div class="exp-date-container" style="display:none;">
                                     <p style="width:100%; border-top:1px solid #f26625; padding-top:15px;">
-                                    	<span class="step-copy">When would you like this coupon to expire (no longer be valid for redemption at <?=$bname?>)?</span>
+                                    	<span class="step-copy">When would you like this coupon to expire (when it will no longer be valid for redemption at <?=$bname?> by customers)?</span>
                                     </p>
                                     <div  style="width:100%; height:30px; padding-top:10px; margin:0px; overflow:hidden;">
                                         <span>
-                                        <input type="radio" value="1" class="required"  id="exp-date-3m" name="exp-date" style="border:none;"/> 
+                                        <input type="radio" value="1" class="required exp-date-radio"  id="exp-date-3m" name="exp-date" style="border:none;"/> 
                                         <label for="exp-date-3m"><span class="step-copy" style="margin-right:30px;">3 months from now</span></label>
                                         </span>                              
                                         <span>
-                                        <input type="radio" value="0" class="required"  id="exp-date-6m" name="exp-date" style="border:none;"/> 
+                                        <input type="radio" value="0" class="required exp-date-radio"  id="exp-date-6m" name="exp-date" style="border:none;"/> 
                                         <label for="exp-date-6m"><span class="step-copy" style="margin-right:30px;">6 months from now</span></label>
                                         </span>
                                         <span>
-                                        <input type="radio" value="0" class="required"  id="exp-date-1y" name="exp-date" style="border:none;"/> 
+                                        <input type="radio" value="0" class="required exp-date-radio"  id="exp-date-1y" name="exp-date" style="border:none;"/> 
                                         <label for="exp-date-1y"><span class="step-copy" style="margin-right:15px;">1 year from now</span></label>
                                         </span>                              
                                         <span>
-                                        <input type="radio" value="0" class="required"  id="exp-date-custom" name="exp-date" style="border:none; margin-left:15px;"/> 
+                                        <input type="radio" value="0" class="required exp-date-radio"  id="exp-date-custom" name="exp-date" style="border:none; margin-left:15px;"/> 
                                         <label for="exp-date-custom"><span class="step-copy">Custom date range</span></label>
                                         </span>
                            			 </div>
@@ -587,33 +610,41 @@
                              		</p>
                                     </div>
                                     <!--End Redemption Validity Period-->
-                                    </div><!--END exp-date-container-->
                                     <br clear="all"/>
+                                    </div><!--END exp-date-container-->
+                                    <div class="next-step-button next-step5"><a href="" id="open5">Next Step</a></div>
                             </div>
                         </div>
                     </li>
                     
                     <li>
                         <h3 id="step-5"><span class="cc-step-title"><strong>5:</strong>Create Coupon Restrictions</span>
+<<<<<<< HEAD
 				<span class="error" id="err-step-5"></span></h3>
+=======
+				<span class="error" id="err-step-8"></span></h3>
+>>>>>>> 55dcdc406643a189b6c471b2c21f49f155fc52e7
                         <div class="acc-section">
                             <div class="acc-content" id="restrictions">
                                 <p><span class="step-copy">What redemption restrictions would you like to put on this coupon?</span></p>
-                                   <br clear="all"/><br clear="all"/>
-                                        
-                                   <div>
-                                      <textarea name="restrictions" cols="93" rows="9" value="Enter all coupon restrictions here"></textarea>
+                                    <div style="margin-top:12p; clear:both;">
+                                      <textarea name="restrictions" class="coupon-restrictions-field" cols="93" rows="9" value="Enter all coupon restrictions here"></textarea>
                                           <p id="footnote">
                                       &nbsp;&nbsp;<strong>examples:</strong> 1 per customer. Dine in only. Not valid on weekends. Cannot be combined with other offers.
                                       </p>
                                    </div>
+                                   <div class="next-step-button next-step6"><a href="" id="open6">Next Step</a></div>
                             </div>
                         </div>
                     </li>
                     
                     <li>
                         <h3 id="step-6"><span class="cc-step-title"><strong>6:</strong>Create Search Key Words</span>
+<<<<<<< HEAD
 				<span class="error" id="err-step-6"></span></h3>
+=======
+				<span class="error" id="err-step-9"></span></h3>
+>>>>>>> 55dcdc406643a189b6c471b2c21f49f155fc52e7
                         <div class="acc-section">
                             <div class="acc-content">
                                 <p><span class="step-copy">What key words or phrases do you think customers interested in this coupon and your product or service may use to search?</span></p>
@@ -624,7 +655,7 @@
                                     <font style="font-weight:bold; color:#f26625">*250 character max.  &nbsp; &nbsp; 
                                     *Sepatare words or phrases with with commas</font> </span>
 					<div id="keywords">
-                                      <textarea name="keywords" cols="93" rows="5" onkeypress="textCounter(this,this.form.counter,250);" value="Enter search terms that are relevant to your coupon"></textarea>
+                                      <textarea name="keywords" class="coupon-key-words-field" cols="93" rows="5" onkeypress="textCounter(this,this.form.counter,250);" value="Enter search terms that are relevant to your coupon"></textarea>
 					</div>
                                       <script type="text/javascript"/>
                                             function textCounter( field, countfield, maxlimit ) {
@@ -646,13 +677,18 @@
                                   If you are a Spa you may list all of your services, i.e. manicure, pedicure, facial, waxing...ouch!
                                   </p>
                                   </div> 
+                                   <div class="next-step-button next-step7"><a href="" id="open7">Next Step</a></div>
                             </div>
                         </div>
                     </li>
                     
                     <li>
                         <h3 id="step-7"><span class="cc-step-title"><strong>7:</strong>Select Featured Coupon Ad Options</span>
+<<<<<<< HEAD
 				<span class="error" id="err-step-7"></span></h3>
+=======
+				<span class="error" id="err-step-10"></span></h3>
+>>>>>>> 55dcdc406643a189b6c471b2c21f49f155fc52e7
                         <div class="acc-section" id="faRadio">
                             <div class="acc-content">
                                 <p><span class="step-copy">Would you like to create an Ad representing this coupon that will appear at the top of the results page when customer search words or phrases realted to your coupon?</span></p>
@@ -661,12 +697,12 @@
                       
                       <div style="width:150px; height:auto; float:left; margin-right:15px; overflow:hidden;">
                           <span>
-                          <input type="radio" name="featuredAd" value="0" class="required"  id="step8-no" style="border:none;"/> 
+                          <input type="radio" name="featuredAd" value="0" class="required no-ad-radio"  id="step8-no" style="border:none;"/> 
                           <label for="step8-no"><span class="step-copy">No, Thanks</span></label>
                           </span>
                           <br clear="all"/>
                           <span>
-                          <input type="radio" name="featuredAd" value="1" class="required"  id="step8-yes" style="border:none;"/> 
+                          <input type="radio" name="featuredAd" value="1" class="required yes-ad-radio"  id="step8-yes" style="border:none;"/> 
                           <label for="step8-yes"><span class="step-copy">Yes, Please</span></label>
                           </span>
               	</div>
@@ -674,13 +710,15 @@
 
              	 <div class="toHide" style="float:left;" id="adblk-0"></div> 
                        
-                       <span class="toHide" id="adblk-1"><!--Start hidden section-->
+                       <span><!--Start hidden section-->
                                               
                        <div  style="width:250px; float:left;">
                            <span>
-                               <input type="checkbox" name="large_ad" value="1" id="foo" class="required"/>
-                               <span class="step-copy">Large, Search-Based Ad</span><br />
-                               <span class="step-copy" style="margin-top:2px;">Cost: $5 per sale from Ad</span><br />
+                           	   <span class="ad-seclected-show">
+                                   <input type="checkbox" class="required large-ad-ckbx" name="large_ad" value="" id="foo" />
+                                   <span class="step-copy">Large, Search-Based Ad</span><br />
+                                   <span class="step-copy" style="margin-top:2px;">Cost: $5 per sale from Ad</span><br />
+                               </span>
                             <div style="float:left; width:125px; margin:8px 4px 0px 25px;"><img src="images/large-ad-thumb.jpg"/></div>
                                <div style="float:left; margin:8px 0px 0px 0px;">
                                <a href="#large-ad-example" class="fancybox" >larger ad<br/>example</a><br /><br />
@@ -688,87 +726,64 @@
                                </div>
                                <br clear="all"/>
                                <div style="display:none; height:40px; margin:6px 0px 0px 24px;" id="checked-a" >
-                                   <span class="step-field-title-box">Max Budget: $&nbsp;</span><input type="number" name="budget_large_ad" id="budget_large" class="required" placeholder="0.00" style="width:60px;"/>
+                                   <span class="step-field-title-box">Max Budget: $&nbsp;</span><input type="number" name="budget_large_ad" id="budget_large" class="required ad-budget-field" placeholder="0.00" style="width:60px;"/>
                                </div>
                           </span>
                           <br clear="all"/>
                       </div>
-                       
-                       
-                     <div  style="width:250px; float:left;">
-                       	<span>
-                       		   <input type="checkbox" name="side_ad" value="1" id="foo2"/>
-                               <span class="step-copy">Side, Location-Based Ad</span><br />
-                               <span class="step-copy" style="margin-top:2px;">Cost: $3 per sale from Ad<br /></span>
-                           <div style="float:left; width:125px; margin:8px 4px 0px 25px;"><img src="images/side-ad-thumb.jpg"/></div>
-                               <div style="float:left; ; margin:8px 0px 0px 0px;">
-                               <a href="#side-ad-example" class="fancybox" >side ad<br/>example</a><br /><br />
-                               <a href="#side-ad-info" class="fancybox" >more info</a>
-                               </div>
-                       			<br clear="all"/>
-                               <div style="display:none; height:40px; margin:6px 0px 0px 24px;" id="checked-b" >
-                                   <span class="step-field-title-box">Max Budget: $&nbsp;</span><input type="number" name="budget_side_ad" id="budget_side" class="required" placeholder="0.00" style="width:60px;"/>
-                               </div>
-                          </span>
-                          <br clear="all"/>
-                   </div>
-     
-                       
-                      </span><!--END hidden section-->
-                              
-                                         
-                            <br clear="all"/>
+                        <div  style="width:250px; float:left;">
+                                <span>
+                                	<span class="ad-seclected-show">
+                                       <input type="checkbox" class="side-ad-ckbx" name="side_ad" value="" id="foo2"/>
+                                       <span class="step-copy">Side, Location-Based Ad</span><br />
+                                       <span class="step-copy" style="margin-top:2px;">Cost: $3 per sale from Ad<br /></span>
+                                    </span>
+                                   <div style="float:left; width:125px; margin:8px 4px 0px 25px;"><img src="images/side-ad-thumb.jpg"/></div>
+                                       <div style="float:left; ; margin:8px 0px 0px 0px;">
+                                       <a href="#side-ad-example" class="fancybox" >side ad<br/>example</a><br /><br />
+                                       <a href="#side-ad-info" class="fancybox" >more info</a>
+                                       </div>
+                                        <br clear="all"/>
+                                       <div style="display:none; height:40px; margin:6px 0px 0px 24px;" id="checked-b" >
+                                           <span class="step-field-title-box">Max Budget: $&nbsp;</span><input type="number" name="budget_side_ad" id="budget_side" class="required ad-budget-field" placeholder="0.00" style="width:60px;"/>
+                                       </div>
+                                  </span>
+                                  <br clear="all"/>
+                           </div>	
+     						 </span><!--END hidden section-->
+                           <br clear="all"/>
                            </div>
+                           <div class="next-step-button next-step8"><a href="" id="open8">Next Step</a></div>
                            </div>
-                        </div>
-                    </li>
+                  </div>
+           </li>
                     
-                    <li>
+            <li>
                         <h3 id="publish"><span class="cc-step-title"><strong>Publish</strong></span>
 				<span class="error" id="err-publish"></span></h3>
                         <div class="acc-section">
                             <div class="acc-content">
-
-			<!-- Not needed
                                 <div id="payment-left-column">
-                                  <ul class="priceList">
-                                        <li>
-                                          <strong>Coupon</strong>
-                                          <em>$100</em>
-                                        </li>
-                                        <li>
-                                            <strong>Large Ad</strong>
-                                            <em>$0*</em>
-                                        </li>
-                                        <li>
-                                            <strong>Side Ad</strong>
-                                            <em>$0*</em>
-                                        </li>
-                                        <li class="last">
-                                          <strong>Order Total</strong>
-                                          <em>$100</em>
-                                        </li>
-                                 </ul>
-                                 <br clear="all"/>
-                                 <div id="footnote">*Ad price is based on total number of purchase originating from the Ad. Billing for Ads will occur after Ad is finished running on COUZOO.</div>
-                            </div> -->
+                                
+                            </div>
                             
                             <div id="payment-right-column">
-                                <h2>Billing Info</h2>
+                               
                                 
 					<div id="promo-hide-coup">
 
 <?php
        $qry = mysql_query("SELECT * FROM CouZoo_Cards WHERE payer_id = '$id_user'");
 	$total_cc = mysql_num_rows($qry);
+	if ($total_cc) {
 ?>
-               <div id="cart-check-out-table-header" class="card-headers" style="<?=$total_cc < 1 ? "display: none;" : "";?>">
+               <div id="cart-check-out-table-header" class="card-headers">
 		     <div class="card-name">Saved Cards</div>
                    <div class="card-type">Card Type</div>
                    <div class="card-number">Card Number</div>
                </div><!--end table header-->
 <?php
-	  while ($cc = mysql_fetch_array($qry)) {
+	} while ($cc = mysql_fetch_array($qry)) {
 		if ($cc['type'] == 'amex') { $cc_type = "American Express"; } else { $cc_type = ucfirst($cc['type']); }
 ?>
                <div id="cart-check-out-table-row" class="<?=$cc['id']?>">
@@ -780,13 +795,11 @@
                </div><!--end table header-->
 <?php } ?>
 
-   <div id="new-card-holder-coupon"></div>
-
    <div id="payment-left-column">
-             <p class="no-card-added step-copy" style="margin-bottom:10px; <?=$total_cc > 0 ? "display: none;" : "";?>">
+             <p id="no-card-added" class="step-copy" style="margin-bottom:10px; <?=$total_cc > 0 ? "display: none;" : "";?>">
                 You have not yet entered a credit card to be used with your CouZoo Merchant Account. There is a $25 per month subscription fee, which allows you to create and post as many coupons as you wish to CouZoo.com. You may cancel at any time.
              </p>
-             <a href="#add-card" class="card-text fancybox change" style="font-size:14px;"><?=!$total_cc ? "Add a Credit Card" : "Add Another Credit Card";?></a>  &nbsp; |  &nbsp; <a href="javascript:;" style="font-size:14px;" onmousedown="slidedown('payment-right-column-coupon');">Use a Promo Code</a>
+             <a href="#add-card" id="card-text" class="fancybox change" style="font-size:14px;"><?=!$total_cc ? "Add a Credit Card" : "Add Another Credit Card";?></a>  &nbsp; |  &nbsp; <a href="javascript:;" style="font-size:14px;" onmousedown="slidedown('payment-right-column-coupon');">Use a Promo Code</a>
         </div>
 
     <div id="payment-right-column-coupon" style="display:none; overflow:hidden; height:128px; width:100%;">
@@ -810,7 +823,8 @@
         </div>
      </div>
 
-	<div class="sub-renew-info" style="<?=$total_cc < 1 ? "display: none;" : "";?>">    
+<?php if ($total_cc > 0) { ?>
+	<div id="sub-renew-info">    
         	<br clear="all"/>
         	<p class="step-copy" style="margin:10px 0px 10px 0px">
             		You are subscribed with the selected credit card above to create unlimited coupons.<br/> 
@@ -821,6 +835,7 @@
             		<input type="radio" name="customer-subscribe-auto-renew" value="no" />&nbsp;no
         	</form>
 	</div>
+<?php } ?>
 
 					</div>
                             
@@ -976,7 +991,23 @@
                 $("#checked-b").fadeOut(200);   
              }
          });
-                         
+		 
+		 $(document).ready(function(){
+			$(".no-ad-radio").click(function(){
+				$("#checked-a").hide('slow');
+				$("#checked-b").hide('slow');
+				$(".ad-seclected-show").hide('slow');
+				$("#budget_large").val('');
+				$("#budget_side").val('');
+				$("#foo").attr('checked', false);
+				$("#foo2").attr('checked', false);
+			});
+		});
+		$(document).ready(function(){
+			$(".yes-ad-radio").click(function(){
+				$(".ad-seclected-show").show('slow');
+			});
+		});
         
         $(function(){
             var ischecked=$("#foo2").is(':checked');
@@ -990,9 +1021,85 @@
              }
         });
         </script>  
+        
+       <!-- IF no Ad is clicked clear YEs Ad values-->
+        <script type="text/javascript"> 
+		
+		</script>
+       
+
+<script type="text/javascript">
+$(document).ready(function(){
+        $("#open2").mousedown(function(){
+			$("#step-2").click();
+		});   
+		$("#open3").mousedown(function(){
+			$("#step-3").click();
+		});
+		$("#open4").mousedown(function(){
+			$("#step-4").click();
+		});   
+		$("#open5").mousedown(function(){
+			$("#step-5").click();
+		});
+		$("#open6").mousedown(function(){
+			$("#step-6").click();
+		});   
+		$("#open7").mousedown(function(){
+			$("#step-7").click();
+		});
+		$("#open8").mousedown(function(){
+			$("#publish").click();
+		});
+		
+		$(".title-option").click(function(){
+            $(".next-step2").show('slow');
+        });
+		/*$(".select-image-btn").click(function(){
+            $(".next-step3").show('slow');
+        })*/
+		$(".coupon-description-field").keyup(function() {
+		setTimeout(func, 1500);
+			function func() {
+				$(".next-step4").show('slow');
+			}
+		});
+		$(".exp-date-radio").click(function(){
+            $(".next-step5").show('slow');
+        });
+		$(".coupon-restrictions-field").keyup(function() {
+		setTimeout(func, 1500);
+			function func() {
+				$(".next-step6").show('slow');
+			}
+		});
+		$(".coupon-key-words-field").keyup(function() {
+		setTimeout(func, 1500);
+			function func() {
+				$(".next-step7").show('slow');
+			}
+		});
+		$(".no-ad-radio").click(function(){
+            $(".next-step8").show('slow');
+        })
+		$(".yes-ad-radio").click(function(){
+            $(".next-step8").hide('slow');
+        })
+		$(".ad-budget-field").keyup(function() {
+		setTimeout(func, 400);
+			function func() {
+				$(".next-step8").show('slow');
+			}
+		});
+	});
+</script>
 
 
-	<script type="text/javascript">
+
+
+
+
+<script type="text/javascript">
 
 // -- Step 1 Functions -- //
 	$('.step-1-change').bind('change keypress',function() {
@@ -1010,6 +1117,7 @@
 	var p_id = $(this).val();
 	var title = $("#p-" + p_id).text();
     	$('#step-1').data('completed', false);
+<<<<<<< HEAD
 		if (type == 0) {
 		    if(featured_item.length < 1 || featured_item == "Enter Product or Service Featured") {
          		$('#err-step-1').html('**Please enter the product or service featured');
@@ -1019,10 +1127,15 @@
 			$('#err-step-1').html('**Please select a final title for your coupon');
 		    } else {
 			$('#err-step-1').html('<img class="checkmark" src="images/green-check.png" width=30 height=25>');
+=======
+		if(cbCheck > 0) {
+         		$('#err-step-1').html('<img class="checkmark" src="images/green-check.png" width=28 height=23>');
+>>>>>>> 55dcdc406643a189b6c471b2c21f49f155fc52e7
     			$('#step-1').data('completed', true);
 			$('#title_final').val(title);
 		    }
 		} else {
+<<<<<<< HEAD
 		    if(minimum_purchase < 1) {
          		$('#err-step-1').html('**Please enter the minimum purchase');
 		    } else if(!$(format).is(':checked')) {
@@ -1032,6 +1145,61 @@
     			$('#step-1').data('completed', true);
 			$('#title_final').val(title);
 		    }
+=======
+         		$('#err-step-1').html('**Please select a category');
+		}
+	});
+
+
+// -- Step 2 Functions -- //
+	$('#step-2').one("click", function() {
+       	$('#err-step-2').html('**Please set value');
+	});
+
+	$('#blk-1 input, #step1-dollars').change(function() {
+    	$('#step-2').data('completed', false);
+	var rpInput = $('#retail-price').val();
+	var spInput = $('#sale-price').val();
+	var title = $('#featured-item').val();
+	var format = $('#blk-b-1 input:radio[name="title_format"]');
+		if($('#step1-dollars').is(':checked') && rpInput.length > 0 && spInput.length > 0) {
+         		$('#err-step-2').html('<img class="checkmark" src="images/green-check.png" width=28 height=23>');
+    			$('#step-2').data('completed', true);
+		} else {
+         		$('#err-step-2').html('**Please set value');
+		}
+
+		if(title.length < 1 && $('#step-3').data('clicked')) {
+         		$('#err-step-3').html('**Please enter a coupon title');
+		} else if(!$(format).is(':checked') && $('#step-3').data('clicked')) {
+         		$('#err-step-3').html('**Please select a title format');
+		} else if(title.length > 0 && $(format).is(':checked') && $('#step-3').data('clicked')) {
+         		$('#err-step-3').html('<img class="checkmark" src="images/green-check.png" width=28 height=23>');
+    			$('#step-2').data('completed', true);
+		}
+	});
+
+	$('#blk-2 input, #step1-percent').change(function() {
+    	$('#step-2').data('completed', false);
+	var rpInput = $('#percent-off').val();
+	var spInput = $('#minimum-purchase').val();
+	var title = $('#featured-item').val();
+	var format = $('#blk-b-2 input:radio[name="title_format"]');
+		if($('#step1-percent').is(':checked') && rpInput.length > 0 && spInput.length > 0) {
+         		$('#err-step-2').html('<img class="checkmark" src="images/green-check.png" width=28 height=23>');
+    			$('#step-2').data('completed', true);
+		} else {
+         		$('#err-step-2').html('**Please set value');
+		}
+
+		if(title.length < 1 && $('#step-3').data('clicked')) {
+         		$('#err-step-3').html('**Please enter a coupon title');
+		} else if(!$(format).is(':checked') && $('#step-3').data('clicked')) {
+         		$('#err-step-3').html('**Please select a title format');
+		} else if(title.length > 0 && $(format).is(':checked') && $('#step-3').data('clicked')) {
+         		$('#err-step-3').html('<img class="checkmark" src="images/green-check.png" width=28 height=23>');
+    			$('#step-2').data('completed', true);
+>>>>>>> 55dcdc406643a189b6c471b2c21f49f155fc52e7
 		}
 	});
 
@@ -1045,9 +1213,36 @@
 	});
 
 
+<<<<<<< HEAD
 // -- Step 2 Functions -- //
 	$('#step-2').one("click", function() {
        	$('#err-step-2').html('**Please select a coupon image');
+=======
+// -- Step 3 Functions -- //
+	$('#step-3').one("click", function() {
+       	$('#err-step-3').html('**Please enter coupon title');
+    		$(this).data('clicked', true);
+	});
+
+	$('#featured-item, input:radio[name="title_format"]').change(function() {
+    	$('#step-3').data('completed', false);
+	var title = $('#featured-item').val();
+	var format = $('input:radio[name="title_format"]');
+		if(title.length < 1) {
+         		$('#err-step-3').html('**Please enter a coupon title');
+		} else if(!$(format).is(':checked')) {
+         		$('#err-step-3').html('**Please select a title format');
+		} else {
+         		$('#err-step-3').html('<img class="checkmark" src="images/green-check.png" width=28 height=23>');
+		    	$('#step-3').data('completed', true);
+		}
+	});
+
+
+// -- Step 4 Functions -- //
+	$('#step-4').one("click", function() {
+       	$('#err-step-4').html('**Please select a coupon image');
+>>>>>>> 55dcdc406643a189b6c471b2c21f49f155fc52e7
 	});
 
 	function readImg(input) {
@@ -1071,7 +1266,11 @@
 			$('#step-2').data('completed', false);
 			$('#img_type').val("");
 		} else {
+<<<<<<< HEAD
          		$('#err-step-2').html('<img class="checkmark" src="images/green-check.png" width=30 height=25>');
+=======
+         		$('#err-step-4').html('<img class="checkmark" src="images/green-check.png" width=28 height=23>');
+>>>>>>> 55dcdc406643a189b6c471b2c21f49f155fc52e7
             		$("#rmImg").show("fast");
 			$('#step-2').data('completed', true);
 		}
@@ -1081,7 +1280,11 @@
 	var profImg = "<?=$prof_img?>?<?=$last_update?>";
 	$('.use-profile-pic').click(function() {
         	$('#imgPreview').attr('src','uploads/merchants/' + profImg);
+<<<<<<< HEAD
          	$('#err-step-2').html('<img class="checkmark" src="images/green-check.png" width=30 height=25>');
+=======
+         	$('#err-step-4').html('<img class="checkmark" src="images/green-check.png" width=28 height=23>');
+>>>>>>> 55dcdc406643a189b6c471b2c21f49f155fc52e7
             	$("#rmImg").show("fast");
 		$('#step-2').data('completed', true);
 		$('#img_type').val("prof");
@@ -1091,7 +1294,11 @@
 		$.fancybox.close();
      		var c_id = $(this).attr('id');
         	$('#imgPreview').attr('src','uploads/coupons/' + c_id + '.jpg');
+<<<<<<< HEAD
          	$('#err-step-2').html('<img class="checkmark" src="images/green-check.png" width=30 height=25>');
+=======
+         	$('#err-step-4').html('<img class="checkmark" src="images/green-check.png" width=28 height=23>');
+>>>>>>> 55dcdc406643a189b6c471b2c21f49f155fc52e7
             	$("#rmImg").show("fast");
 		$('#step-2').data('completed', true);
 		$('#img_type').val("reuse");
@@ -1118,8 +1325,13 @@
 		if($('#description textarea').val() < 1) {
          		$('#err-step-3').html('**Please give your coupon a description');
 		} else {
+<<<<<<< HEAD
          		$('#err-step-3').html('<img class="checkmark" src="images/green-check.png" width="30" height="25">');
     			$('#step-3').data('completed', true);
+=======
+         		$('#err-step-5').html('<img class="checkmark" src="images/green-check.png" width=28 height=23>');
+    			$('#step-5').data('completed', true);
+>>>>>>> 55dcdc406643a189b6c471b2c21f49f155fc52e7
 		}
 	});
 
@@ -1139,7 +1351,7 @@
 		} else if(!$('#removal_date').datepicker('getDate')) {
        		$('#err-step-6').html('**Please select an ending date');
 		} else {
- 			$('#err-step-6').html('<img class="checkmark" src="images/green-check.png" width=30 height=25>');
+ 			$('#err-step-6').html('<img class="checkmark" src="images/green-check.png" width=28 height=23>');
     			$('#step-6').data('completed', true);
 		}
 
@@ -1162,8 +1374,13 @@
 		if($('#restrictions textarea').val() < 1) {
          		$('#err-step-5').html('**Please set some coupon restrictions');
 		} else {
+<<<<<<< HEAD
          		$('#err-step-5').html('<img class="checkmark" src="images/green-check.png" width=30 height=25>');
     			$('#step-5').data('completed', true);
+=======
+         		$('#err-step-8').html('<img class="checkmark" src="images/green-check.png" width=28 height=23>');
+    			$('#step-8').data('completed', true);
+>>>>>>> 55dcdc406643a189b6c471b2c21f49f155fc52e7
 		}
 	});
 
@@ -1178,8 +1395,13 @@
 		if($('#keywords textarea').val() < 1) {
          		$('#err-step-6').html('**Please give your coupon a description');
 		} else {
+<<<<<<< HEAD
          		$('#err-step-6').html('<img class="checkmark" src="images/green-check.png" width=30 height=25>');
 		    	$('#step-6').data('completed', true);
+=======
+         		$('#err-step-9').html('<img class="checkmark" src="images/green-check.png" width=28 height=23>');
+		    	$('#step-9').data('completed', true);
+>>>>>>> 55dcdc406643a189b6c471b2c21f49f155fc52e7
 		}
 	});
 
@@ -1202,12 +1424,21 @@
 			} else if (!sAd && !lAd) {
        			$('#err-step-7').html('**Please select a large ad, side ad, or both');
 			} else {
+<<<<<<< HEAD
  				$('#err-step-7').html('<img class="checkmark" src="images/green-check.png" width=30 height=25>');
 		    	$('#step-7').data('completed', true);
 			}
 		} else {
  			$('#err-step-7').html('<img class="checkmark" src="images/green-check.png" width=30 height=25>');
 		    	$('#step-7').data('completed', true);
+=======
+ 				$('#err-step-10').html('<img class="checkmark" src="images/green-check.png" width=28 height=23>');
+		    	$('#step-10').data('completed', true);
+			}
+		} else {
+ 			$('#err-step-10').html('<img class="checkmark" src="images/green-check.png" width=28 height=23>');
+		    	$('#step-10').data('completed', true);
+>>>>>>> 55dcdc406643a189b6c471b2c21f49f155fc52e7
 		}
 	});
 

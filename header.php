@@ -14,7 +14,7 @@ require_once("includes/config.php");
 <?php if (isset($page_title)): ?>
 	<title>CouZoo - <?=$page_title?></title>
 <?php else: ?>
-	<title>CouZoo - The Crown of Coupons!</title>
+	<title>CouZoo - The Best Site for Online Local Coupons and Deals</title>
 <?php endif; ?>
 
 <link rel="stylesheet" href="<?=$up_dir?>css/style.css" type="text/css" /><!--gerneral-->

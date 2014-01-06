@@ -115,8 +115,18 @@ margin:5px;
 #create-a-coupon .acc h3 .cc-step-title strong {padding-right:10px; font-size:18px; font-weight:bold;}
 
 #create-a-coupon .error {float: right; padding-right:15px; line-height:34px; color: red;}
-#create-a-coupon img.checkmark {padding-top: 5px;}
+#create-a-coupon img.checkmark {padding:6px 0px 0px 0px; float:right;}
 
+.ad-seclected-show{display:none;}
+
+.next-step-button {color:#f26625; font-size:16px; text-align:left;}
+
+.next-step2, .next-step4, .next-step5, .next-step6, .next-step7, .next-step8 {display:none;}
+
+.next-step3, .next-step4 {margin-top:8px;}
+.next-step5 {margin-top:-10px;}
+
+#open2, #open3, #open4, #open5, #open6, #open7, #open8 {color:#f26625; text-decoration:none; font-size:16px; margin-bottom:0px;}
 <!--END Accordion create a coupon version 2-->
 
 

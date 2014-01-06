@@ -24,7 +24,7 @@ $couzoo->CheckLogin();
 
 <p>
 
-Hi.
+Hi there.
 </p><p>
 If you’ve looked around CouZoo already you may or may not have noticed it’s basically a big, searchable database of local coupons for sale. Think of it kind of like a Netflix or Craigslist for coupons. Just to reiterate, we sell coupons, not deals.
 </p><p>
