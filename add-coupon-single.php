@@ -9,12 +9,9 @@
                 <ul class="acc" id="acccreate">
 
  					<li>
-<<<<<<< HEAD
                  		 <h3 id="step-1"><span class="cc-step-title"><strong>1:</strong>Create Coupon Title</span><a href="#help-step3" class="fancybox help-icon" >[&nbsp;?&nbsp;]</a>
 				 <span class="error" id="err-step-1">**Please select a final title for your coupon</span></h3>
-=======
-                 		 <h3 id="step-1"><span class="cc-step-title"><strong>1:</strong>Create Coupon Title</span><a href="#help-step3" class="fancybox help-icon" >[&nbsp;?&nbsp;]</a></h3>
->>>>>>> 55dcdc406643a189b6c471b2c21f49f155fc52e7
+
                         <div class="acc-section">
                            <div id="step-1-change" class="acc-content">
                             
@@ -389,15 +386,12 @@
                                           <br clear="all"/> 
                                        </span>
                                   </div><!--END Percent Off Item Title Options-->                       
-                                  
-<<<<<<< HEAD
 
 					<!-- Final input text sent to server for saving -->
 					<input type="hidden" value="" id="title_final" name="title_final" />
                                 
-=======
                                   <div class="next-step-button next-step2"><a href="" id="open2">Next Step</a></div>
->>>>>>> 55dcdc406643a189b6c471b2c21f49f155fc52e7
+
                               </div><!--END Title Options-->
                                   <br clear="all"/>
                           </div>
@@ -406,11 +400,7 @@
                    
                     <li>
                        <h3 id="step-2"><span class="cc-step-title"><strong>2:</strong>Select Coupon Image</span>
-<<<<<<< HEAD
 				<span class="error" id="err-step-2"></span></h3>
-=======
-				<span class="error" id="err-step-4"></span></h3>
->>>>>>> 55dcdc406643a189b6c471b2c21f49f155fc52e7
                         <div class="acc-section">
                             <div class="acc-content">
 
@@ -464,18 +454,13 @@
                     
                     <li>
                         <h3 id="step-3"><span class="cc-step-title"><strong>3:</strong>Create Coupon Description</span>
-<<<<<<< HEAD
 				<span class="error" id="err-step-3"></span></h3>
-=======
-				<span class="error" id="err-step-5"></span></h3>
->>>>>>> 55dcdc406643a189b6c471b2c21f49f155fc52e7
                         <div class="acc-section">
                             <div class="acc-content">
                                 <p><span class="step-copy">Describe the product or service in which this coupon is featuring. </span></p>
                                    
                                    <div style="margin-top:12p; clear:both;">
-                                    <font style="font-weight:bold; color:#f26625">*425 character max.  &nbsp; &nbsp; 
-                                    *Sepatare words or phrases with with commas</font> </span>
+                                    <font style="font-weight:bold; color:#f26625">*425 character max. </span>
 					<div id="description">
                                       <textarea name="description" class="coupon-description-field" cols="93" rows="5" onkeypress="textCounterDesc(this,this.form.counter,425);" value="Enter a description of the product or service featured in this coupon"></textarea>
 					</div>
@@ -502,31 +487,33 @@
                     
                     
                     <li>
-<<<<<<< HEAD
-                        <h3 id="step-4"><span class="cc-step-title"><strong>4:</strong>Select Coupon Dates & Purchase Limit</span><a href="#help-step6" class="fancybox help-icon" >[&nbsp;?&nbsp;]</a>
-  			       <span class="error" id="err-step-4"></span></h3>
-=======
-                        <h3 id="step-4"><span class="cc-step-title"><strong>4:</strong>Select Coupon Dates & Purchase Limit</span><a href="#help-step6" class="fancybox help-icon" >[&nbsp;?&nbsp;]</a></h3>
->>>>>>> 55dcdc406643a189b6c471b2c21f49f155fc52e7
+                        <h3 id="step-4"><span class="cc-step-title">
+                        	<strong>4:</strong>Select Coupon Dates & Purchase Limit</span><a href="#help-step6" class="fancybox help-icon" >[&nbsp;?&nbsp;]</a>
+  			       			<span class="error" id="err-step-4"></span>
+                        </h3>
+                        
                         <div class="acc-section">
                             <div class="acc-content">
-                                <p><span class="step-copy">For how long would you like this coupon to appear on CouZoo.com and would you like there to be a maximum number of total coupons that can be sold on couzoo.com?</span></p>
+                                <p>
+                                	<span class="step-copy">For how long would you like this coupon to appear on CouZoo.com 
+                                    and would you like there to be a maximum number of total coupons that can be sold on couzoo.com?</span>
+                                </p>
                                 
                             <div  style="width:100%; height:26px; padding-top:10px; margin:0px; overflow:hidden;">
                                 <span>
-                                <input type="radio" value="1" class="required"  id="run-date-30" name="run-dates" style="border:none;"/> 
+                                <input type="radio" value="30" class="required"  id="run-date-30" name="run-dates" style="border:none;"/> 
                                 <label for="run-date-30"><span class="step-copy" style="margin-right:30px;">30 days from now</span></label>
                                 </span>                              
                                 <span>
-                                <input type="radio" value="0" class="required"  id="run-date-60" name="run-dates" style="border:none;"/> 
+                                <input type="radio" value="60" class="required"  id="run-date-60" name="run-dates" style="border:none;"/> 
                                 <label for="run-date-60"><span class="step-copy" style="margin-right:30px;">60 days from now</span></label>
                                 </span>
                                 <span>
-                                <input type="radio" value="0" class="required"  id="run-date-90" name="run-dates" style="border:none;"/> 
+                                <input type="radio" value="90" class="required"  id="run-date-90" name="run-dates" style="border:none;"/> 
                                 <label for="run-date-90"><span class="step-copy" style="margin-right:15px;">90 days from now</span></label>
                                 </span>                              
                                 <span>
-                                <input type="radio" value="0" class="required"  id="run-date-custom" name="run-dates" style="border:none; margin-left:15px;"/> 
+                                <input type="radio" value="custom" class="required"  id="run-date-custom" name="run-dates" style="border:none; margin-left:15px;"/> 
                                 <label for="run-date-custom"><span class="step-copy">Custom date range</span></label>
                                 </span>
                             </div>
@@ -534,7 +521,9 @@
                                 
                                       <div style="width:310px; height:auto; float:left; margin:0px 20px 0px 0px; padding:0px 20px 0px 0px;">
                                              <div style="margin:8px 0px 0px 0px;">
-                                                <input type="checkbox" value="1" class="maxpurchchbx" id="maxpurchchbx" name="maxPurch"/><label for="maxpurchchbx"><span class="step-copy">Enable Maximum Purchases Amount</span></label>
+                                                <input type="checkbox" value="1" class="maxpurchchbx" id="maxpurchchbx" name="maxPurch"/><label for="maxpurchchbx"><span class="step-copy">
+                                                Enable Maximum Purchases Amount</span>
+                                                </label>
                                               </div>
                                        	   <br clear="all"/>
                                               <div class="toHide" style="display:none; float:left; margin:0px 0px;" id="paymaxp-1">
@@ -542,22 +531,25 @@
                                                         <span class="step-field-title-box">Purchase Limit*&nbsp;:&nbsp;</span>
                                                         <input type="number" name="maxPurchases_num" id="maxPurchases_num" placeholder="2,500" style="width:80px;" />
                                                     </div>
-                                          <p id="footnote" style="margin:10px 0px;">
-                                          *This coupon will be removed from CouZoo after it has been purchased the amount of times entered in the "Purchase Limit" field.<br clear="all"/>
-                                          </p>
-                                          </div> 
+                                              <p id="footnote" style="margin:10px 0px;">
+                                              *This coupon will be removed from CouZoo after it has been purchased the amount of times entered in the "Purchase Limit" field.<br clear="all"/>
+                                              </p>
+                                          	</div> 
                                           <br clear="all"/>    
                                       </div>
                                       
                                       
                                       
                                     <div style="width:340px; height:auto; display:none; float:right;" class="custom-date-range-container">
-                                    <p class="step-copy" style="margin:8px 0px 6px 45px;">Select Custom Date Range</p><br clear="all"/>
-                                    	<input type="hidden" id="posting_date_formatted" name="posting_date_formatted" class="required">
-										<input type="hidden" id="removal_date_formatted" name="removal_date_formatted" class="required">
-                                    <span class="step-field-title-box" style="width:130px;">Posting Date*&nbsp;:</span><input type="text" id="posting_date" name="posting_date" class="required" placeholder="click to select" style="width:150px;"/>
-                                          <br clear="all"/>
-                                          <span class="step-field-title-box" style="width:130px;">Removal Date**&nbsp;:</span><input type="text" id="removal_date" name="removal_date" class="required" placeholder="3-month max" style="width:150px;"/>
+                                        <p class="step-copy" style="margin:8px 0px 6px 45px;">Select Custom Date Range</p>
+                                        <br clear="all"/>
+                                            <input type="hidden" id="posting_date_formatted" name="posting_date_formatted" class="required">
+                                            <input type="hidden" id="removal_date_formatted" name="removal_date_formatted" class="required">
+                                            <span class="step-field-title-box" style="width:130px;">Posting Date*&nbsp;:</span>
+                                            <input type="text" id="posting_date" name="posting_date" class="required" placeholder="click to select" style="width:150px;"/>
+                                              <br clear="all"/>
+                                              <span class="step-field-title-box" style="width:130px;">Removal Date**&nbsp;:</span>
+                                              <input type="text" id="removal_date" name="removal_date" class="required" placeholder="3-month max" style="width:150px;"/>
                                           
                                           <p id="footnote" style="margin:2px 0px 10px 0px;">
                                               *Date this coupon will start to appear on CouZoo.com<br/>
@@ -573,35 +565,35 @@
                                     </p>
                                     <div  style="width:100%; height:30px; padding-top:10px; margin:0px; overflow:hidden;">
                                         <span>
-                                        <input type="radio" value="1" class="required exp-date-radio"  id="exp-date-3m" name="exp-date" style="border:none;"/> 
+                                        <input type="radio" value="3m" class="required exp-date-radio"  id="exp-date-3m" name="exp-date" style="border:none;"/> 
                                         <label for="exp-date-3m"><span class="step-copy" style="margin-right:30px;">3 months from now</span></label>
                                         </span>                              
                                         <span>
-                                        <input type="radio" value="0" class="required exp-date-radio"  id="exp-date-6m" name="exp-date" style="border:none;"/> 
+                                        <input type="radio" value="6m" class="required exp-date-radio"  id="exp-date-6m" name="exp-date" style="border:none;"/> 
                                         <label for="exp-date-6m"><span class="step-copy" style="margin-right:30px;">6 months from now</span></label>
                                         </span>
                                         <span>
-                                        <input type="radio" value="0" class="required exp-date-radio"  id="exp-date-1y" name="exp-date" style="border:none;"/> 
+                                        <input type="radio" value="1y" class="required exp-date-radio"  id="exp-date-1y" name="exp-date" style="border:none;"/> 
                                         <label for="exp-date-1y"><span class="step-copy" style="margin-right:15px;">1 year from now</span></label>
                                         </span>                              
                                         <span>
-                                        <input type="radio" value="0" class="required exp-date-radio"  id="exp-date-custom" name="exp-date" style="border:none; margin-left:15px;"/> 
+                                        <input type="radio" value="custom" class="required exp-date-radio"  id="exp-date-custom" name="exp-date" style="border:none; margin-left:15px;"/> 
                                         <label for="exp-date-custom"><span class="step-copy">Custom date range</span></label>
                                         </span>
                            			 </div>
                                     
-                                    <!--Start Redemption Validity Period-->
-                                    <div style="width:440px; height:auto; display:none; float:right;" class="custom-exp-date-range-container">
-                                    	<input type="hidden" id="valid_date_formatted" name="valid_date_formatted" class="required">
-										<input type="hidden" id="exp_date_formatted" name="exp_date_formatted" class="required">
-                                    <p class="step-copy">
-                                        <div style="width:420px; float:left; margin-right:20px;">
-                                            <p class="step-copy" style="margin:8px 0px 6px 70px;">Select Custom Valid Time Frame</p><br clear="all"/>
-                                            <span class="step-field-title-box" style="width:240px;">Coupon becomes valid on*&nbsp;:</span>
-                                            <input type="text" id="valid_date" name="valid_date" class="required" placeholder="click to select" style="width:150px;"/>
-                                            	<br clear="all"/>
-                                            <span class="step-field-title-box" style="width:240px;">Coupon is no longer valid after**&nbsp;: &nbsp;</span>
-                                            <input type="text" id="exp_date" name="exp_date" class="required" placeholder="click to select" style="width:150px;"/>
+                                        <!--Start Redemption Validity Period-->
+                                        <div style="width:440px; height:auto; display:none; float:right;" class="custom-exp-date-range-container">
+                                            <input type="hidden" id="valid_date_formatted" name="valid_date_formatted" class="required">
+                                            <input type="hidden" id="exp_date_formatted" name="exp_date_formatted" class="required">
+                                            <p class="step-copy">
+                                            <div style="width:420px; float:left; margin-right:20px;">
+                                                <p class="step-copy" style="margin:8px 0px 6px 70px;">Select Custom Valid Time Frame</p><br clear="all"/>
+                                                <span class="step-field-title-box" style="width:240px;">Coupon becomes valid on*&nbsp;:</span>
+                                                <input type="text" id="valid_date" name="valid_date" class="required" placeholder="click to select" style="width:150px;"/>
+                                                    <br clear="all"/>
+                                                <span class="step-field-title-box" style="width:240px;">Coupon is no longer valid after**&nbsp;: &nbsp;</span>
+                                                <input type="text" id="exp_date" name="exp_date" class="required" placeholder="click to select" style="width:150px;"/>
                                         </div>
                                     </p>
                                     <p id="footnote">
@@ -619,11 +611,7 @@
                     
                     <li>
                         <h3 id="step-5"><span class="cc-step-title"><strong>5:</strong>Create Coupon Restrictions</span>
-<<<<<<< HEAD
-				<span class="error" id="err-step-5"></span></h3>
-=======
-				<span class="error" id="err-step-8"></span></h3>
->>>>>>> 55dcdc406643a189b6c471b2c21f49f155fc52e7
+						<span class="error" id="err-step-5"></span></h3>
                         <div class="acc-section">
                             <div class="acc-content" id="restrictions">
                                 <p><span class="step-copy">What redemption restrictions would you like to put on this coupon?</span></p>
@@ -640,11 +628,7 @@
                     
                     <li>
                         <h3 id="step-6"><span class="cc-step-title"><strong>6:</strong>Create Search Key Words</span>
-<<<<<<< HEAD
 				<span class="error" id="err-step-6"></span></h3>
-=======
-				<span class="error" id="err-step-9"></span></h3>
->>>>>>> 55dcdc406643a189b6c471b2c21f49f155fc52e7
                         <div class="acc-section">
                             <div class="acc-content">
                                 <p><span class="step-copy">What key words or phrases do you think customers interested in this coupon and your product or service may use to search?</span></p>
@@ -684,11 +668,7 @@
                     
                     <li>
                         <h3 id="step-7"><span class="cc-step-title"><strong>7:</strong>Select Featured Coupon Ad Options</span>
-<<<<<<< HEAD
 				<span class="error" id="err-step-7"></span></h3>
-=======
-				<span class="error" id="err-step-10"></span></h3>
->>>>>>> 55dcdc406643a189b6c471b2c21f49f155fc52e7
                         <div class="acc-section" id="faRadio">
                             <div class="acc-content">
                                 <p><span class="step-copy">Would you like to create an Ad representing this coupon that will appear at the top of the results page when customer search words or phrases realted to your coupon?</span></p>
@@ -1117,7 +1097,6 @@ $(document).ready(function(){
 	var p_id = $(this).val();
 	var title = $("#p-" + p_id).text();
     	$('#step-1').data('completed', false);
-<<<<<<< HEAD
 		if (type == 0) {
 		    if(featured_item.length < 1 || featured_item == "Enter Product or Service Featured") {
          		$('#err-step-1').html('**Please enter the product or service featured');
@@ -1127,15 +1106,10 @@ $(document).ready(function(){
 			$('#err-step-1').html('**Please select a final title for your coupon');
 		    } else {
 			$('#err-step-1').html('<img class="checkmark" src="images/green-check.png" width=30 height=25>');
-=======
-		if(cbCheck > 0) {
-         		$('#err-step-1').html('<img class="checkmark" src="images/green-check.png" width=28 height=23>');
->>>>>>> 55dcdc406643a189b6c471b2c21f49f155fc52e7
     			$('#step-1').data('completed', true);
 			$('#title_final').val(title);
 		    }
 		} else {
-<<<<<<< HEAD
 		    if(minimum_purchase < 1) {
          		$('#err-step-1').html('**Please enter the minimum purchase');
 		    } else if(!$(format).is(':checked')) {
@@ -1145,61 +1119,6 @@ $(document).ready(function(){
     			$('#step-1').data('completed', true);
 			$('#title_final').val(title);
 		    }
-=======
-         		$('#err-step-1').html('**Please select a category');
-		}
-	});
-
-
-// -- Step 2 Functions -- //
-	$('#step-2').one("click", function() {
-       	$('#err-step-2').html('**Please set value');
-	});
-
-	$('#blk-1 input, #step1-dollars').change(function() {
-    	$('#step-2').data('completed', false);
-	var rpInput = $('#retail-price').val();
-	var spInput = $('#sale-price').val();
-	var title = $('#featured-item').val();
-	var format = $('#blk-b-1 input:radio[name="title_format"]');
-		if($('#step1-dollars').is(':checked') && rpInput.length > 0 && spInput.length > 0) {
-         		$('#err-step-2').html('<img class="checkmark" src="images/green-check.png" width=28 height=23>');
-    			$('#step-2').data('completed', true);
-		} else {
-         		$('#err-step-2').html('**Please set value');
-		}
-
-		if(title.length < 1 && $('#step-3').data('clicked')) {
-         		$('#err-step-3').html('**Please enter a coupon title');
-		} else if(!$(format).is(':checked') && $('#step-3').data('clicked')) {
-         		$('#err-step-3').html('**Please select a title format');
-		} else if(title.length > 0 && $(format).is(':checked') && $('#step-3').data('clicked')) {
-         		$('#err-step-3').html('<img class="checkmark" src="images/green-check.png" width=28 height=23>');
-    			$('#step-2').data('completed', true);
-		}
-	});
-
-	$('#blk-2 input, #step1-percent').change(function() {
-    	$('#step-2').data('completed', false);
-	var rpInput = $('#percent-off').val();
-	var spInput = $('#minimum-purchase').val();
-	var title = $('#featured-item').val();
-	var format = $('#blk-b-2 input:radio[name="title_format"]');
-		if($('#step1-percent').is(':checked') && rpInput.length > 0 && spInput.length > 0) {
-         		$('#err-step-2').html('<img class="checkmark" src="images/green-check.png" width=28 height=23>');
-    			$('#step-2').data('completed', true);
-		} else {
-         		$('#err-step-2').html('**Please set value');
-		}
-
-		if(title.length < 1 && $('#step-3').data('clicked')) {
-         		$('#err-step-3').html('**Please enter a coupon title');
-		} else if(!$(format).is(':checked') && $('#step-3').data('clicked')) {
-         		$('#err-step-3').html('**Please select a title format');
-		} else if(title.length > 0 && $(format).is(':checked') && $('#step-3').data('clicked')) {
-         		$('#err-step-3').html('<img class="checkmark" src="images/green-check.png" width=28 height=23>');
-    			$('#step-2').data('completed', true);
->>>>>>> 55dcdc406643a189b6c471b2c21f49f155fc52e7
 		}
 	});
 
@@ -1213,36 +1132,9 @@ $(document).ready(function(){
 	});
 
 
-<<<<<<< HEAD
 // -- Step 2 Functions -- //
 	$('#step-2').one("click", function() {
        	$('#err-step-2').html('**Please select a coupon image');
-=======
-// -- Step 3 Functions -- //
-	$('#step-3').one("click", function() {
-       	$('#err-step-3').html('**Please enter coupon title');
-    		$(this).data('clicked', true);
-	});
-
-	$('#featured-item, input:radio[name="title_format"]').change(function() {
-    	$('#step-3').data('completed', false);
-	var title = $('#featured-item').val();
-	var format = $('input:radio[name="title_format"]');
-		if(title.length < 1) {
-         		$('#err-step-3').html('**Please enter a coupon title');
-		} else if(!$(format).is(':checked')) {
-         		$('#err-step-3').html('**Please select a title format');
-		} else {
-         		$('#err-step-3').html('<img class="checkmark" src="images/green-check.png" width=28 height=23>');
-		    	$('#step-3').data('completed', true);
-		}
-	});
-
-
-// -- Step 4 Functions -- //
-	$('#step-4').one("click", function() {
-       	$('#err-step-4').html('**Please select a coupon image');
->>>>>>> 55dcdc406643a189b6c471b2c21f49f155fc52e7
 	});
 
 	function readImg(input) {
@@ -1266,11 +1158,7 @@ $(document).ready(function(){
 			$('#step-2').data('completed', false);
 			$('#img_type').val("");
 		} else {
-<<<<<<< HEAD
          		$('#err-step-2').html('<img class="checkmark" src="images/green-check.png" width=30 height=25>');
-=======
-         		$('#err-step-4').html('<img class="checkmark" src="images/green-check.png" width=28 height=23>');
->>>>>>> 55dcdc406643a189b6c471b2c21f49f155fc52e7
             		$("#rmImg").show("fast");
 			$('#step-2').data('completed', true);
 		}
@@ -1280,11 +1168,7 @@ $(document).ready(function(){
 	var profImg = "<?=$prof_img?>?<?=$last_update?>";
 	$('.use-profile-pic').click(function() {
         	$('#imgPreview').attr('src','uploads/merchants/' + profImg);
-<<<<<<< HEAD
          	$('#err-step-2').html('<img class="checkmark" src="images/green-check.png" width=30 height=25>');
-=======
-         	$('#err-step-4').html('<img class="checkmark" src="images/green-check.png" width=28 height=23>');
->>>>>>> 55dcdc406643a189b6c471b2c21f49f155fc52e7
             	$("#rmImg").show("fast");
 		$('#step-2').data('completed', true);
 		$('#img_type').val("prof");
@@ -1294,11 +1178,7 @@ $(document).ready(function(){
 		$.fancybox.close();
      		var c_id = $(this).attr('id');
         	$('#imgPreview').attr('src','uploads/coupons/' + c_id + '.jpg');
-<<<<<<< HEAD
          	$('#err-step-2').html('<img class="checkmark" src="images/green-check.png" width=30 height=25>');
-=======
-         	$('#err-step-4').html('<img class="checkmark" src="images/green-check.png" width=28 height=23>');
->>>>>>> 55dcdc406643a189b6c471b2c21f49f155fc52e7
             	$("#rmImg").show("fast");
 		$('#step-2').data('completed', true);
 		$('#img_type').val("reuse");
@@ -1325,42 +1205,66 @@ $(document).ready(function(){
 		if($('#description textarea').val() < 1) {
          		$('#err-step-3').html('**Please give your coupon a description');
 		} else {
-<<<<<<< HEAD
          		$('#err-step-3').html('<img class="checkmark" src="images/green-check.png" width="30" height="25">');
     			$('#step-3').data('completed', true);
-=======
-         		$('#err-step-5').html('<img class="checkmark" src="images/green-check.png" width=28 height=23>');
-    			$('#step-5').data('completed', true);
->>>>>>> 55dcdc406643a189b6c471b2c21f49f155fc52e7
 		}
 	});
 
 
 // -- Step 4 Functions -- //
-	$('#step-6').one("click", function() {
-       	$('#err-step-6').html('**Please select date range');
+	$('#step-4').one("click", function() {
+       	$('#err-step-4').html('**Please select all the date ranges');
 	});
 
-	$('#maxPurchases, #maxPurchases_num').bind('change keyup', function() {
+	$('#maxpurchchbx, #maxPurchases_num').bind('change keyup', function() {
 	var maxNum = $('#maxPurchases_num').val();
-    	$('#step-6').data('completed', false);
-		if($('#maxPurchases').is(':checked') && maxNum.length < 1) {
-       		$('#err-step-6').html('**Max. purchases is empty');
-		} else if(!$('#posting_date').datepicker('getDate')) {
-       		$('#err-step-6').html('**Please select a start date');
-		} else if(!$('#removal_date').datepicker('getDate')) {
-       		$('#err-step-6').html('**Please select an ending date');
+	var runDates = $('input[name="run-dates"]:checked').val()
+	var expDate = $('input[name="exp-date"]:checked').val()
+    	$('#step-4').data('completed', false);
+		if($('#maxpurchchbx').is(':checked') && maxNum.length < 1) {
+       		$('#err-step-4').html('**Max. purchases is empty');
+		} else if(!runDates) {
+       	    	$('#err-step-4').html('**Please select the run time for your coupon');
+		} else if(runDates == 'custom' && !$('#posting_date').datepicker('getDate')) {
+       		$('#err-step-4').html('**Please select a starting date');
+		} else if(runDates == 'custom' && !$('#removal_date').datepicker('getDate')) {
+			$('#err-step-4').html('**Please select an ending date');
+		} else if(!expDate) {
+       	    	$('#err-step-4').html('**Please select an expiration date');
+		} else if(expDate == 'custom' && !$('#valid_date').datepicker('getDate')) {
+       	     	$('#err-step-4').html('**Please select when the coupon becomes valid');
+		} else if(expDate == 'custom' && !$('#exp_date').datepicker('getDate')) {
+			$('#err-step-4').html('**Please tell us when the coupon needs to be used by');
 		} else {
- 			$('#err-step-6').html('<img class="checkmark" src="images/green-check.png" width=28 height=23>');
-    			$('#step-6').data('completed', true);
+ 			$('#err-step-4').html('<img class="checkmark" src="images/green-check.png" width=28 height=23>');
+    			$('#step-4').data('completed', true);
+		}
+	});
+
+	$('input[name="run-dates"], input[name="exp-date"]').bind('change', function() {
+	var maxNum = $('#maxPurchases_num').val();
+	var runDates = $('input[name="run-dates"]:checked').val()
+	var expDate = $('input[name="exp-date"]:checked').val()
+    	$('#step-4').data('completed', false);
+		if($('#maxpurchchbx').is(':checked') && maxNum.length < 1) {
+       		$('#err-step-4').html('**Max. purchases is empty');
+		} else if(!runDates) {
+       	    	$('#err-step-4').html('**Please select the run time for your coupon');
+		} else if(runDates == 'custom' && !$('#posting_date').datepicker('getDate')) {
+       		$('#err-step-4').html('**Please select a starting date');
+		} else if(runDates == 'custom' && !$('#removal_date').datepicker('getDate')) {
+			$('#err-step-4').html('**Please select an ending date');
+		} else if(!expDate) {
+       	    	$('#err-step-4').html('**Please select an expiration date');
+		} else if(expDate == 'custom' && !$('#valid_date').datepicker('getDate')) {
+       	     	$('#err-step-4').html('**Please select when the coupon becomes valid');
+		} else if(expDate == 'custom' && !$('#exp_date').datepicker('getDate')) {
+			$('#err-step-4').html('**Please tell us when the coupon needs to be used by');
+		} else {
+ 			$('#err-step-4').html('<img class="checkmark" src="images/green-check.png" width=28 height=23>');
+    			$('#step-4').data('completed', true);
 		}
 
-	});
-
-
-// -- Step 7 Functions -- //
-	$('#step-7').one("click", function() {
-       	$('#err-step-7').html("**Please select the coupon's validity date range");
 	});
 
 
@@ -1374,13 +1278,8 @@ $(document).ready(function(){
 		if($('#restrictions textarea').val() < 1) {
          		$('#err-step-5').html('**Please set some coupon restrictions');
 		} else {
-<<<<<<< HEAD
          		$('#err-step-5').html('<img class="checkmark" src="images/green-check.png" width=30 height=25>');
     			$('#step-5').data('completed', true);
-=======
-         		$('#err-step-8').html('<img class="checkmark" src="images/green-check.png" width=28 height=23>');
-    			$('#step-8').data('completed', true);
->>>>>>> 55dcdc406643a189b6c471b2c21f49f155fc52e7
 		}
 	});
 
@@ -1395,13 +1294,8 @@ $(document).ready(function(){
 		if($('#keywords textarea').val() < 1) {
          		$('#err-step-6').html('**Please give your coupon a description');
 		} else {
-<<<<<<< HEAD
          		$('#err-step-6').html('<img class="checkmark" src="images/green-check.png" width=30 height=25>');
 		    	$('#step-6').data('completed', true);
-=======
-         		$('#err-step-9').html('<img class="checkmark" src="images/green-check.png" width=28 height=23>');
-		    	$('#step-9').data('completed', true);
->>>>>>> 55dcdc406643a189b6c471b2c21f49f155fc52e7
 		}
 	});
 
@@ -1412,10 +1306,10 @@ $(document).ready(function(){
 	});
 
 	$('#faRadio input').bind('change keyup', function() {
-    	$('#step-10').data('completed', false);
+    	$('#step-7').data('completed', false);
 	var fAd = $('input[name="featuredAd"]:checked').val()
-	var lAd = $('input[name="large_ad"]:checked').val()
-	var sAd = $('input[name="side_ad"]:checked').val()
+	var lAd = $('input[name="large_ad"]').is(':checked')
+	var sAd = $('input[name="side_ad"]').is(':checked')
 		if(fAd == 1) {
 			if(lAd == 1 && !$('#budget_large').val()) {
        			$('#err-step-7').html('**Please enter your large ad budget');
@@ -1424,21 +1318,12 @@ $(document).ready(function(){
 			} else if (!sAd && !lAd) {
        			$('#err-step-7').html('**Please select a large ad, side ad, or both');
 			} else {
-<<<<<<< HEAD
  				$('#err-step-7').html('<img class="checkmark" src="images/green-check.png" width=30 height=25>');
-		    	$('#step-7').data('completed', true);
+		    		$('#step-7').data('completed', true);
 			}
 		} else {
  			$('#err-step-7').html('<img class="checkmark" src="images/green-check.png" width=30 height=25>');
 		    	$('#step-7').data('completed', true);
-=======
- 				$('#err-step-10').html('<img class="checkmark" src="images/green-check.png" width=28 height=23>');
-		    	$('#step-10').data('completed', true);
-			}
-		} else {
- 			$('#err-step-10').html('<img class="checkmark" src="images/green-check.png" width=28 height=23>');
-		    	$('#step-10').data('completed', true);
->>>>>>> 55dcdc406643a189b6c471b2c21f49f155fc52e7
 		}
 	});
 
@@ -1468,7 +1353,7 @@ $(document).ready(function(){
 $('.submit-btn').click(function() {
 $('#submitStatus').fadeIn(250).css('color', '#f26625').html('One moment..');
 var success = true;
-   for (var n = 1; n < 11; n++) {
+   for (var n = 1; n < 8; n++) {
 	if(success == true && !$('#step-' + n).data('completed')) {
 		var success = false;
 		var err = n;

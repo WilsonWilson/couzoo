@@ -25,12 +25,8 @@ require_once("location/geoPlugin.php");
 		$adr = urlencode($_POST['address']);
 		$zip = urlencode($_POST['zip']);
 
-		if ($adr == "") {
-			echo "Please enter your street address!";
-			die;
-		}
-		elseif ($zip == "") {
-			echo "Please enter your zip code!";
+		if ($adr == "" && $zip == "") {
+			echo "Please enter a city and address or a zip code!";
 			die;
 		}
 
@@ -60,8 +56,8 @@ require_once("location/geoPlugin.php");
 		setcookie( "UserLat", $userLat, strtotime( '+1 year' ) );
 		setcookie( "UserLong", $userLong, strtotime( '+1 year' ) );
 
-		header("Location: index.php");
-		exit;
+		//header("Location: index.php");
+		//exit;
 	}
 
 	$userLocation = $userCity.", ".$userState;

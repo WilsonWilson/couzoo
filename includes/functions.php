@@ -1046,11 +1046,6 @@ class CouZoo
    
         $formvars = array();
         
-        if($this->ValidateAddCoupon())
-        {
-            return false;
-        }
-        
         $this->CollectAddCoupon($formvars);
         
         if(!$this->SaveToDatabaseCoupon($formvars))
@@ -1098,10 +1093,10 @@ class CouZoo
 
     function CollectAddCoupon(&$formvars)
     {
-	 $cat_array = $_POST['category'];
-	 $categories = implode(",", $cat_array);
-        $formvars['category'] = $categories;
-
+	 // $cat_array = $_POST['category'];
+	 // $categories = implode(",", $cat_array);
+        // $formvars['category'] = $categories;
+	 $formvars['coupon_type'] = $this->Sanitize($_POST['coupontype']);
         $formvars['mark_down'] = $this->Sanitize($_POST['mark_down']);
         $formvars['retail_price'] = $this->Sanitize($_POST['retail_price']);
         $formvars['dollars_off'] = $this->Sanitize($_POST['dollars_off']);
@@ -1113,6 +1108,7 @@ class CouZoo
         $formvars['id_user'] = $this->Sanitize($_POST['id_user']);
         $formvars['title_final'] = $this->Sanitize($_POST['title_final']);
         $formvars['description'] = $this->Sanitize($_POST['description']);
+	 $formvars['run_dates'] = $this->Sanitize($_POST['run-dates']);
         $formvars['posting_date'] = $this->Sanitize($_POST['posting_date_formatted']);
         $formvars['removal_date'] = $this->Sanitize($_POST['removal_date_formatted']);
         $formvars['max_purchases'] = $this->Sanitize($_POST['maxPurchases']);
@@ -1126,7 +1122,8 @@ class CouZoo
         $formvars['budget_large_ad'] = $this->Sanitize($_POST['budget_large_ad']);
         $formvars['side_ad'] = $this->Sanitize($_POST['side_ad']);
         $formvars['budget_side_ad'] = $this->Sanitize($_POST['budget_side_ad']);
-        $formvars['total_price'] = $this->Sanitize($_POST['total_price']);       
+        $formvars['total_price'] = $this->Sanitize($_POST['total_price']);
+	 $formvars['exp_dates'] = $this->Sanitize($_POST['exp-date']);      
 	 $formvars['valid_date'] = $this->Sanitize($_POST['valid_date_formatted']);        
 	 $formvars['exp_date'] = $this->Sanitize($_POST['exp_date_formatted']);
 	 $formvars['img_type'] = $this->Sanitize($_POST['img_type']);
@@ -1214,6 +1211,8 @@ function SaveToDatabaseCoupon(&$formvars)
     
     function InsertIntoDBCoupon(&$formvars)
     {
+	$coupon_type = $formvars['coupon_type'];
+
 	// Specific product
 	$retail_price = $formvars['retail_price'];
 	$dollars_off = $formvars['dollars_off'];
@@ -1225,57 +1224,77 @@ function SaveToDatabaseCoupon(&$formvars)
 	$dollars_off_any = $formvars['dollars_off_any'];
 	$percent_off_any = $formvars['percent_off_any'];
 
-      // Find savings and determine price of coupon
-	$savings1 = $retail_price - $sale_price;
-	$percent = $percent_off * .01;
-	$savings2 = $percent * $min_purchase;
 
-
-	if($mark_down == "1")
+	if($coupon_type == "0")
 	{
-		if($savings1 < 11)
-		{
-			$price = "1";
-		}
-		elseif($savings1 > 10 && $savings1 < 21)
-		{
-			$price = "2";
-		}
-		elseif($savings1 > 20 && $savings1 < 36)
-		{
-			$price = "3";
-		}
-		elseif($savings1 > 35 && $savings1 < 51)
-		{
-			$price = "4";
-		}
-		elseif($savings1 > 50)
-		{
-			$price = "5";
-		}
+		$savings = $dollars_off;
+
+	       if($percent_off)
+			$savings = $percent_off * .01 * $retail_price;
+	       elseif($lower_price)
+		 	$savings = $retail_price - $lower_price;
 	}
-	elseif($mark_down == "2")
+	elseif($coupon_type == "1")
 	{
-		if($savings2 < 11)
-		{
-			$price = "1";
-		}
-		elseif($savings2 > 10 && $savings2 < 21)
-		{
-			$price = "2";
-		}
-		elseif($savings2 > 20 && $savings2 < 36)
-		{
-			$price = "3";
-		}
-		elseif($savings2 > 35 && $savings2 < 51)
-		{
-			$price = "4";
-		}
-		elseif($savings2 > 50)
-		{
-			$price = "5";
-		}
+ 		$savings = $dollars_off_any;
+
+	       if($percent_off_any)
+			$savings = $percent_off_any * .01 * $min_purchase_any;
+	}
+
+	if($savings < 15)
+	{
+		$price = "1";
+	}
+	elseif($savings >= 15 && $savings < 25)
+	{
+		$price = "2";
+	}
+	elseif($savings >= 25 && $savings < 40)
+	{
+		$price = "3";
+	}
+	elseif($savings >= 40 && $savings < 75)
+	{
+		$price = "4";
+	}
+	elseif($savings >= 75)
+	{
+		$price = "5";
+	}
+
+     // Dates
+	$run_dates = $formvars['run_dates'];
+	$exp_dates = $formvars['exp_dates'];
+	$valid_date = $formvars['valid_date'];
+	$exp_date = $formvars['exp_date'];
+
+     // Current date
+	$now = time();
+	$posting_date = date('Y-m-d', $now);
+	$valid_date = date('Y-m-d', $now);
+
+    // Determine date to store for coupon run time and expiration
+	if ($run_dates == '30') {
+	    $removal_date = date('Y-m-d', strtotime("+30 days"));
+	} elseif ($run_dates == '60') {
+	    $removal_date = date('Y-m-d', strtotime("+60 days"));
+	} elseif ($run_dates == '90') {
+	    $removal_date = date('Y-m-d', strtotime("+90 days"));
+	} elseif ($run_dates == 'custom') {
+	    $posting_date = $formvars['posting_date'];
+	    $removal_date = $formvars['removal_date'];
+	}
+
+	if ($exp_dates == '3m') {
+	    $exp_date = date('Y-m-d', strtotime("+3 months"));
+	} elseif ($exp_dates == '6m') {
+	    $exp_date = date('Y-m-d', strtotime("+6 months"));
+	} elseif ($exp_dates == '1y') {
+	    $exp_date = date('Y-m-d', strtotime("+1 year"));
+	} elseif ($exp_dates == 'custom') {
+	    $valid_date = $formvars['valid_date'];
+	    $exp_date = $formvars['exp_date'];
 	}
 
 
@@ -1311,12 +1330,12 @@ function SaveToDatabaseCoupon(&$formvars)
                 "' . $this->SanitizeForSQL($formvars['percent_off']) . '",
                 "' . $this->SanitizeForSQL($formvars['min_purchase']) . '",
                 "' . $this->SanitizeForSQL($formvars['description']) . '",
-                "' . $this->SanitizeForSQL($formvars['posting_date']) . '",
-                "' . $this->SanitizeForSQL($formvars['removal_date']) . '",
+                "' . $this->SanitizeForSQL($posting_date) . '",
+                "' . $this->SanitizeForSQL($removal_date) . '",
                 "' . $this->SanitizeForSQL($formvars['max_purchases']) . '",
                 "' . $this->SanitizeForSQL($formvars['max_purchases_num']) . '",
-                "' . $this->SanitizeForSQL($formvars['valid_date']) . '",
-                "' . $this->SanitizeForSQL($formvars['exp_date']) . '",
+                "' . $this->SanitizeForSQL($valid_date) . '",
+                "' . $this->SanitizeForSQL($exp_date) . '",
                 "' . $this->SanitizeForSQL($formvars['restrictions']) . '",
                 "' . $this->SanitizeForSQL($formvars['keywords']) . '",
                 "' . $this->SanitizeForSQL($formvars['featured_ad']) . '",

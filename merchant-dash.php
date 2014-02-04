@@ -327,15 +327,22 @@ onSelect: function( selectedDate ) {
 var date = $.datepicker.formatDate('yy-mm-dd', new Date( selectedDate ));
 $( "#posting_date_formatted" ).val( date );
 $( "#removal_date" ).datepicker( "option", "minDate", selectedDate );
-$('#step-6').data('completed', false);
+$('#step-4').data('completed', false);
 	var maxNum = $('#maxPurchases_num').val();
+	var expDate = $('input[name="exp-date"]:checked').val()
 	if(!$('#removal_date').datepicker('getDate')) {
-       	$('#err-step-6').html('**Please select an ending date');
-	} else if($('#maxPurchases').is(':checked') && maxNum.length < 1) {
-       	$('#err-step-6').html('**Max. purchases is empty');
+       	$('#err-step-4').html('**Please select an ending date');
+	} else if($('#maxpurchchbx').is(':checked') && maxNum.length < 1) {
+       	$('#err-step-4').html('**Max. purchases is empty');
+	} else if(!expDate) {
+       	$('#err-step-4').html('**Please select an expiration date');
+	} else if(expDate == 'custom' && !$('#valid_date').datepicker('getDate')) {
+       	$('#err-step-4').html('**Please select when the coupon becomes valid');
+	} else if(expDate == 'custom' && !$('#exp_date').datepicker('getDate')) {
+		$('#err-step-4').html('**Please tell us when the coupon needs to be used by');
 	} else {
- 		$('#err-step-6').html('<img class="checkmark" src="images/green-check.png" width=30 height=25>');
-		$('#step-6').data('completed', true);
+ 		$('#err-step-4').html('<img class="checkmark" src="images/green-check.png" width=30 height=25>');
+		$('#step-4').data('completed', true);
 	}
 }
 });
@@ -350,15 +357,22 @@ onSelect: function( selectedDate ) {
 var date = $.datepicker.formatDate('yy-mm-dd', new Date( selectedDate ));
 $( "#removal_date_formatted" ).val( date );
 $( "#posting_date" ).datepicker( "option", "maxDate", selectedDate );
-$('#step-6').data('completed', false);
+$('#step-4').data('completed', false);
 	var maxNum = $('#maxPurchases_num').val();
+	var expDate = $('input[name="exp-date"]:checked').val()
 	if(!$('#posting_date').datepicker('getDate')) {
-       	$('#err-step-6').html('**Please select a starting date');
-	} else if($('#maxPurchases').is(':checked') && maxNum.length < 1) {
-       	$('#err-step-6').html('**Max. purchases is empty');
+       	$('#err-step-4').html('**Please select a starting date');
+	} else if($('#maxpurchchbx').is(':checked') && maxNum.length < 1) {
+       	$('#err-step-4').html('**Max. purchases is empty');
+	} else if(!expDate) {
+       	$('#err-step-4').html('**Please select an expiration date');
+	} else if(expDate == 'custom' && !$('#valid_date').datepicker('getDate')) {
+       	$('#err-step-4').html('**Please select when the coupon becomes valid');
+	} else if(expDate == 'custom' && !$('#exp_date').datepicker('getDate')) {
+		$('#err-step-4').html('**Please tell us when the coupon needs to be used by');
 	} else {
- 		$('#err-step-6').html('<img class="checkmark" src="images/green-check.png" width=30 height=25>');
-		$('#step-6').data('completed', true);
+ 		$('#err-step-4').html('<img class="checkmark" src="images/green-check.png" width=30 height=25>');
+		$('#step-4').data('completed', true);
 	}
 }
 });
@@ -373,12 +387,22 @@ onSelect: function( selectedDate ) {
 var date = $.datepicker.formatDate('yy-mm-dd', new Date( selectedDate ));
 $( "#valid_date_formatted" ).val( date );
 $( "#exp_date" ).datepicker( "option", "minDate", selectedDate );
-$('#step-7').data('completed', false);
+$('#step-4').data('completed', false);
+	var maxNum = $('#maxPurchases_num').val();
+	var runDates = $('input[name="run-dates"]:checked').val()
 	if(!$('#exp_date').datepicker('getDate')) {
-       	$('#err-step-7').html('**Please select the date when the coupon expires');
+       	$('#err-step-4').html('**Please tell us when the coupon needs to be used by');
+	} else if($('#maxpurchchbx').is(':checked') && maxNum.length < 1) {
+       	$('#err-step-4').html('**Max. purchases is empty');
+	} else if(!runDates) {
+       	$('#err-step-4').html('**Please select the run time for your coupon');
+	} else if(runDates == 'custom' && !$('#posting_date').datepicker('getDate')) {
+       	$('#err-step-4').html('**Please select a starting date');
+	} else if(runDates == 'custom' && !$('#removal_date').datepicker('getDate')) {
+		$('#err-step-4').html('**Please select an ending date');
 	} else {
- 		$('#err-step-7').html('<img class="checkmark" src="images/green-check.png" width=30 height=25>');
-		$('#step-7').data('completed', true);
+ 		$('#err-step-4').html('<img class="checkmark" src="images/green-check.png" width=30 height=25>');
+		$('#step-4').data('completed', true);
 	}
 }
 });
@@ -393,12 +417,22 @@ onSelect: function( selectedDate ) {
 var date = $.datepicker.formatDate('yy-mm-dd', new Date( selectedDate ));
 $( "#exp_date_formatted" ).val( date );
 $( "#valid_date" ).datepicker( "option", "maxDate", selectedDate );
-$('#step-7').data('completed', false);
+$('#step-4').data('completed', false);
+	var maxNum = $('#maxPurchases_num').val();
+	var runDates = $('input[name="run-dates"]:checked').val()
 	if(!$('#valid_date').datepicker('getDate')) {
-       	$('#err-step-7').html('**Please select the date when the coupon first becomes valid to use');
+       	$('#err-step-4').html('**Please select when the coupon becomes valid');
+	} else if($('#maxpurchchbx').is(':checked') && maxNum.length < 1) {
+       	$('#err-step-4').html('**Max. purchases is empty');
+	} else if(!runDates) {
+       	$('#err-step-4').html('**Please select the run time for your coupon');
+	} else if(runDates == 'custom' && !$('#posting_date').datepicker('getDate')) {
+       	$('#err-step-4').html('**Please select a starting date');
+	} else if(runDates == 'custom' && !$('#removal_date').datepicker('getDate')) {
+		$('#err-step-4').html('**Please select an ending date');
 	} else {
- 		$('#err-step-7').html('<img class="checkmark" src="images/green-check.png" width=30 height=25>');
-		$('#step-7').data('completed', true);
+ 		$('#err-step-4').html('<img class="checkmark" src="images/green-check.png" width=30 height=25>');
+		$('#step-4').data('completed', true);
 	}
 }
 });
@@ -1287,6 +1321,8 @@ $('.apply-promo-btn').click(function() {
 		  $('#promo_code_form').val('1');
 	         $('#slideTwo').html(res.message);
 	         $('#promo-hide-coup').html(res.message);
+		  $('#err-publish').html('<font color="green">Click to confirm ad</font>');
+		  $('#publish').data('completed', true);
 	     } else {
 		  $('#promo-msg-' + id).html(res.message);
 	     }

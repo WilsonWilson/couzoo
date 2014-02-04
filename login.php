@@ -106,3 +106,4 @@ $('.submit-btn').click(function() {
 	$('#login_form').submit();
 });
 </script>
+

@@ -103,6 +103,9 @@
 				$empty_cart = true;
 			}
 
+			// Update total sales for coupons
+			$qry = mysql_query("UPDATE CouZoo_Coupons SET sales = sales + 1 WHERE id_coupon = '$coupon_id'");
+
 			// Update total purhcased coupons
 			$qry = mysql_query("UPDATE CouZoo_Members SET purchased_coupons = purchased_coupons + '$total_coupons' WHERE id_user = '$payer_id'");
 
@@ -206,13 +209,13 @@
 
 <?php if ($paid) { ?>
 	Thank you for your order! Please go to your account and make sure you use your coupons before they expire! The CouZoo Team thanks you for your business. Happy Couponing!
-
+<?php 
 	if ($empty_cart == 'true') {
 		// Empty cart since it was a checkout and not a buy now
 		$qry = mysql_query("DELETE FROM CouZoo_Cart WHERE id_user = '$payer_id'");
 	}
 
-<?php } else { ?>
+} else { ?>
 
 	<input type="hidden" name="checkout" value="true">
 	<input type="hidden" name="payer_id" value="<?=$id_user?>">

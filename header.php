@@ -25,6 +25,8 @@ require_once("includes/config.php");
 <link rel="stylesheet" href="<?=$up_dir?>css/mini-cart-styles.css" type="text/css"/>
 
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+	<script type="text/javascript" src="<?=$up_dir?>js/mobile-redirect.js"></script>
+
 
     <!-- FOR DROPDOWN -->
     <script type='text/javascript' src='<?=$up_dir?>js/sign-in-sign-up.js'></script>
