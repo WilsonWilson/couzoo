@@ -215,7 +215,7 @@ elseif ($c['status'] == 'ended')
 		     </form>
 		     <a href="#"> <div id="buy-btn" class="use-this-coupon">buy now</div></a>
 		 <?php else:?>
-                   <a href="m-log-in.php"> <div class="use-this-coupon">please login to buy now</div></a>
+                   <a href="m-log-in.php"> <div class="use-this-coupon">login to buy now</div></a>
 		 <?php endif;?>
             </div>
             <div class="added-to-watch">This coupon has been added to your watch list.</div>
