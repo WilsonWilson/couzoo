@@ -460,7 +460,8 @@
                                 <p><span class="step-copy">Describe the product or service in which this coupon is featuring. </span></p>
                                    
                                    <div style="margin-top:12p; clear:both;">
-                                    <font style="font-weight:bold; color:#f26625">*425 character max. </span>
+                                    <font style="font-weight:bold; color:#f26625">*425 character max.  &nbsp; &nbsp; 
+                                    *Sepatare words or phrases with with commas</font> </span>
 					<div id="description">
                                       <textarea name="description" class="coupon-description-field" cols="93" rows="5" onkeypress="textCounterDesc(this,this.form.counter,425);" value="Enter a description of the product or service featured in this coupon"></textarea>
 					</div>
@@ -484,11 +485,10 @@
                             </div>
                         </div>
                     </li>
-                    
-                    
+
                     <li>
                         <h3 id="step-4"><span class="cc-step-title">
-                        	<strong>4:</strong>Select Coupon Dates & Purchase Limit</span><a href="#help-step6" class="fancybox help-icon" >[&nbsp;?&nbsp;]</a>
+                        	<strong>4:</strong>Select Coupon Dates & Purchase Limit</span><a href="#help-step4" class="fancybox help-icon" >[&nbsp;?&nbsp;]</a>
   			       			<span class="error" id="err-step-4"></span>
                         </h3>
                         
@@ -608,7 +608,7 @@
                             </div>
                         </div>
                     </li>
-                    
+
                     <li>
                         <h3 id="step-5"><span class="cc-step-title"><strong>5:</strong>Create Coupon Restrictions</span>
 						<span class="error" id="err-step-5"></span></h3>
@@ -625,7 +625,7 @@
                             </div>
                         </div>
                     </li>
-                    
+
                     <li>
                         <h3 id="step-6"><span class="cc-step-title"><strong>6:</strong>Create Search Key Words</span>
 				<span class="error" id="err-step-6"></span></h3>
