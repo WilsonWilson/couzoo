@@ -1,10 +1,13 @@
 <div id="expanderContent" style="display:none">
 	<div id="menu">
     	<ul>
+         <?php if($id_user):?>
+                <li><a href="">log out</a></li>
+         <?php endif;?>
 	     <?php if(!$id_user):?>
                 <li><a href="m-log-in.php">log in</a></li>
-		  <li><a href="m-sign-up-customer.php">sign up</a></li>
-		  <li><a href="m-sign-up-merchant.php">sign up as a merchant</a></li>
+                <li><a href="m-sign-up-customer.php">sign up</a></li>
+                <li><a href="m-sign-up-merchant.php">sign up as a merchant</a></li>
 	     <?php endif;?>         
                 <li><a href="m-contact-us.php">contact us</a></li>
                 <li><a href="index.php">search coupons</a></li>
