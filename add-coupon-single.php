@@ -753,7 +753,7 @@
 					<div id="promo-hide-coup">
 
 <?php
-       $qry = mysql_query("SELECT id FROM CouZoo_Cards WHERE payer_id = '$id_user' WHERE primary = 1");
+       $qry = mysql_query("SELECT id FROM CouZoo_Cards WHERE payer_id = '$id_user'");
 	$total_cc = mysql_num_rows($qry);
 	$cc = mysql_fetch_array($qry);
 ?>

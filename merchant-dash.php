@@ -498,7 +498,7 @@ $views = $res['views'];
 
 $promo_applied = mysql_num_rows(mysql_query("SELECT * FROM CouZoo_Promo_Log WHERE id_user = '$id_user'"));
 
-if ($promo_applied > 55):
+if ($promo_applied > 0):
 ?>
 
 <script>

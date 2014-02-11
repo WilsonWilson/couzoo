@@ -159,7 +159,7 @@ elseif ($c['status'] == 'ended')
     </div>
  
     <div class="m-blurb">
-        <?=$c['description']?> 
+        <?=$c['coupon_desc']?>
     </div><!--End m-Blurb-->
 
 
