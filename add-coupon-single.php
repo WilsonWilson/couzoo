@@ -753,33 +753,28 @@
 					<div id="promo-hide-coup">
 
 <?php
-       $qry = mysql_query("SELECT * FROM CouZoo_Cards WHERE payer_id = '$id_user'");
+       $qry = mysql_query("SELECT id FROM CouZoo_Cards WHERE payer_id = '$id_user' WHERE primary = 1");
 	$total_cc = mysql_num_rows($qry);
-	if ($total_cc) {
+	$cc = mysql_fetch_array($qry);
 ?>
-               <div id="cart-check-out-table-header" class="card-headers">
-		     <div class="card-name">Saved Cards</div>
-                   <div class="card-type">Card Type</div>
-                   <div class="card-number">Card Number</div>
-               </div><!--end table header-->
-<?php
-	} while ($cc = mysql_fetch_array($qry)) {
-		if ($cc['type'] == 'amex') { $cc_type = "American Express"; } else { $cc_type = ucfirst($cc['type']); }
-?>
-               <div id="cart-check-out-table-row" class="<?=$cc['id']?>">
-		     <input type="radio" id="cc_id" name="cc_id" value="<?=$cc['id']?>">
-                   <div class="card-name"><?=$cc['fname']?> <?=$cc['lname']?></div>
-                   <div class="card-type"><?=$cc_type?></div>
-                   <div class="card-number"><?=$cc['number']?></div>
-		     <div id="<?=$cc['id']?>" class="card-delete"><img src="/images/red-x.png" width="15"></img></div>
-               </div><!--end table header-->
-<?php } ?>
 
    <div id="payment-left-column">
-             <p id="no-card-added" class="step-copy" style="margin-bottom:10px; <?=$total_cc > 0 ? "display: none;" : "";?>">
+
+<?php if(!$total_cc):?>
+             <p id="no-card-added" class="step-copy" style="margin-bottom:10px;">
                 You have not yet entered a credit card to be used with your CouZoo Merchant Account. There is a $25 per month subscription fee, which allows you to create and post as many coupons as you wish to CouZoo.com. You may cancel at any time.
              </p>
-             <a href="#add-card" id="card-text" class="fancybox change" style="font-size:14px;"><?=!$total_cc ? "Add a Credit Card" : "Add Another Credit Card";?></a>  &nbsp; |  &nbsp; <a href="javascript:;" style="font-size:14px;" onmousedown="slidedown('payment-right-column-coupon');">Use a Promo Code</a>
+	      <a href="#add-card" id="card-text" class="fancybox change" style="font-size:14px;">Add a Credit Card</a>  &nbsp; |  &nbsp; <a href="javascript:;" style="font-size:14px;" onmousedown="slidedown('payment-right-column-coupon');">Use a Promo Code</a>
+<?php else:?>
+             <p id="no-card-added" class="step-copy" style="margin-bottom:10px;">
+                Nice work! Please review your coupon info and if you're ready to go, click the "submit" button below.<br><br>
+		  If you have a promo code, you may enter it below.
+             </p>
+	      <a href="javascript:;" style="font-size:14px;" onmousedown="slidedown('payment-right-column-coupon');">Use a Promo Code</a>
+<?php endif;?>
+
+<input type="hidden" id="cc_id" name="cc_id" value="<?=$cc['id']?>">
+       
         </div>
 
     <div id="payment-right-column-coupon" style="display:none; overflow:hidden; height:128px; width:100%;">
@@ -803,7 +798,7 @@
         </div>
      </div>
 
-<?php if ($total_cc > 0) { ?>
+<?php if ($total_cc === -5) { ?>
 	<div id="sub-renew-info">    
         	<br clear="all"/>
         	<p class="step-copy" style="margin:10px 0px 10px 0px">
