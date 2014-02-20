@@ -50,7 +50,32 @@
 	margin:2px 0px;
 }
 
+/*Pre Beta sign up form*/
+#advancedCall .pre-beta-customer-signup-form input
+{
+    width:320px;/*changed for cart log-in*/
+    height:50px;/*only for homepage search*/
+	margin:0 ;
+    font-size:16px;
+    font-weight:bold;
+    padding-left:15px;
+	background:#F4F4F4;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+}
 
+#welcome-merch-view-container #advancedCallBrowse input
+{
+    width:320px;/*changed for cart log-in*/
+    height:50px;/*only for homepage search*/
+	margin:6px 0px;
+    font-size:16px;
+    font-weight:bold;
+    padding-left:15px;
+	background:#F4F4F4;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+}
 
 /*Log-in and Register Only*/
 
@@ -102,6 +127,19 @@
     font-size:16px;
     font-weight:bold;
     margin:3px;
+    padding:8px 4px 8px 8px;
+	background:#F4F4F4;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+}
+
+#advancedCallBrowse textarea.prebeta-merch-comment 
+{
+    width:322px;/*changed for cart log-in*/
+    height:80px;/*only for homepage search*/
+    font-size:16px;
+    font-weight:bold;
+    margin:0;
     padding:8px 4px 8px 8px;
 	background:#F4F4F4;
 	-moz-border-radius: 6px;

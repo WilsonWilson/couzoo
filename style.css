@@ -104,9 +104,9 @@ font-family:Arial, Helvetica, sans-serif;
 text-align:left;
 }
 
-#home-zoo-view-box a:active, #home-zoo-view-box a:visited {font-size:12px;}
+#home-zoo-view-box a:active, a:visited {font-size:12px;}
 
-p a:link, p a:active, p a:visited {font-family:Arial, Helvetica, sans-serif; color:#00988d; text-decoration:underline; font-weight:100; font-size:16px}
+p a:link, a:active, a:visited {font-family:Arial, Helvetica, sans-serif; color:#00988d; text-decoration:underline; font-weight:100; font-size:16px}
 
 p a:hover {color:#f26625}
 
@@ -1164,245 +1164,33 @@ transition: background-image 0.2s ease-in-out;
 
 
 /* WELCOME SIGN UP PAGE */
-/* customer side */
 .welcome-main-column{
 	margin-top:40px;
 	width:700px;
 }
 .welcome-customer-container-head{
 	width:700px;
-	height:auto;
-	margin-top:20px;
 }
 .welcome-customer-container-head h1{
 	color:#f26625;
-	margin:0px 0px 15px 10px;
+	margin:20px 0px 15px 10px;
 	font-size:40px;
 	}
 .welcome-customer-container-head h2{
 	color:#f26625;
-	margin:0px 0px 12px 10px;
+	margin:0px 0px 15px 10px;
 	font-size:22px;
 	}
 .welcome-customer-container-head p{
 	color:#603912;
-	margin:0px 0px 25px 12px;
+	margin:0px 0px 40px 13px;
 	width:700px;
 	}
 .welcome-customer-container-head .form-container{
-	margin:0px 0px 0px 10px;
-	padding:20px;
+	margin:0px 8px;
+	padding:15px;
 	background-color:#ffffff;
 	border:#f26625 3px solid; 
 	-moz-border-radius: 12px; 
 	border-radius: 12px;
-	overflow:hidden;
-}
-.welcome-signup-social-container{
-	width:50%;
-	text-align:center;
-	margin:10px 0px 0px 0px;
-	height:auto;
-	float:left;
-}
-.welcome-signup-nav-container{
-	width:288px;
-	text-align:center;
-	margin:0px 0px 0px 0px;
-	height:52px;
-	float:right;
-}
-.welcome-signup-nav-container input{
-	padding:0px;
-	margin:0px;
-	width:288px;
-	height:52px;	
-}
-.red { 
-	margin-top:-4px;
-	color:#F00;
-	font-size:14px;
-}
-.welcome-customer-container-head .form-container .break-line{
-	height:1px;
-	width:640px;
-	background-color:#b49168;
-	margin:20px 0px 30px;
-}
-.welcome-customer-container-head .form-container .merch-copy-container{
-	float:right;
-	width:72%;
-}
-.welcome-customer-container-head .form-container .merch-copy-container p{
-	width:auto;
-}
-.merch-copy-container p .merch-link{
-	color:#f26625;
-	text-decoration:underline;
-	font-size:15px;
-}
-.merch-copy-container p strong{
-	font-weight:bold;
-	font-size:15px;
-}
-#welcome-social-share-box{
-	height:368px;
-	width:56px;
-	position:absolute;
-	top:200px;
-	left:718px;
-}
-#slide-02 #welcome-social-share-box{
-	top:220px;
-	left:770px;
-}
-#welcome-social-share-box #home-social-share-icon{
-	margin-bottom:6px;
-}
-
-.welcome-merch-signup-nav-container{
-	width:auto;
-	text-align:center;
-	margin:0px 0px 0px 0px;
-	height:auto;
-	float:right;
-}
-ul.welcome-merch-signup-nav{
-	list-style:none;
-	display:inline-block;
-}
-.welcome-merch-signup-nav li{
-	float:left;
-}
-.welcome-merch-signup-nav li a:link{
-	padding:14px 14px 13px 14px;
-	display:block;
-	width:260px;
-	text-align:center;
-	-moz-border-radius: 8px; 
-	border-radius: 8px;
-	text-decoration:none;
-	font-size:20px;
-	}
-.welcome-merch-signup-nav li a.go_to_slide_zooview:link, 
-.welcome-merch-signup-nav li a.go_to_slide_zooview:active, 
-.welcome-merch-signup-nav li a.go_to_slide_zooview:visited{
-	background-color:#603912;
-	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0.31, #6B421A), color-stop(0.63, #4D2A07), color-stop(0.79, #3D1D00));
-	background-image: -o-linear-gradient(bottom, #6B421A 31%, #4D2A07 63%, #3D1D00 79%);
-	background-image: -moz-linear-gradient(bottom, #6B421A 31%, #4D2A07 63%, #3D1D00 79%);
-	background-image: -webkit-linear-gradient(bottom, #6B421A 31%, #4D2A07 63%, #3D1D00 79%);
-	background-image: -ms-linear-gradient(bottom, #6B421A 31%, #4D2A07 63%, #3D1D00 79%);
-	background-image: linear-gradient(to bottom, #6B421A 31%, #4D2A07 63%, #3D1D00 79%);
-	color:#ffffff !important;
-}
-.welcome-merch-signup-nav li a.go_to_slide_zooview:hover{
-	background-color:#603912; background-image: -webkit-gradient( linear, left top, left bottom, color-stop(0.31, #613913), color-stop(0.63, #422406), color-stop(0.79, #361900));
-	background-image: -o-linear-gradient(bottom, #613913 31%, #422406 63%, #361900 79%);
-	background-image: -moz-linear-gradient(bottom, #613913 31%, #422406 63%, #361900 79%);
-	background-image: -webkit-linear-gradient(bottom, #613913 31%, #422406 63%, #361900 79%);
-	background-image: -ms-linear-gradient(bottom, #613913 31%, #422406 63%, #361900 79%);
-	background-image: linear-gradient(to bottom, #613913 31%, #422406 63%, #361900 79%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#efa681', endColorstr='#ef4f00',GradientType=0 ); /* IE6-9 */
-	-webkit-transition: background-image 0.2s ease-in-out;
-	-moz-transition: background-image 0.2s ease-in-out;
-	-ms-transition: background-image 0.2s ease-in-out;
-	-o-transition: background-image 0.2s ease-in-out;
-	transition: background-image 0.2s ease-in-out;
-}
-.if-so-arrow{
-	float:left;
-	position:relative;
-	top:4px;
-	left:60px;
-}
-
-
-/* merchant side */
-#welcome-merch-view-container{width:720px; float:left; z-index:1000; position:inherit; margin-left:-8px;}
-#welcome-merch-view-container .welcome-main-column{
-	margin-top:40px;
-	width:760px;
-}
-#welcome-merch-view-container .welcome-customer-container-head{
-	width:760px;
-	height:auto;
-	margin-top:20px;
-}
-#welcome-merch-view-container .welcome-customer-container-head p{
-	color:#603912;
-	margin:0px 0px 30px 12px;
-	width:756px;
-	}
-#welcome-merch-view-container .welcome-customer-container-head .form-container{
-	margin:0px 0px 0px 10px;
-	padding:20px;
-	background-color:#ffffff;
-	border:#f26625 3px solid; 
-	-moz-border-radius: 12px; 
-	border-radius: 12px;
-	overflow:hidden;
-	width:700px;
-}
-.form-container #advancedCallBrowse .merch-form-container{
-	float:left;
-	width:340px;
-}
-.form-container #advancedCallBrowse .merch-form-container p {
-	width:320px !important;
-	margin-top:4px;
-}
-#advancedCallBrowse .welcome-signup-nav-container{
-	width:300px;
-	text-align:center;
-	margin:0px 30px 0px 0px;
-	height:auto;
-	float:right;
-}
-#advancedCallBrowse .welcome-signup-nav li a:link{
-	width:300px;
-}
-
-#advancedCallBrowse .break-line{
-	width:696px;
-	margin-bottom:20px;
-}
-.pre-beta-merchant-signup-form #home-zoo-view-box{padding:16px 20px 0; width:250px;}
-.pre-beta-merchant-signup-form #home-zoo-view-box a:link, 
-.pre-beta-merchant-signup-form #home-zoo-view-box a:active, 
-.pre-beta-merchant-signup-form #home-zoo-view-box a:visited {font-size:18px; text-decoration:none; color:#f26625;}
-
-
-input[type=radio] {
-    display: none;
-}
-input[type=radio] + label::before {
-    content: '';
-    display: inline-block;
-    border: 1px solid #000;
-    border-radius: 50%;
-    margin: 0 0.5em -2px 0.5em;
-}
-input[type=radio]:checked + label::before {
-    background-color: #f26625;
-}
-.info-row {
-	margin:-20px .75em .75em .75em;
-	float:left;
-	width:70px;
-}
-.info-row span{
-	margin-bottom:4px;
-	font-size:16px;
-}
-.radio1 + label::before, .radio2 + label::before {
-	margin-top:2px;
-    width: 1em;
-    height: 1em;	
-}
-.use-before-yes{
-	display:none;
-}
-.pre-beta-merch-comment{
-	display:none;
 }
