@@ -24,31 +24,43 @@ include ("m-header.php");
 <script src="js/query.formHighlighterSettings.js" type="text/javascript"></script>
 <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
 <script type="text/javascript" src="js/jquery.asyncslider.min.js"></script>
+<!-- Slide Divs -->
+<script type="text/javascript">
+	$(window).load(function(){
+		// Setup Slider
+		$(".my_asyncslider").asyncSlider({
+			direction: "horizontal",
+			minTime: 1200,
+			maxTime: 1200,
+			easingIn: 'easeInExpo',
+			easingOut: 'easeOutExpo',
+			prevNextNav: $(".prev_next_nav_env"),
+			keyboardNavigate: false,
+			slidesNav: $("#asyncslider_links")
+		});
+		
+		// Link to go to slide 3
+		$(".go_to_slide_3").click(function(ev){
+			ev.preventDefault();
+			$(".my_asyncslider").asyncSlider("moveToSlide", 3);
+		})
+		
+		// Link to go to slide 2
+		$(".go_to_slide_2").click(function(ev){
+			ev.preventDefault();
+			$(".my_asyncslider").asyncSlider("moveToSlide", 2);
+		});
+		
+		// Link to go to slide 1
+		$(".go_to_slide_1").click(function(ev){
+			ev.preventDefault();
+			$(".my_asyncslider").asyncSlider("moveToSlide", 1);
+		})
+	});
+</script>
 </head>
 
 <body>
-
-<!-- START Modal Content -->
-<div class="page-overlay"></div>
-<div class="close-change-location-modal">close</div>
-<div class="change-locaton-container">
-    <div class="change-locaton-inner-container">
-    <h2>Change Location</h2>
-        <div id="m-advancedCall2">
-                <form method="POST" id="change_location" name="form_location">
-		      <input type="hidden" name="location" value="true">
-                    <input class="changeLocationField" style="text-align:center;" type="text" name="address" placeholder="enter zip code or city name" />					
-                </form>
-                <br />
-        </div>
-        <div class="m-find-button-contianer">
-            <div class="m-change-location-button">
-               <a href="#"> <div class="use-this-coupon">change location</div></a>
-            </div>
-        </div><!--end use now button container-->
-    </div>
-</div><!--END Change Location Container-->
-<!-- END Modal Content -->
 
 <div class="home-container">
     <div class="home-header">
@@ -63,104 +75,272 @@ include ("m-header.php");
         <div class="orange-stripe2"><img src="m-images/zoo.jpg" width="1" height="67" /></div>
     </div>
 
-	<ul class="my_asyncslider">
-		<li>
-
-            <div class="m-use-button-contianer">
+	<ul class="my_asyncslider slide-slide">
+		<li id="slide-01">
+        <h1 class="better-way">The better way to<br/>do online deals</h1>
+			<div class="m-use-button-contianer">
                 <div class="m-use-button">
-                   <a href="m-my-coupons.php"> <div class="use-this-coupon">my coupons</div></a>
+                   <a href="#" class="go_to_slide_2"> <div class="use-this-coupon">customers</div></a>
                 </div>
             </div><!--end use now button container-->
-                        
+            
+            
             <div class="search-coupon-section-container">
+                <div class="m-find-button-contianer">
+                    <div class="m-find-button">
+                       <a href="#" class="go_to_slide_3"> <div class="use-this-coupon">business owners</div></a>
+                    </div>
+                </div><!--end use now button container-->
+            </div><!--end search-coupon-section-container-->
+		</li>
+        
+        <li id="slide-02">
+        	<h2 class="m-pre-beta-copy">CouZoo is changing the way local online deals are done.</h2>
+            <ul class="m-list">
+                <li>No more emails</li>
+                <li>No more large upfront payment</li> 
+                <li>No more shenanigans</li>
+            </ul>
+			<p class="m-pre-beta-copy">
+				Sign up now and become one of the first to access CouZoo.
+            </p>
+            
+            <div class="m-pre-beta-form-container">
             <div class="m-search-container">
             <div id="m-advancedCall">
-                <form action="m-results.php" id="keyword_search" name="homeSearch">
-                    <input class="myclass" type="text" style="text-align:center;" name="search" placeholder="search for coupons here" />					
-                    <br />
+                <form class="pre-beta-customer-signup-form" id="preBetaCustomer" method="POST" action="/pre-beta-customer.php">
+                    <input class="myclass" type="text" style="text-align:center;" name="preBetaCustomerEmail" id="preBetaCustomerEmail" placeholder="enter your email"/>
+                    <div id="preBetaCustomerEmailError" class="red"></div>	
                 </form>
             </div>
             </div>
             
             <div class="m-find-button-contianer">
                 <div class="m-find-button">
-                   <a href="#"> <div id="search_btn" class="use-this-coupon">find a coupon</div></a>
+                   <a href="#"> <div class="use-this-coupon submit-customer">sign up now</div></a>
                 </div>
             </div><!--end use now button container-->
             </div><!--end search-coupon-section-container-->
-
 		</li>
+        
+		<li id="slide-03">
+        	<h2 class="m-pre-beta-copy">Online deals you can afford to run.</h2>
+            <ul class="m-list">
+            	<li>We don't keep a cut</li>
+            	<li>You paid by your customers</li>
+                <li>You have complete control</li> 
+            </ul>
+			<p class="m-pre-beta-copy">
+				Complete the form below to find out more.
+            </p>
+            
+            <div class="m-pre-beta-form-container">
+            <div class="m-pre-beta-merch-form-container">
+            <div id="m-advancedCall2">
+                <form class="pre-beta-merchant-signup-form" id="preBetaMerchant" method="POST" action="/pre-beta-merchant.php">
+                  <input class="myclass" type="text" style="text-align:center;" name="preBetaMerchName" id="preBetaMerchName" placeholder="business name" />
+                  <div id="preBetaMerchNameError" class="red"></div>
+                  <input class="myclass" type="text" style="text-align:center;" name="preBetaMerchContact" id="preBetaMerchContact" placeholder="contact name" />
+                  <div id="preBetaMerchContactError" class="red"></div>
+                  <input class="myclass" type="text" style="text-align:center;" name="preBetaMerchEmail" id="preBetaMerchEmail" placeholder="email" />
+                  <div id="preBetaMerchEmailError" class="red"></div>
+                  
+                  <div class="merch-form-container" style="margin-left:20px;">
+                    <p class="m-pre-beta-in-form-copy">Have you ever used an online deal, daily deal or coupon service (i.e. Groupon, Living Social, Amazon Local, etc.)? </p>
+                        <div class="m-info-row-inline">
+                            <input type="radio" class="used-before-no radio3" name="preBetaUsedBefore" id="preBetaUsedBeforeN" value="no"/><label style="font-size:3em;" for="preBetaUsedBeforeN"><span>no</span></label>       								
+                        </div>    
+                        <div class="m-info-row-inline">         
+                            <input type="radio" class="used-before-yes radio3" name="preBetaUsedBefore" id="preBetaUsedBeforeY" value="yes"/><label style="font-size:3em;" for="preBetaUsedBeforeY"><span>yes</span> </label>
+                        </div>
+                            <br clear="all"/>
+                    
+                    <div class="use-before-yes">
+                    
+                    <input class="myclass" type="text" name="preBetaCompanyBefore" id="preBetaCompanyBefore" style="width:100%;" placeholder="which company did you use?" />
+                
+                    <p class="m-pre-beta-in-form-copy">Were you happy with the experience? </p>
+                
+                    <div class="m-info-row-inline">
+                        <input type="radio" class="used-before-happy-no radio4" name="preBetaUsedHappy" id="preBetaUsedHappyN" value="no"/><label style="font-size:3em;" for="preBetaUsedHappyN"><span>no</span></label>
+                    </div>    
+                
+                    <div class="m-info-row-inline">         
+                        <input type="radio" class="used-before-happy-yes radio4" name="preBetaUsedHappy" id="preBetaUsedHappyY" value="yes"/><label style="font-size:3em;" for="preBetaUsedHappyY"><span>yes</span> </label>
+                    </div>
+                
+                    <br clear="all"/>
+                
+                    <div class="pre-beta-merch-comment">
+                        <textarea class="prebeta-merch-comment" name="preBetaMerchComments" id="preBetaMerchComments">share your thoughts, comments, or questions</textarea>
+                    </div>
+                 </div>
+                </form>
+            </div>
+            </div>
+            <br clear="all"/>
+            
+            <div class="m-find-button-contianer">
+                <div class="m-find-button">
+                   <a href="#"> <div class="use-this-coupon submit-merchant">sign up now</div></a>
+                </div>
+            </div><!--end use now button container-->
+            </div><!--end search-coupon-section-container-->
+        </li>
 	</ul>
 
 <div class="push-home"></div>
 </div><!--End Container-->
 
-<div class="bottom-home-nav">
-<!--<div class="bottom-home-nav-fixed">-->
-    <div class="bottom-home-nav-container">
-        <div class="view-my-account-btn">
-        	<a href="m-my-account.php">View My<br/>Account</a>
-        </div>
-              
-        <div class="pricing_table merchant-center-btn" id="couzooHome">        	
-		    <a href='m-merchant-center.php'>Merchant<br/>Center</a>           
-        </div>
-                
-        <div class="change-location-btn">
-        	<a class="change-location-click" href="#">Change<br/>Location</a>
-        </div>
-    </div><!--End bottom-nav-container-->
-</div><!--End bottom nav-->
 
-<script type="text/javascript"><!--Toggle MErche Center Home Button-->
-		$(".change-location-btn").click(function(){
-			$(".page-overlay").fadeIn('slow');
-			setTimeout(func, 400);
-			function func() {
-            	$(".change-locaton-container").fadeIn('slow');
-				$(".close-change-location-modal").fadeIn('slow');
-			}
-        });
-		
-		$(".page-overlay").click(function(){
-			$(".change-locaton-container").fadeOut('slow');	
-			$(".close-change-location-modal").fadeOut('slow');	
-			setTimeout(func, 600);
-			function func() {
-            	$(".page-overlay").fadeOut('slow');	
-			}
-        });
-		
-		$(".close-change-location-modal").click(function(){
-			$(".change-locaton-container").fadeOut('slow');	
-			$(".close-change-location-modal").fadeOut('slow');	
-			setTimeout(func, 600);
-			function func() {
-            	$(".page-overlay").fadeOut('slow');	
-			}
-        });
-		
-		
-		$('.changeLocationField').keydown(function(){
-			$('.page-overlay').css('height', '110%');
-	});		
+<script type="text/javascript">
+$(function () {
+    $('.used-before-no').click(function () {
+        $('.use-before-yes').hide('slow');
+		$('.pre-beta-merch-comment').hide('slow');
+		$('.slide-slide').css("height","1800px");
+		$('#slide-03').css("height","1800px");
+    });
+    $('.used-before-yes').click(function () {
+        $('.use-before-yes').show('slow');
+		$('.slide-slide').css("height","2275px");
+		$('#slide-03').css("height","2275px");
+    });
+});
 </script>
 
-<script>
-$('#change_loc').click(function() {
-	$('#change_location').submit();
-});
+<script type="text/javascript">
+	$('.used-before-happy-yes').click(function(){
+		$('.slide-slide').css("height","2850px");
+		$('#slide-03').css("height","2800px");
+		
+	});
+	$('.used-before-happy-no').click(function(){
+		$('.slide-slide').css("height","2850px");
+		$('#slide-03').css("height","2850px");
+		
+	});
+</script>
 
-$('#search_btn').click(function() {
-	$('#keyword_search').submit();
+<script type="text/javascript">
+$(function () {
+    $('.used-before-happy-no').click(function () {
+        $('.pre-beta-merch-comment').show('slow');
+    });
+    $('.used-before-happy-yes').click(function () {
+        $('.pre-beta-merch-comment').show('slow');
+    });
+});
+</script>
+
+<script type="text/javascript">
+$('.home-search-btn').click(function() {
+	$('#homeFilter').submit();
 });
 
 $('form').submit(function(){
-    	$(this).children('input[value=""]').prop('disabled', 'disabled');
-    	$('select').children('option[value=""]').prop('disabled', 'disabled');
+    	$(this).children('input[value=""]').attr('disabled', 'disabled');
+    	$('select').children('option[value=""]').attr('disabled', 'disabled');
+});
+</script>
+
+<script>
+$('.submit-customer').click(function() {
+	$('#preBetaCustomer').submit();
 });
 
+$('.submit-merchant').click(function() {
+	$('#preBetaMerchant').submit();
+});
 </script>
+<!--Validation for Forms-->
+<script type="text/javascript">
+	window.onload = init;
+	
+	function init() {
+	   // Attach "onsubmit" handler
+	   document.getElementById("preBetaCustomer").onsubmit = validateForm;
+	   document.getElementById("preBetaMerchant").onsubmit = validateForm2;
+	}
+	
+	function validateForm() {
+	return (isValidEmail("preBetaCustomerEmail", "Please enter a valid email")
+		);
+	}
+	
+	function validateForm2() {
+		return (isNotEmpty("preBetaMerchName", "Please enter your business name")
+		&& isNotEmpty("preBetaMerchContact", "Please enter a person to contact")
+		&& isValidEmail("preBetaMerchEmail", "Please enter a valid email")
+		);
+	}
+	
+	function isNotEmpty(inputId, errorMsg) {
+	   var inputElement = document.getElementById(inputId);
+	   var errorElement = document.getElementById(inputId + "Error");
+	   var inputValue = inputElement.value.trim();
+	   var isValid = (inputValue.length != 0);  // boolean
+	   showMessage(isValid, inputElement, errorMsg, errorElement);
+	   return isValid;
+	}
+	 
+	function showMessage(isValid, inputElement, errorMsg, errorElement) {
+	   if (!isValid) {
+		  // Put up error message on errorElement or via alert()
+		  if (errorElement != null) {
+			 errorElement.innerHTML = errorMsg;
+		  } else {
+			 alert(errorMsg);
+		  }
+		  // Change "class" of inputElement, so that CSS displays differently
+		  if (inputElement != null) {
+			 inputElement.className = "error";
+			 inputElement.focus();
+		  }
+	   } else {
+		  // Reset to normal display
+		  if (errorElement != null) {
+			 errorElement.innerHTML = "";
+		  }
+		  if (inputElement != null) {
+			 inputElement.className = "";
+		  }
+	   }
+	}
+	 
+	function isValidEmail(inputId, errorMsg) {
+	   var inputElement = document.getElementById(inputId);
+	   var errorElement = document.getElementById(inputId + "Error");
+	   var inputValue = inputElement.value;
+	   var atPos = inputValue.indexOf("@");
+	   var dotPos = inputValue.lastIndexOf(".");
+	   var isValid = (atPos > 0) && (dotPos > atPos + 1) && (inputValue.length > dotPos + 2);
+	   showMessage(isValid, inputElement, errorMsg, errorElement);
+	   return isValid;
+	}
+	
+	// The "onclick" handler for the "reset" button to clear the display
+	function clearDisplay() {
+	   var elms = document.getElementsByTagName("*");  // all tags
+	   for (var i = 0; i < elms.length; i++) {
+		  if ((elms[i].id).match(/Error$/)) {  // no endsWith() in JS?
+			 elms[i].innerHTML = "";
+		  }
+		  if (elms[i].className == "error") {  // assume only one class
+			 elms[i].className = "";
+		  }
+	   }
+	   // Set initial focus
+	   document.getElementById("name").focus();
+	}
+
+</script>
+
+<?php if($_GET['valid'] == true):?>
+<script>
+     alert("We already have your information. We will keep you notified. Thank you for your continued interest!");
+</script>
+<?php endif;?>
 
 </body>
 </html>

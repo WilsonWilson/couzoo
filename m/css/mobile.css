@@ -1497,7 +1497,7 @@ input[type=radio] + label::before {
     display: inline-block;
     border: 1px solid #000;
     border-radius: 50%;
-    margin: 0 0.5em;
+    margin: 0 0.5em -.2em;
 }
 input[type=radio]:checked + label::before {
     background-color: #f26625;
@@ -1506,9 +1506,17 @@ input[type=radio]:checked + label::before {
 	clear:both;
 	margin:.75em;
 }
+.m-info-row-inline {
+	float:left;
+	margin:3em 5em;
+}
 .radio1 + label::before, .radio2 + label::before {
     width: .6em;
     height: .6em;	
+}
+.radio3 + label::before, .radio4 + label::before {
+    width: 1em;
+    height: 1em;	
 }
 
 .toggler{		
@@ -1852,3 +1860,140 @@ input[type=radio]:checked + label::before {
 	-moz-border-radius-topleft: 18px;
 	border-top-left-radius: 18px;
 }
+
+/*  ======================== PRE BETA ======================== */
+.m-goto-customer-button-contianer{
+	position:relative;
+    width:100%;
+	margin:20% auto 0;
+}
+.m-goto-customer-use-button{
+	width:94%;
+	height:auto;
+	-moz-border-radius: 12px;
+	border-radius: 12px;
+	margin:auto;	
+	text-align:center;
+	vertical-align:middle;
+	text-decoration:none;
+	overflow:hidden;
+}
+.m-goto-customer-button a:link,
+.m-goto-customer-button a:active,
+.m-goto-customer-button a:visited {
+	text-decoration:none;
+	display:block;
+	height:100%;
+	width:100%;
+	color:#FFF;
+	font-size:4.8em;
+	padding:.6em 0px;
+	/*background-color:#603912;*/
+	background-image: -ms-linear-gradient(top, #846546 0%, #603912 65%);
+	background-image: -moz-linear-gradient(top, #846546 0%, #603912 65%);
+	background-image: -o-linear-gradient(top, #846546 0%, #603912 65%);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #846546), color-stop(.65, #603912));
+	background-image: -webkit-linear-gradient(top, #846546 0%, #603912 65%);
+	background-image: linear-gradient(to bottom, #846546 0%, #603912 65%);
+}
+.m-goto-merch-button-contianer{
+	position:relative;
+    width:100%;
+	margin:20px auto;
+}
+.m-goto-merch-button{
+	width:94%;
+	height:auto;
+	-moz-border-radius: 12px;
+	border-radius: 12px;
+	margin:auto;	
+	text-align:center;
+	vertical-align:middle;
+	text-decoration:none;
+	overflow:hidden;
+}
+.m-goto-merch-button a:link,
+.m-goto-merch-button a:active,
+.m-goto-merch-button a:visited {
+	text-decoration:none;
+	display:block;
+	height:100%;
+	width:100%;
+	color:#FFF;
+	font-size:4.8em;
+	padding:.6em 0px;
+	/*background-color:#f26625;*/
+	background-image: -ms-linear-gradient(top, #F2B48A 0%, #F26625 65%);
+	background-image: -moz-linear-gradient(top, #F2B48A 0%, #F26625 65%);
+	background-image: -o-linear-gradient(top, #F2B48A 0%, #F26625 65%);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #F2B48A), color-stop(.5, #F26625));
+	background-image: -webkit-linear-gradient(top, #F2B48A 0%, #F26625 65%);
+	background-image: linear-gradient(to bottom, #F2B48A 0%, #F26625 65%);
+}
+.better-way{
+	margin:.75em auto;
+	width:100%;
+	height:100%;
+	text-align:center;
+	font-size:5em;
+	color:#f26625;
+	font-weight:bold;
+}
+.m-pre-beta-copy{
+	height:auto;
+	top:top;
+	margin:.75em 15px 0px 30px;
+	position:relative;
+	z-index:100;
+	font-size:3.2em;
+	color:#603912;
+	text-align:left;
+}
+h2.m-pre-beta-copy{
+	font-size:3.4em;
+}
+.m-list{
+	font-size:3.2em;
+	list-style:inside;
+	list-style-type:none;
+	color:#603912;
+	margin:20px 50px;
+}
+.m-pre-beta-form-container{margin-top:10%;}
+.red { 
+	margin-top:-4px;
+	color:#F00;
+	font-size:14px;
+}
+.m-pre-beta-merch-form-container{
+	text-align:center;
+	width:95%;
+	height:auto;
+	margin:0px auto;
+}
+.m-pre-beta-in-form-copy{
+	height:auto;
+	top:top;
+	margin:.5em 15px 0px 0px;
+	position:relative;
+	z-index:100;
+	font-size:3em;
+	color:#603912;
+	text-align:left;
+}
+.use-before-yes,
+.pre-beta-merch-comment
+{
+	display:none;
+}
+.prebeta-merch-comment{
+	width:100%;
+	font-size:3.2em;
+	text-align:left;
+	height:12em;
+	-moz-border-radius: 12px;
+	border-radius: 12px;
+	
+}
+
+/* test */
